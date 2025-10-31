@@ -1,0 +1,114 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --azul-oscuro: #1e3a8a;
+            --rojo: #ea2d0c;
+            --gris-claro: #f3f4f6;
+            --texto-dark: #1f2937;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--texto-dark);
+            background: #ffffff;
+        }
+
+        /* Header y Navegación */
+        header {
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo { height: 60px; }
+
+        .nav-links { display:flex; gap:2rem; list-style:none; align-items:center; }
+        .nav-links a { text-decoration:none; color:var(--azul-oscuro); font-weight:600; }
+        .lang-selector { background:var(--azul-oscuro); color:#fff; border:none; padding:0.5rem 1rem; border-radius:5px; }
+
+        /* Contenido Principal */
+        main {
+            min-height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, var(--azul-oscuro) 0%, #2563eb 100%);
+            padding: 3rem 5%;
+        }
+
+        .construction-container { text-align:center; background: white; padding:3rem; border-radius:15px; box-shadow:0 10px 30px rgba(0,0,0,0.12); max-width:600px; }
+        .construction-icon { font-size:5rem; margin-bottom:1rem; }
+        .construction-container h1 { color:var(--azul-oscuro); font-size:2.5rem; margin-bottom:1rem; }
+        .construction-container p { color:#666; font-size:1.2rem; }
+
+        /* Footer: layout with left GMK block and right offices columns */
+        footer {
+            background: #fff;
+            color: var(--texto-dark);
+            padding: 2.5rem 5%;
+            border-top: 1px solid #e6e6e6;
+        }
+
+        .footer-content { max-width:1200px; margin:0 auto; }
+
+        .footer-inner { display:flex; gap:2rem; align-items:flex-start; }
+
+        /* Left column: GMK representative box */
+        .footer-left { width:280px; }
+        .gmk-box { border:1px solid #ddd; padding:1rem; background:#fafafa; border-radius:6px; }
+        .gmk-box img { display:block; max-width:140px; margin-bottom:0.5rem; }
+        .gmk-box p { font-size:0.9rem; color:#111827; margin:0.35rem 0; }
+        .gmk-box a { color:var(--azul-oscuro); text-decoration:none; }
+
+        /* Right column: offices */
+        .footer-right { flex:1; }
+        .footer-title { color:var(--azul-oscuro); font-size:1.25rem; font-weight:700; margin:0 0 1rem 0; }
+
+    /* Two-column layout for offices: explicit two columns (3 then 4) */
+    .offices-grid { display:flex; gap:2rem; align-items:flex-start; }
+    .offices-col { flex:1; display:flex; flex-direction:column; gap:0.35rem; }
+    .offices-col .office { padding:0; }
+    .office { padding:0; }
+    .office h3 { font-size:0.95rem; margin:0 0 0.12rem; font-weight:700; }
+    .office h4 { font-size:0.9rem; margin:0 0 0.08rem; font-weight:600; color:var(--azul-oscuro); }
+    .office p { margin:0.06rem 0; font-size:0.88rem; color:#374151; line-height:1.15; }
+
+        /* Contacts area (rightmost) */
+        .contacts { margin-top:0.5rem; }
+        .contacts p { margin:0.15rem 0; }
+        .contacts a { color:var(--azul-oscuro); text-decoration:none; }
+
+        /* Footer small separators */
+        .footer-sep { height:1px; background:#eee; margin:1rem 0; }
+
+        /* Responsive */
+        @media (max-width: 1100px) {
+            .offices-grid { grid-template-columns: repeat(2, minmax(160px, 1fr)); }
+        }
+
+        @media (max-width: 780px) {
+            .footer-inner { flex-direction:column; }
+            .footer-left { width:100%; }
+            /* On smaller tablets switch to single column for readability */
+            .offices-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 480px) {
+            .offices-grid { grid-template-columns: 1fr; }
+        }
