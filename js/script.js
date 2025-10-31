@@ -56,23 +56,37 @@
         function setupMobileMenu() {
             const menuToggle = document.getElementById('menuToggle');
             const navLinks = document.querySelector('.nav-links');
+            const overlay = document.getElementById('overlay');
             
             if (menuToggle && navLinks) {
                 menuToggle.addEventListener('click', () => {
-                    navLinks.classList.toggle('active');
+                    const opened = navLinks.classList.toggle('active');
+                    if (overlay) overlay.classList.toggle('active', opened);
                 });
 
                 // Cerrar menú al hacer clic en un enlace
                 navLinks.querySelectorAll('a').forEach(link => {
                     link.addEventListener('click', () => {
                         navLinks.classList.remove('active');
+                        if (overlay) overlay.classList.remove('active');
                     });
                 });
 
                 // Cerrar menú al hacer clic fuera
+                // Close when clicking the overlay
+                if (overlay) {
+                    overlay.addEventListener('click', () => {
+                        navLinks.classList.remove('active');
+                        overlay.classList.remove('active');
+                    });
+                }
+
+                // Keep the document click handler but ignore overlay clicks
                 document.addEventListener('click', (e) => {
+                    if (overlay && overlay.contains(e.target)) return;
                     if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
                         navLinks.classList.remove('active');
+                        if (overlay) overlay.classList.remove('active');
                     }
                 });
             }
@@ -80,9 +94,15 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             try {
-                const navLang = navigator.language || navigator.userLanguage || 'es';
-                const baseLang = (navLang.split('-')[0] || 'es').toLowerCase();
-                currentLang = translations[baseLang] ? baseLang : 'es';
+                        // First, check if the user has a saved preference
+                        const saved = localStorage.getItem('instrelecLang');
+                        if (saved && translations[saved]) {
+                            currentLang = saved;
+                        } else {
+                            const navLang = navigator.language || navigator.userLanguage || 'es';
+                            const baseLang = (navLang.split('-')[0] || 'es').toLowerCase();
+                            currentLang = translations[baseLang] ? baseLang : 'es';
+                        }
             } catch (e) {
                 currentLang = 'es';
             }
@@ -90,3 +110,16 @@
             applyTranslations();
             setupMobileMenu();
         });
+
+        // Persist language when toggling
+        const originalToggle = toggleLanguage;
+        function toggleLanguageAndPersist() {
+            originalToggle();
+            try {
+                localStorage.setItem('instrelecLang', currentLang);
+            } catch (e) {
+                // ignore storage errors
+            }
+        }
+        // Replace global toggle with persisting version
+        window.toggleLanguage = toggleLanguageAndPersist;

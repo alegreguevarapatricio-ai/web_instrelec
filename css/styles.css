@@ -32,15 +32,33 @@
             justify-content: space-between;
             align-items: center;
             padding: 1rem 5%;
+            position: relative;
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        .logo { height: 60px; }
+    .logo { height: 60px; max-width:160px; }
 
-        .nav-links { display:flex; gap:2rem; list-style:none; align-items:center; }
-        .nav-links a { text-decoration:none; color:var(--azul-oscuro); font-weight:600; }
-        .lang-selector { background:var(--azul-oscuro); color:#fff; border:none; padding:0.5rem 1rem; border-radius:5px; }
+    /* Navigation */
+    .nav-links { display:flex; gap:2rem; list-style:none; align-items:center; }
+    .nav-links a { text-decoration:none; color:var(--azul-oscuro); font-weight:600; }
+    .lang-selector { background:var(--azul-oscuro); color:#fff; border:none; padding:0.5rem 1rem; border-radius:5px; }
+
+    /* Mobile menu toggle (hidden on desktop) */
+    .menu-toggle { display:none; background:transparent; border:none; cursor:pointer; padding:0.25rem; }
+    .menu-toggle span { display:block; width:26px; height:3px; background:var(--azul-oscuro); margin:4px 0; border-radius:2px; }
+
+    /* Overlay used when mobile menu is open */
+    .overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.35);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.25s ease-in-out, visibility 0.25s;
+        z-index: 110;
+    }
+    .overlay.active { opacity: 1; visibility: visible; }
 
         /* Contenido Principal */
         main {
@@ -61,33 +79,33 @@
         footer {
             background: #fff;
             color: var(--texto-dark);
-            padding: 2.5rem 5%;
+            padding: 1.8rem 5%;
             border-top: 1px solid #e6e6e6;
         }
 
         .footer-content { max-width:1200px; margin:0 auto; }
 
-        .footer-inner { display:flex; gap:2rem; align-items:flex-start; }
+    .footer-inner { display:flex; gap:1rem; align-items:flex-start; }
 
-        /* Left column: GMK representative box */
-        .footer-left { width:280px; }
-        .gmk-box { border:1px solid #ddd; padding:1rem; background:#fafafa; border-radius:6px; }
-        .gmk-box img { display:block; max-width:140px; margin-bottom:0.5rem; }
-        .gmk-box p { font-size:0.9rem; color:#111827; margin:0.35rem 0; }
+    /* Left column: GMK representative box */
+    .footer-left { width:300px; }
+    .gmk-box { border:1px solid #ddd; padding:0.9rem; background:#fafafa; border-radius:6px; }
+    .gmk-box img { display:block; max-width:130px; margin-bottom:0.4rem; }
+    .gmk-box p { font-size:0.9rem; color:#111827; margin:0.2rem 0; }
         .gmk-box a { color:var(--azul-oscuro); text-decoration:none; }
 
         /* Right column: offices */
         .footer-right { flex:1; }
         .footer-title { color:var(--azul-oscuro); font-size:1.25rem; font-weight:700; margin:0 0 1rem 0; }
 
-    /* Two-column layout for offices: explicit two columns (3 then 4) */
-    .offices-grid { display:flex; gap:2rem; align-items:flex-start; }
-    .offices-col { flex:1; display:flex; flex-direction:column; gap:0.35rem; }
+        /* Two-column layout for offices: explicit two columns (3 then 4) */
+    .offices-grid { display:flex; gap:1rem; align-items:flex-start; }
+    .offices-col { flex:1; display:flex; flex-direction:column; gap:0.2rem; }
     .offices-col .office { padding:0; }
     .office { padding:0; }
-    .office h3 { font-size:0.95rem; margin:0 0 0.12rem; font-weight:700; }
-    .office h4 { font-size:0.9rem; margin:0 0 0.08rem; font-weight:600; color:var(--azul-oscuro); }
-    .office p { margin:0.06rem 0; font-size:0.88rem; color:#374151; line-height:1.15; }
+    .office h3 { font-size:0.95rem; margin:0 0 0.08rem; font-weight:700; }
+    .office h4 { font-size:0.9rem; margin:0 0 0.06rem; font-weight:600; color:var(--azul-oscuro); }
+    .office p { margin:0.04rem 0; font-size:0.88rem; color:#374151; line-height:1.08; }
 
         /* Contacts area (rightmost) */
         .contacts { margin-top:0.5rem; }
@@ -95,20 +113,56 @@
         .contacts a { color:var(--azul-oscuro); text-decoration:none; }
 
         /* Footer small separators */
-        .footer-sep { height:1px; background:#eee; margin:1rem 0; }
+    .footer-sep { height:1px; background:#eee; margin:0.6rem 0; }
 
         /* Responsive */
+        /* Desktop -> tablet -> mobile breakpoints */
         @media (max-width: 1100px) {
-            .offices-grid { grid-template-columns: repeat(2, minmax(160px, 1fr)); }
+            .offices-grid { gap:1rem; }
+            .footer-left { width:260px; }
         }
 
         @media (max-width: 780px) {
+            /* Mobile navigation: hide links and show burger */
+            .menu-toggle { display:block; }
+            .nav-links { 
+                position: fixed;
+                right: -100%;
+                top: 0;
+                height: 100vh;
+                width: 80%;
+                max-width: 320px;
+                background: #fff;
+                flex-direction: column;
+                padding: 80px 20px;
+                gap: 1rem;
+                box-shadow: -8px 0 24px rgba(0,0,0,0.08);
+                transition: right 0.32s cubic-bezier(.2,.9,.3,1);
+                z-index: 120;
+            }
+            .nav-links.active { right: 0; }
+            .nav-links a { color:var(--texto-dark); font-size:1.05rem; }
+
+            /* Center the logo visually on small screens */
+            nav { align-items: center; }
+            .logo { position: absolute; left: 50%; transform: translateX(-50%); z-index:125; }
+
             .footer-inner { flex-direction:column; }
             .footer-left { width:100%; }
-            /* On smaller tablets switch to single column for readability */
-            .offices-grid { grid-template-columns: 1fr; }
+            .offices-grid { flex-direction:column; }
+            .offices-col { width:100%; }
+            /* Ensure first column stays above second when stacked */
+            .offices-col:first-child { order: 0; }
+            .offices-col:last-child { order: 1; }
+            /* Slightly reduce spacing on mobile for compactness */
+            .offices-col { gap:0.16rem; }
+            .office p { font-size:0.86rem; }
         }
 
         @media (max-width: 480px) {
-            .offices-grid { grid-template-columns: 1fr; }
+            .logo { height:48px; }
+            .construction-container { padding:1.5rem; }
+            .construction-container h1 { font-size:1.6rem; }
+            .construction-container p { font-size:0.95rem; }
+            .gmk-box img { max-width:120px; }
         }
