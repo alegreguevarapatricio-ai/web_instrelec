@@ -1,138 +1,285 @@
 * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        :root {
-            --azul-oscuro: #1e3a8a;
-            --rojo: #ea2d0c;
-            --gris-claro: #f3f4f6;
-            --texto-dark: #1f2937;
-        }
+:root {
+    --azul-oscuro: #1e3a8a;
+    --rojo: #ea2d0c;
+    --gris-claro: #f3f4f6;
+    --texto-dark: #1f2937;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--texto-dark);
-            background: #ffffff;
-        }
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--texto-dark);
+    background: #ffffff;
+}
 
-        /* Header y Navegación */
-        header {
-            background: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.06);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+/* Header y Navegación */
+header {
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 5%;
-            position: relative;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-    .logo { height: 60px; max-width:160px; }
+/* Añade esto a tu styles.css si el logo-container o el texto aparecen subrayados */
+.logo-link {
+    text-decoration: none;
+    /* Elimina el subrayado */
+    color: inherit;
+    /* Mantiene el color del texto si lo hereda */
+    display: block;
+    /* Asegura que ocupe todo el espacio para hacer clic */
+}
 
-    /* Navigation */
-    .nav-links { display:flex; gap:2rem; list-style:none; align-items:center; }
-    .nav-links a { text-decoration:none; color:var(--azul-oscuro); font-weight:600; }
-    .lang-selector { background:var(--azul-oscuro); color:#fff; border:none; padding:0.5rem 1rem; border-radius:5px; }
+.logo {
+    height: 60px;
+    max-width: 160px;
+}
 
-    /* Mobile menu toggle (hidden on desktop) */
-    .menu-toggle { display:none; background:transparent; border:none; cursor:pointer; padding:0.25rem; }
-    .menu-toggle span { display:block; width:26px; height:3px; background:var(--azul-oscuro); margin:4px 0; border-radius:2px; }
+/* Navigation */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    align-items: center;
+}
 
-    /* Overlay used when mobile menu is open */
-    .overlay {
-        position: fixed;
-        inset: 0;
-        background: rgba(0,0,0,0.35);
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.25s ease-in-out, visibility 0.25s;
-        z-index: 110;
-    }
-    .overlay.active { opacity: 1; visibility: visible; }
+.nav-links a {
+    text-decoration: none;
+    color: var(--azul-oscuro);
+    font-weight: 600;
+}
 
-        /* Contenido Principal */
-        main {
-            min-height: 70vh;
-            /* Se ha ajustado el main para permitir que las secciones se vean correctamente
+.lang-selector {
+    background: var(--azul-oscuro);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+/* Mobile menu toggle (hidden on desktop) */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background: var(--azul-oscuro);
+    margin: 4px 0;
+    border-radius: 2px;
+}
+
+/* Overlay used when mobile menu is open */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease-in-out, visibility 0.25s;
+    z-index: 110;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Contenido Principal */
+main {
+    min-height: 70vh;
+    /* Se ha ajustado el main para permitir que las secciones se vean correctamente
                cuando se descomenten, pero manteniendo el fondo azul oscuro para la alerta. */
-            padding: 0;
-        }
-        
-        .construction-container { 
-            text-align:center; 
-            background: linear-gradient(135deg, var(--azul-oscuro) 0%, #2563eb 100%);
-            padding:6rem 3rem; 
-            min-height: 70vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .construction-container .construction-icon { color:white; font-size:5rem; margin-bottom:1rem; }
-        .construction-container h1 { color:white; font-size:2.5rem; margin-bottom:1rem; }
-        .construction-container p { color:#ddd; font-size:1.2rem; }
+    padding: 0;
+}
+
+.construction-container {
+    text-align: center;
+    background: linear-gradient(135deg, var(--azul-oscuro) 0%, #2563eb 100%);
+    padding: 6rem 3rem;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.construction-container .construction-icon {
+    color: white;
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.construction-container h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.construction-container p {
+    color: #ddd;
+    font-size: 1.2rem;
+}
 
 
-        /* Footer: layout with left GMK block and right offices columns */
-        footer {
-            background: #fff;
-            color: var(--texto-dark);
-            padding: 1.8rem 5%;
-            border-top: 1px solid #e6e6e6;
-        }
+/* Footer: layout with left GMK block and right offices columns */
+footer {
+    background: #fff;
+    color: var(--texto-dark);
+    padding: 1.8rem 5%;
+    border-top: 1px solid #e6e6e6;
+}
 
-        .footer-content { max-width:1200px; margin:0 auto; }
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-    .footer-inner { display:flex; gap:1rem; align-items:flex-start; }
+.footer-inner {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
 
-    /* Left column: GMK representative box */
-    .footer-left { width:300px; }
-    .gmk-box { border:1px solid #ddd; padding:0.9rem; background:#fafafa; border-radius:6px; }
-    .gmk-box img { display:block; max-width:130px; margin-bottom:0.4rem; }
-    .gmk-box p { font-size:0.9rem; color:#111827; margin:0.2rem 0; }
-        .gmk-box a { color:var(--azul-oscuro); text-decoration:none; }
+/* Left column: GMK representative box */
+.footer-left {
+    width: 300px;
+}
 
-        /* Right column: offices */
-        .footer-right { flex:1; }
-        .footer-title { color:var(--azul-oscuro); font-size:1.25rem; font-weight:700; margin:0 0 1rem 0; }
+.gmk-box {
+    border: 1px solid #ddd;
+    padding: 0.9rem;
+    background: #fafafa;
+    border-radius: 6px;
+}
 
-        /* Two-column layout for offices: explicit two columns (3 then 4) */
-    .offices-grid { display:flex; gap:1rem; align-items:flex-start; }
-    .offices-col { flex:1; display:flex; flex-direction:column; gap:0.2rem; }
-    .offices-col .office { padding:0; }
-    .office { padding:0; }
-    .office h3 { font-size:0.95rem; margin:0 0 0.08rem; font-weight:700; }
-    .office h4 { font-size:0.9rem; margin:0 0 0.06rem; font-weight:600; color:var(--azul-oscuro); }
-    .office p { margin:0.04rem 0; font-size:0.88rem; color:#374151; line-height:1.08; }
+.gmk-box img {
+    display: block;
+    max-width: 130px;
+    margin-bottom: 0.4rem;
+}
 
-        /* Contacts area (rightmost) */
-        .contacts { margin-top:0.5rem; }
-        .contacts p { margin:0.15rem 0; }
-        .contacts a { color:var(--azul-oscuro); text-decoration:none; }
+.gmk-box p {
+    font-size: 0.9rem;
+    color: #111827;
+    margin: 0.2rem 0;
+}
 
-        /* Footer small separators */
-    .footer-sep { height:1px; background:#eee; margin:0.6rem 0; }
+.gmk-box a {
+    color: var(--azul-oscuro);
+    text-decoration: none;
+}
 
-    /* --- ESTILOS PARA LA NUEVA SECCIÓN: EMPRESA (image.png) --- */
-    /* --- NUEVOS ESTILOS PARA HERO DE EMPRESA --- */
+/* Right column: offices */
+.footer-right {
+    flex: 1;
+}
+
+.footer-title {
+    color: var(--azul-oscuro);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+}
+
+/* Two-column layout for offices: explicit two columns (3 then 4) */
+.offices-grid {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.offices-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.offices-col .office {
+    padding: 0;
+}
+
+.office {
+    padding: 0;
+}
+
+.office h3 {
+    font-size: 0.95rem;
+    margin: 0 0 0.08rem;
+    font-weight: 700;
+}
+
+.office h4 {
+    font-size: 0.9rem;
+    margin: 0 0 0.06rem;
+    font-weight: 600;
+    color: var(--azul-oscuro);
+}
+
+.office p {
+    margin: 0.04rem 0;
+    font-size: 0.88rem;
+    color: #374151;
+    line-height: 1.08;
+}
+
+/* Contacts area (rightmost) */
+.contacts {
+    margin-top: 0.5rem;
+}
+
+.contacts p {
+    margin: 0.15rem 0;
+}
+
+.contacts a {
+    color: var(--azul-oscuro);
+    text-decoration: none;
+}
+
+/* Footer small separators */
+.footer-sep {
+    height: 1px;
+    background: #eee;
+    margin: 0.6rem 0;
+}
+
+/* --- ESTILOS PARA LA NUEVA SECCIÓN: EMPRESA (image.png) --- */
+/* --- NUEVOS ESTILOS PARA HERO DE EMPRESA --- */
 .empresa-hero {
-    height: 450px; /* Altura deseada */
+    height: 450px;
+    /* Altura deseada */
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white; /* Texto blanco sobre la imagen oscura */
+    color: white;
+    /* Texto blanco sobre la imagen oscura */
     text-align: center;
     position: relative;
     padding: 0 5%;
@@ -140,10 +287,13 @@
 
 .hero-overlay {
     /* Glassmorphism Effect */
-    background: rgba(255, 255, 255, 0.15); /* Fondo blanco muy transparente */
-    backdrop-filter: blur(10px); /* El efecto clave de glassmorphism */
-    -webkit-backdrop-filter: blur(10px); /* Soporte para navegadores WebKit */
-    
+    background: rgba(255, 255, 255, 0.15);
+    /* Fondo blanco muy transparente */
+    backdrop-filter: blur(10px);
+    /* El efecto clave de glassmorphism */
+    -webkit-backdrop-filter: blur(10px);
+    /* Soporte para navegadores WebKit */
+
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 2rem 3rem;
@@ -155,7 +305,8 @@
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para legibilidad */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    /* Sombra para legibilidad */
 }
 
 .hero-text-content p {
@@ -166,7 +317,8 @@
 }
 
 #hero-paragraph {
-    font-weight: 600; /* Texto del ORC más destacado */
+    font-weight: 600;
+    /* Texto del ORC más destacado */
     margin-top: 1.5rem;
 }
 
@@ -177,281 +329,350 @@
     .empresa-hero {
         height: 350px;
     }
+
     .hero-overlay {
         padding: 1.5rem 2rem;
     }
+
     .hero-text-content h1 {
         font-size: 2rem;
     }
+
     .hero-text-content p {
         font-size: 1rem;
     }
 }
 
 
-    .section-content {
-        padding: 3rem 5%;
-        background: var(--gris-claro);
+.section-content {
+    padding: 3rem 5%;
+    background: var(--gris-claro);
+}
+
+.empresa-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    text-align: left;
+}
+
+.about-instrelec h2 {
+    color: var(--azul-oscuro);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.about-instrelec p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #374151;
+    margin-bottom: 1.5rem;
+}
+
+.btn-link {
+    color: var(--azul-oscuro);
+    font-weight: 600;
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 2px solid var(--azul-oscuro);
+    transition: opacity 0.2s;
+}
+
+.btn-link:hover {
+    opacity: 0.8;
+}
+
+.our-services {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.our-services h3 {
+    color: var(--texto-dark);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.our-services ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.our-services li {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #4b5563;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.our-services li::before {
+    content: '•';
+    color: var(--azul-oscuro);
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* --- ESTILOS PARA LA NUEVA SECCIÓN: TECNOLOGÍA ORC (orc2.png) --- */
+
+.orc-section {
+    background: var(--gris-claro);
+    padding: 4rem 5% 6rem;
+    text-align: center;
+}
+
+.orc-header {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+}
+
+.orange-bar {
+    width: 60px;
+    height: 6px;
+    background: var(--rojo);
+    /* #ea2d0c */
+    margin: 0 auto 1.5rem;
+}
+
+.orc-header h2 {
+    color: var(--azul-oscuro);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.orc-header p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #4b5563;
+}
+
+/* --- GRID DE TARJETAS ORC --- */
+.orc-grid {
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Grid de 3 columnas */
+    gap: 30px;
+}
+
+.orc-card {
+    background: white;
+    border-radius: 8px;
+    border: 1px solid rgba(30, 58, 138, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    padding-bottom: 2rem;
+}
+
+.card-image-wrapper {
+    width: 100%;
+    height: 180px;
+    /* Altura fija para la consistencia visual */
+    overflow: hidden;
+    padding: 15px;
+    background: white;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Asegura el mismo tamaño visible */
+    transition: transform 0.3s;
+}
+
+.orc-card:hover .card-image {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 1.5rem 1.2rem 0;
+}
+
+.card-content h3 {
+    color: var(--rojo);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+.card-content p {
+    font-size: 0.95rem;
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+.card-content p strong {
+    font-weight: 700;
+}
+
+/* --- Botón ORC --- */
+.orc-footer {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn-orc {
+    background: var(--rojo);
+    color: white;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background 0.3s;
+    display: inline-block;
+    margin-top: 1rem;
+    box-shadow: 0 4px 10px rgba(234, 45, 12, 0.3);
+}
+
+.btn-orc:hover {
+    background: #d92400;
+}
+
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .offices-grid {
+        gap: 1rem;
+    }
+
+    .footer-left {
+        width: 260px;
+    }
+
+    .orc-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+@media (max-width: 780px) {
+
+    /* Mobile navigation: hide links and show burger */
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        height: 100vh;
+        width: 80%;
+        max-width: 320px;
+        background: #fff;
+        flex-direction: column;
+        padding: 80px 20px;
+        gap: 1rem;
+        box-shadow: -8px 0 24px rgba(0, 0, 0, 0.08);
+        transition: right 0.32s cubic-bezier(.2, .9, .3, 1);
+        z-index: 120;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        color: var(--texto-dark);
+        font-size: 1.05rem;
+    }
+
+    /* Center the logo visually on small screens */
+    nav {
+        align-items: center;
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 125;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+    }
+
+    .footer-left {
+        width: 100%;
+    }
+
+    .offices-grid {
+        flex-direction: column;
+    }
+
+    .offices-col {
+        width: 100%;
+    }
+
+    /* Ensure first column stays above second when stacked */
+    .offices-col:first-child {
+        order: 0;
+    }
+
+    .offices-col:last-child {
+        order: 1;
+    }
+
+    /* Slightly reduce spacing on mobile for compactness */
+    .offices-col {
+        gap: 0.16rem;
+    }
+
+    .office p {
+        font-size: 0.86rem;
     }
 
     .empresa-container {
-        max-width: 1000px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 1.5fr 1fr;
-        gap: 3rem;
-        text-align: left;
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
+}
 
-    .about-instrelec h2 {
-        color: var(--azul-oscuro);
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
-    }
-
-    .about-instrelec p {
-        font-size: 1.05rem;
-        line-height: 1.6;
-        color: #374151;
-        margin-bottom: 1.5rem;
-    }
-
-    .btn-link {
-        color: var(--azul-oscuro);
-        font-weight: 600;
-        text-decoration: none;
-        padding-bottom: 2px;
-        border-bottom: 2px solid var(--azul-oscuro);
-        transition: opacity 0.2s;
-    }
-
-    .btn-link:hover {
-        opacity: 0.8;
-    }
-
-    .our-services {
-        background: white;
-        padding: 2rem;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    }
-
-    .our-services h3 {
-        color: var(--texto-dark);
-        font-size: 1.3rem;
-        margin-bottom: 1rem;
-    }
-
-    .our-services ul {
-        list-style-type: none;
-        padding-left: 0;
-    }
-
-    .our-services li {
-        font-size: 1.05rem;
-        line-height: 1.7;
-        color: #4b5563;
-        position: relative;
-        padding-left: 1.5rem;
-    }
-
-    .our-services li::before {
-        content: '•';
-        color: var(--azul-oscuro);
-        font-size: 1.2rem;
-        position: absolute;
-        left: 0;
-        top: 0;
-    }
-
-    /* --- ESTILOS PARA LA NUEVA SECCIÓN: TECNOLOGÍA ORC (orc2.png) --- */
-
-    .orc-section {
-        background: var(--gris-claro); 
-        padding: 4rem 5% 6rem;
-        text-align: center;
-    }
-
-    .orc-header {
-        max-width: 900px;
-        margin: 0 auto 3rem;
-    }
-
-    .orange-bar {
-        width: 60px;
-        height: 6px;
-        background: var(--rojo); /* #ea2d0c */
-        margin: 0 auto 1.5rem;
-    }
-
-    .orc-header h2 {
-        color: var(--azul-oscuro); 
-        font-size: 2.2rem;
-        font-weight: 700;
-        margin-bottom: 1.5rem;
-    }
-
-    .orc-header p {
-        font-size: 1.05rem;
-        line-height: 1.6;
-        color: #4b5563;
-    }
-
-    /* --- GRID DE TARJETAS ORC --- */
+@media (max-width: 650px) {
     .orc-grid {
-        max-width: 1200px;
-        margin: 0 auto 2rem;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); /* Grid de 3 columnas */
-        gap: 30px;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        height: 48px;
     }
 
-    .orc-card {
-        background: white;
-        border-radius: 8px;
-        border: 1px solid rgba(30, 58, 138, 0.1); 
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-        overflow: hidden; 
-        padding-bottom: 2rem; 
+    .construction-container {
+        padding: 1.5rem;
     }
 
-    .card-image-wrapper {
-        width: 100%;
-        height: 180px; /* Altura fija para la consistencia visual */
-        overflow: hidden;
-        padding: 15px; 
-        background: white;
+    .construction-container h1 {
+        font-size: 1.6rem;
     }
 
-    .card-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* Asegura el mismo tamaño visible */
-        transition: transform 0.3s;
-    }
-
-    .orc-card:hover .card-image {
-        transform: scale(1.05);
-    }
-
-    .card-content {
-        padding: 1.5rem 1.2rem 0;
-    }
-
-    .card-content h3 {
-        color: var(--rojo); 
-        font-size: 1.5rem;
-        font-weight: 700;
-        margin-bottom: 0.8rem;
-    }
-
-    .card-content p {
+    .construction-container p {
         font-size: 0.95rem;
-        color: #4b5563;
-        line-height: 1.5;
     }
 
-    .card-content p strong {
-        font-weight: 700;
+    .gmk-box img {
+        max-width: 120px;
     }
+}
 
-    /* --- Botón ORC --- */
-    .orc-footer {
-        text-align: center;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .btn-orc {
-        background: var(--rojo);
-        color: white;
-        text-decoration: none;
-        padding: 1rem 2rem;
-        border-radius: 5px;
-        font-weight: 600;
-        transition: background 0.3s;
-        display: inline-block;
-        margin-top: 1rem;
-        box-shadow: 0 4px 10px rgba(234, 45, 12, 0.3);
-    }
-
-    .btn-orc:hover {
-        background: #d92400;
-    }
-
-
-        /* Responsive */
-        @media (max-width: 1100px) {
-            .offices-grid { gap:1rem; }
-            .footer-left { width:260px; }
-            .orc-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 25px;
-            }
-        }
-
-        @media (max-width: 780px) {
-            /* Mobile navigation: hide links and show burger */
-            .menu-toggle { display:block; }
-            .nav-links { 
-                position: fixed;
-                right: -100%;
-                top: 0;
-                height: 100vh;
-                width: 80%;
-                max-width: 320px;
-                background: #fff;
-                flex-direction: column;
-                padding: 80px 20px;
-                gap: 1rem;
-                box-shadow: -8px 0 24px rgba(0,0,0,0.08);
-                transition: right 0.32s cubic-bezier(.2,.9,.3,1);
-                z-index: 120;
-            }
-            .nav-links.active { right: 0; }
-            .nav-links a { color:var(--texto-dark); font-size:1.05rem; }
-
-            /* Center the logo visually on small screens */
-            nav { align-items: center; }
-            .logo { position: absolute; left: 50%; transform: translateX(-50%); z-index:125; }
-
-            .footer-inner { flex-direction:column; }
-            .footer-left { width:100%; }
-            .offices-grid { flex-direction:column; }
-            .offices-col { width:100%; }
-            /* Ensure first column stays above second when stacked */
-            .offices-col:first-child { order: 0; }
-            .offices-col:last-child { order: 1; }
-            /* Slightly reduce spacing on mobile for compactness */
-            .offices-col { gap:0.16rem; }
-            .office p { font-size:0.86rem; }
-
-            .empresa-container {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-        }
-
-        @media (max-width: 650px) {
-            .orc-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .logo { height:48px; }
-            .construction-container { padding:1.5rem; }
-            .construction-container h1 { font-size:1.6rem; }
-            .construction-container p { font-size:0.95rem; }
-            .gmk-box img { max-width:120px; }
-        }
-
-        /* --- ESTILOS PARA LA NUEVA SECCIÓN: PROYECTOS DESTACADOS --- */
+/* --- ESTILOS PARA LA NUEVA SECCIÓN: PROYECTOS DESTACADOS --- */
 
 .projects-section {
     background: white;
-    padding: 4rem 5%; 
+    padding: 4rem 5%;
     text-align: center;
 }
 
@@ -466,14 +687,15 @@
     max-width: 1200px;
     margin: 0 auto 2rem;
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Grid de 4 columnas */
+    grid-template-columns: repeat(4, 1fr);
+    /* Grid de 4 columnas */
     gap: 30px;
 }
 
 .project-card {
     background: var(--gris-claro);
     border-radius: 8px;
-    overflow: hidden; 
+    overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s;
 }
@@ -495,7 +717,7 @@
 }
 
 .project-info h3 {
-    color: var(--rojo); 
+    color: var(--rojo);
     font-size: 1.15rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
@@ -529,8 +751,8 @@
 /* --- ESTILOS PARA LA NUEVA SECCIÓN: SERVICIOS INTEGRALES --- */
 
 .services-section {
-    background: #fdfdfd; 
-    padding: 4rem 5%; 
+    background: #fdfdfd;
+    padding: 4rem 5%;
     text-align: center;
     border-top: 1px solid #eee;
 }
@@ -546,7 +768,8 @@
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Grid de 4 columnas */
+    grid-template-columns: repeat(4, 1fr);
+    /* Grid de 4 columnas */
     gap: 20px;
 }
 
@@ -568,11 +791,11 @@
 .service-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: var(--rojo); 
+    color: var(--rojo);
 }
 
 .service-card h3 {
-    color: var(--azul-oscuro); 
+    color: var(--azul-oscuro);
     font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 0.75rem;
@@ -586,14 +809,18 @@
 
 /* Responsive adjustments */
 @media (max-width: 1100px) {
-    .projects-grid, .services-grid {
+
+    .projects-grid,
+    .services-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 25px;
     }
 }
 
 @media (max-width: 650px) {
-    .projects-grid, .services-grid {
+
+    .projects-grid,
+    .services-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
