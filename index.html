@@ -7,25 +7,35 @@
     <link rel="stylesheet" href="css/styles.css">
     </head>
 <body>
-    <header>
-        <nav>
-            <img src="/img/logo_instrelec.png" alt="Corp Instrelec Group" class="logo" id="logo">
-            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-links">
-                <li><a href="#inicio" id="nav-inicio">Inicio</a></li>
-                <li><a href="#about" id="nav-about">Nosotros</a></li>
-                <li><a href="#contacto" id="nav-contacto">Contacto</a></li>
-                <li><button class="lang-selector" onclick="toggleLanguage()" id="lang-btn">EN</button></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <nav>
+        <div class="logo-container">
+            <img src="/img/logo_instrelec.png" alt="Instrelec Logo" class="logo" id="logo">
+            <span class="logo-text">Instrelec Group</span>
+        </div>
+        
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <ul class="nav-links">
+            <li><a href="#empresa" id="nav-empresa">Empresa</a></li>
+            <li><a href="#tecnologia-orc" id="nav-orc">Tecnología ORC</a></li>
+            <li><a href="#proyectos" id="nav-proyectos">Proyectos</a></li>
+            <li><a href="#servicios" id="nav-servicios">Servicios</a></li>
+            <li><a href="#contacto" id="nav-contacto">Contacto</a></li>
+        </ul>
 
-    <!-- Overlay for mobile menu -->
-    <div id="overlay" class="overlay" aria-hidden="true"></div>
+        <div class="lang-selector-group">
+            <button class="lang-selector" data-lang="es" id="lang-btn-es" onclick="setLanguage('es')">ES</button>
+            <button class="lang-selector active" data-lang="en" id="lang-btn-en" onclick="setLanguage('en')">EN</button>
+        </div>
+    </nav>
+</header>
+
+<div id="overlay" class="overlay" aria-hidden="true"></div>
 
     <main>
         <div class="construction-container">

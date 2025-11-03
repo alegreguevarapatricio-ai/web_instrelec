@@ -1,11 +1,14 @@
-
-        let currentLang = 'es';
+let currentLang = 'es';
 
         const translations = {
             es: {
-                navInicio: 'Inicio',
-                navAbout: 'Nosotros',
+                // Nuevos enlaces de navegación
+                navEmpresa: 'Empresa',
+                navORC: 'Tecnología ORC',
+                navProyectos: 'Proyectos',
+                navServicios: 'Servicios',
                 navContacto: 'Contacto',
+                // Contenido principal de "Construcción" (se mantiene)
                 mainTitle: 'Sitio en Construcción',
                 mainText: 'Estamos trabajando para ofrecerte la mejor experiencia. Pronto estaremos contigo.',
                 footerTitle: 'OFICINAS',
@@ -13,9 +16,13 @@
                 rights: 'Todos los derechos reservados.'
             },
             en: {
-                navInicio: 'Home',
-                navAbout: 'About',
+                // Nuevos enlaces de navegación
+                navEmpresa: 'Company',
+                navORC: 'ORC Technology',
+                navProyectos: 'Projects',
+                navServicios: 'Services',
                 navContacto: 'Contact',
+                // Contenido principal de "Construcción" (se mantiene)
                 mainTitle: 'Under Construction',
                 mainText: 'We are working to offer you the best experience. We will be with you soon.',
                 footerTitle: 'OFFICES',
@@ -30,28 +37,52 @@
             if (!t) return;
 
             const get = id => document.getElementById(id);
-            if (get('nav-inicio')) get('nav-inicio').textContent = t.navInicio;
-            if (get('nav-about')) get('nav-about').textContent = t.navAbout;
+            // Nuevos enlaces
+            if (get('nav-empresa')) get('nav-empresa').textContent = t.navEmpresa;
+            if (get('nav-orc')) get('nav-orc').textContent = t.navORC;
+            if (get('nav-proyectos')) get('nav-proyectos').textContent = t.navProyectos;
+            if (get('nav-servicios')) get('nav-servicios').textContent = t.navServicios;
             if (get('nav-contacto')) get('nav-contacto').textContent = t.navContacto;
+            
+            // Texto de Construcción
             if (get('main-title')) get('main-title').textContent = t.mainTitle;
             if (get('main-text')) get('main-text').textContent = t.mainText;
+            
+            // Footer
             if (get('footer-title')) get('footer-title').textContent = t.footerTitle;
-            if (get('sales-director')) get('sales-director').textContent = t.salesDirector;
-            if (get('rights')) get('rights').textContent = t.rights;
+            // Solo actualiza el texto, no el nombre del director
+            if (get('sales-director')) {
+                get('sales-director').textContent = t.salesDirector;
+                // Asume que el HTML mantiene el nombre del director después del strong
+                // <p><strong id="sales-director">Director de ventas:</strong> Nico Timm</p>
+            } 
+            if (get('rights')) get('rights').textContent = `© 2025 Corp Instrelec Group. ${t.rights}`; 
 
-            const langBtn = get('lang-btn');
-            if (langBtn) langBtn.textContent = currentLang === 'es' ? 'EN' : 'ES';
+            // Gestión de la clase 'active' para los nuevos botones de idioma
+            const btnES = get('lang-btn-es');
+            const btnEN = get('lang-btn-en');
+            
+            if (btnES) btnES.classList.toggle('active', currentLang === 'es');
+            if (btnEN) btnEN.classList.toggle('active', currentLang === 'en');
 
             document.documentElement.lang = currentLang;
         }
 
-        // Alterna el idioma y aplica traducciones
-        function toggleLanguage() {
-            currentLang = currentLang === 'es' ? 'en' : 'es';
-            applyTranslations();
+        // Función para establecer el idioma y persistir
+        function setLanguage(lang) {
+            if (translations[lang] && lang !== currentLang) {
+                currentLang = lang;
+                applyTranslations();
+                try {
+                    localStorage.setItem('instrelecLang', currentLang);
+                } catch (e) {
+                    // ignore storage errors
+                }
+            }
         }
-
-        // Detectar idioma del navegador al cargar y aplicar traducción
+        // Exponer la nueva función globalmente
+        window.setLanguage = setLanguage;
+        
         // Control del menú móvil
         function setupMobileMenu() {
             const menuToggle = document.getElementById('menuToggle');
@@ -72,7 +103,6 @@
                     });
                 });
 
-                // Cerrar menú al hacer clic fuera
                 // Close when clicking the overlay
                 if (overlay) {
                     overlay.addEventListener('click', () => {
@@ -85,6 +115,10 @@
                 document.addEventListener('click', (e) => {
                     if (overlay && overlay.contains(e.target)) return;
                     if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+                        // Check if the click is not on the language selector buttons either
+                        const langGroup = document.querySelector('.lang-selector-group');
+                        if (langGroup && langGroup.contains(e.target)) return;
+
                         navLinks.classList.remove('active');
                         if (overlay) overlay.classList.remove('active');
                     }
@@ -110,16 +144,3 @@
             applyTranslations();
             setupMobileMenu();
         });
-
-        // Persist language when toggling
-        const originalToggle = toggleLanguage;
-        function toggleLanguageAndPersist() {
-            originalToggle();
-            try {
-                localStorage.setItem('instrelecLang', currentLang);
-            } catch (e) {
-                // ignore storage errors
-            }
-        }
-        // Replace global toggle with persisting version
-        window.toggleLanguage = toggleLanguageAndPersist;
