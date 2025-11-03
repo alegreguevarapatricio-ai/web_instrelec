@@ -1,4 +1,4 @@
-        * {
+* {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -63,17 +63,25 @@
         /* Contenido Principal */
         main {
             min-height: 70vh;
+            /* Se ha ajustado el main para permitir que las secciones se vean correctamente
+               cuando se descomenten, pero manteniendo el fondo azul oscuro para la alerta. */
+            padding: 0;
+        }
+        
+        .construction-container { 
+            text-align:center; 
+            background: linear-gradient(135deg, var(--azul-oscuro) 0%, #2563eb 100%);
+            padding:6rem 3rem; 
+            min-height: 70vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(135deg, var(--azul-oscuro) 0%, #2563eb 100%);
-            padding: 3rem 5%;
         }
+        .construction-container .construction-icon { color:white; font-size:5rem; margin-bottom:1rem; }
+        .construction-container h1 { color:white; font-size:2.5rem; margin-bottom:1rem; }
+        .construction-container p { color:#ddd; font-size:1.2rem; }
 
-        .construction-container { text-align:center; background: white; padding:3rem; border-radius:15px; box-shadow:0 10px 30px rgba(0,0,0,0.12); max-width:600px; }
-        .construction-icon { font-size:5rem; margin-bottom:1rem; }
-        .construction-container h1 { color:var(--azul-oscuro); font-size:2.5rem; margin-bottom:1rem; }
-        .construction-container p { color:#666; font-size:1.2rem; }
 
         /* Footer: layout with left GMK block and right offices columns */
         footer {
@@ -115,11 +123,207 @@
         /* Footer small separators */
     .footer-sep { height:1px; background:#eee; margin:0.6rem 0; }
 
+    /* --- ESTILOS PARA LA NUEVA SECCIÓN: EMPRESA (image.png) --- */
+
+    .section-content {
+        padding: 3rem 5%;
+        background: var(--gris-claro);
+    }
+
+    .empresa-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        gap: 3rem;
+        text-align: left;
+    }
+
+    .about-instrelec h2 {
+        color: var(--azul-oscuro);
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .about-instrelec p {
+        font-size: 1.05rem;
+        line-height: 1.6;
+        color: #374151;
+        margin-bottom: 1.5rem;
+    }
+
+    .btn-link {
+        color: var(--azul-oscuro);
+        font-weight: 600;
+        text-decoration: none;
+        padding-bottom: 2px;
+        border-bottom: 2px solid var(--azul-oscuro);
+        transition: opacity 0.2s;
+    }
+
+    .btn-link:hover {
+        opacity: 0.8;
+    }
+
+    .our-services {
+        background: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .our-services h3 {
+        color: var(--texto-dark);
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .our-services ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .our-services li {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: #4b5563;
+        position: relative;
+        padding-left: 1.5rem;
+    }
+
+    .our-services li::before {
+        content: '•';
+        color: var(--azul-oscuro);
+        font-size: 1.2rem;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    /* --- ESTILOS PARA LA NUEVA SECCIÓN: TECNOLOGÍA ORC (orc2.png) --- */
+
+    .orc-section {
+        background: var(--gris-claro); 
+        padding: 4rem 5% 6rem;
+        text-align: center;
+    }
+
+    .orc-header {
+        max-width: 900px;
+        margin: 0 auto 3rem;
+    }
+
+    .orange-bar {
+        width: 60px;
+        height: 6px;
+        background: var(--rojo); /* #ea2d0c */
+        margin: 0 auto 1.5rem;
+    }
+
+    .orc-header h2 {
+        color: var(--azul-oscuro); 
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+    }
+
+    .orc-header p {
+        font-size: 1.05rem;
+        line-height: 1.6;
+        color: #4b5563;
+    }
+
+    /* --- GRID DE TARJETAS ORC --- */
+    .orc-grid {
+        max-width: 1200px;
+        margin: 0 auto 2rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Grid de 3 columnas */
+        gap: 30px;
+    }
+
+    .orc-card {
+        background: white;
+        border-radius: 8px;
+        border: 1px solid rgba(30, 58, 138, 0.1); 
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        overflow: hidden; 
+        padding-bottom: 2rem; 
+    }
+
+    .card-image-wrapper {
+        width: 100%;
+        height: 180px; /* Altura fija para la consistencia visual */
+        overflow: hidden;
+        padding: 15px; 
+        background: white;
+    }
+
+    .card-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Asegura el mismo tamaño visible */
+        transition: transform 0.3s;
+    }
+
+    .orc-card:hover .card-image {
+        transform: scale(1.05);
+    }
+
+    .card-content {
+        padding: 1.5rem 1.2rem 0;
+    }
+
+    .card-content h3 {
+        color: var(--rojo); 
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 0.8rem;
+    }
+
+    .card-content p {
+        font-size: 0.95rem;
+        color: #4b5563;
+        line-height: 1.5;
+    }
+
+    .card-content p strong {
+        font-weight: 700;
+    }
+
+    /* --- Botón ORC --- */
+    .orc-footer {
+        text-align: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .btn-orc {
+        background: var(--rojo);
+        color: white;
+        text-decoration: none;
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        font-weight: 600;
+        transition: background 0.3s;
+        display: inline-block;
+        margin-top: 1rem;
+        box-shadow: 0 4px 10px rgba(234, 45, 12, 0.3);
+    }
+
+    .btn-orc:hover {
+        background: #d92400;
+    }
+
+
         /* Responsive */
-        /* Desktop -> tablet -> mobile breakpoints */
         @media (max-width: 1100px) {
             .offices-grid { gap:1rem; }
             .footer-left { width:260px; }
+            .orc-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
         }
 
         @media (max-width: 780px) {
@@ -157,6 +361,18 @@
             /* Slightly reduce spacing on mobile for compactness */
             .offices-col { gap:0.16rem; }
             .office p { font-size:0.86rem; }
+
+            .empresa-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .orc-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
         }
 
         @media (max-width: 480px) {
