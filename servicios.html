@@ -1,86 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corp Instrelec Group</title>
     <link rel="stylesheet" href="css/styles.css">
-    </head>
+</head>
+
 <body>
-<header>
-    <nav>
-        <a href="index.html" class="logo-link"> 
-            <div class="logo-container">
-                <img src="/img/logo_instrelec.png" alt="Instrelec Logo" class="logo" id="logo">
-                <span class="logo-text">Instrelec Group</span>
-            </div>
-        </a>
-        
-        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        
-        <ul class="nav-links">
-            <li><a href="Empresa.html" id="nav-empresa">Empresa</a></li>
-            <li><a href="tecnologia-orc.html" id="nav-orc">Tecnología ORC</a></li>
-            <li><a href="servicios.html" id="nav-servicios">Servicios</a></li>
-            <li><a href="proyectos.html" id="nav-proyectos">Proyectos</a></li>
-            <li><a href="contacto.html" id="nav-contacto">Contacto</a></li>
-            
-            <!-- Selectores de idioma dentro del menú móvil -->
-            <div class="lang-selector-group">
-                <button class="lang-selector" data-lang="es" id="lang-btn-es" onclick="setLanguage('es')">ES</button>
-                <button class="lang-selector active" data-lang="en" id="lang-btn-en" onclick="setLanguage('en')">EN</button>
-            </div>
-        </ul>
+    <header>
+        <nav>
+            <a href="index.html" class="logo-link">
+                <div class="logo-container">
+                    <img src="/img/logo_instrelec.png" alt="Instrelec Logo" class="logo" id="logo">
+                </div>
+            </a>
 
-        <!-- Selectores de idioma para desktop (fuera del menú) -->
-        <div class="lang-selector-group lang-selector-desktop">
-            <button class="lang-selector" data-lang="es" id="lang-btn-es-desktop" onclick="setLanguage('es')">ES</button>
-            <button class="lang-selector active" data-lang="en" id="lang-btn-en-desktop" onclick="setLanguage('en')">EN</button>
-        </div>
-    </nav>
-</header>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-<div id="overlay" class="overlay" aria-hidden="true"></div>
+            <ul class="nav-links">
+                <li><a href="inicio.html" id="nav-inicio">Inicio</a></li>
+                <li><a href="tecnologia-orc.html" id="nav-orc">Tecnología ORC</a></li>
+                <li><a href="servicios.html" id="nav-servicios">Servicios</a></li>
+                <li><a href="proyectos.html" id="nav-proyectos">Proyectos</a></li>
+                <!-- <li><a href="contacto.html" id="nav-contacto">Contacto</a></li> -->
+
+                <!-- Selectores de idioma dentro del menú móvil -->
+                <div class="lang-selector-group">
+                    <button class="lang-selector" data-lang="es" id="lang-btn-es"
+                        onclick="setLanguage('es')">ES</button>
+                    <button class="lang-selector active" data-lang="en" id="lang-btn-en"
+                        onclick="setLanguage('en')">EN</button>
+                </div>
+            </ul>
+
+            <!-- Selectores de idioma para desktop (fuera del menú) -->
+            <div class="lang-selector-group lang-selector-desktop">
+                <button class="lang-selector" data-lang="es" id="lang-btn-es-desktop"
+                    onclick="setLanguage('es')">ES</button>
+                <button class="lang-selector active" data-lang="en" id="lang-btn-en-desktop"
+                    onclick="setLanguage('en')">EN</button>
+            </div>
+        </nav>
+    </header>
+
+
 
     <main>
-<section id="servicios" class="section-content services-section">
-    <div class="container">
-        <h2 id="servicios-integrales-title">Servicios Integrales</h2>
-        <div class="services-grid">
-            
-            <div class="service-card">
-                <div class="service-icon">🛠️</div>
-                <h3 id="service-card1-title">Construcción y Revamping</h3>
-                <p id="service-card1-desc">Servicios de Construcción, Montaje, puesta en marcha (Commissioning) y modernización (Revamping) de plantas y procesos industriales.</p>
+        <section id="servicios" class="section-content services-section">
+            <div class="container">
+                <h2 id="servicios-integrales-title">Servicios Integrales</h2>
+                <div class="services-grid">
+
+                    <div class="service-card">
+                        <div class="service-icon">🛠️</div>
+                        <h3 id="service-card1-title">Construcción y Revamping</h3>
+                        <p id="service-card1-desc">Servicios de Construcción, Montaje, puesta en marcha (Commissioning)
+                            y modernización (Revamping) de plantas y procesos industriales.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">⚙️</div>
+                        <h3 id="service-card2-title">Ingeniería y Diseño</h3>
+                        <p id="service-card2-desc">Diseño de ingeniería conceptual, de detalle, y estudios de viabilidad
+                            para sistemas de energía, automatización, y proyectos ORC.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">📈</div>
+                        <h3 id="service-card3-title">Procura y Gestión (EPC)</h3>
+                        <p id="service-card3-desc">Gestión completa de Procura, Contratación y Suministro (EPC/IPCC)
+                            para garantizar la calidad y eficiencia de su proyecto.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">👨‍🔧</div>
+                        <h3 id="service-card4-title">Mantenimiento y Contratos</h3>
+                        <p id="service-card4-desc">Servicios de mantenimiento preventivo y correctivo, y contratos a
+                            largo plazo (LTSA) para la máxima disponibilidad de sus equipos.</p>
+                    </div>
+
+                </div>
             </div>
+        </section>
 
-            <div class="service-card">
-                <div class="service-icon">⚙️</div>
-                <h3 id="service-card2-title">Ingeniería y Diseño</h3>
-                <p id="service-card2-desc">Diseño de ingeniería conceptual, de detalle, y estudios de viabilidad para sistemas de energía, automatización, y proyectos ORC.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">📈</div>
-                <h3 id="service-card3-title">Procura y Gestión (EPC)</h3>
-                <p id="service-card3-desc">Gestión completa de Procura, Contratación y Suministro (EPC/IPCC) para garantizar la calidad y eficiencia de su proyecto.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">👨‍🔧</div>
-                <h3 id="service-card4-title">Mantenimiento y Contratos</h3>
-                <p id="service-card4-desc">Servicios de mantenimiento preventivo y correctivo, y contratos a largo plazo (LTSA) para la máxima disponibilidad de sus equipos.</p>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-        </main>
+    </main>
 
     <footer>
         <div class="footer-content">
@@ -184,4 +193,5 @@
 
     <script src="js/script.js"></script>
 </body>
+
 </html>

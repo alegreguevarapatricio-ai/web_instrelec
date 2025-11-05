@@ -1,95 +1,107 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corp Instrelec Group</title>
     <link rel="stylesheet" href="css/styles.css">
-    </head>
+</head>
+
 <body>
-<header>
-    <nav>
-        <a href="index.html" class="logo-link"> 
-            <div class="logo-container">
-                <img src="/img/logo_instrelec.png" alt="Instrelec Logo" class="logo" id="logo">
-                <span class="logo-text">Instrelec Group</span>
-            </div>
-        </a>
-        
-        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        
-        <ul class="nav-links">
-            <li><a href="Empresa.html" id="nav-empresa">Empresa</a></li>
-            <li><a href="tecnologia-orc.html" id="nav-orc">Tecnología ORC</a></li>
-            <li><a href="servicios.html" id="nav-servicios">Servicios</a></li>
-            <li><a href="proyectos.html" id="nav-proyectos">Proyectos</a></li>
-            <li><a href="contacto.html" id="nav-contacto">Contacto</a></li>
-            
-            <!-- Selectores de idioma dentro del menú móvil -->
-            <div class="lang-selector-group">
-                <button class="lang-selector" data-lang="es" id="lang-btn-es" onclick="setLanguage('es')">ES</button>
-                <button class="lang-selector active" data-lang="en" id="lang-btn-en" onclick="setLanguage('en')">EN</button>
-            </div>
-        </ul>
+    <header>
+        <nav>
+            <a href="index.html" class="logo-link">
+                <div class="logo-container">
+                    <img src="/img/logo_instrelec.png" alt="Instrelec Logo" class="logo" id="logo">
+                </div>
+            </a>
 
-        <!-- Selectores de idioma para desktop (fuera del menú) -->
-        <div class="lang-selector-group lang-selector-desktop">
-            <button class="lang-selector" data-lang="es" id="lang-btn-es-desktop" onclick="setLanguage('es')">ES</button>
-            <button class="lang-selector active" data-lang="en" id="lang-btn-en-desktop" onclick="setLanguage('en')">EN</button>
-        </div>
-    </nav>
-</header>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-<div id="overlay" class="overlay" aria-hidden="true"></div>
+            <ul class="nav-links">
+                <li><a href="inicio.html" id="nav-inicio">Inicio</a></li>
+                <li><a href="tecnologia-orc.html" id="nav-orc">Tecnología ORC</a></li>
+                <li><a href="servicios.html" id="nav-servicios">Servicios</a></li>
+                <li><a href="proyectos.html" id="nav-proyectos">Proyectos</a></li>
+                <!-- <li><a href="contacto.html" id="nav-contacto">Contacto</a></li> -->
+
+                <!-- Selectores de idioma dentro del menú móvil -->
+                <div class="lang-selector-group">
+                    <button class="lang-selector" data-lang="es" id="lang-btn-es"
+                        onclick="setLanguage('es')">ES</button>
+                    <button class="lang-selector active" data-lang="en" id="lang-btn-en"
+                        onclick="setLanguage('en')">EN</button>
+                </div>
+            </ul>
+
+            <!-- Selectores de idioma para desktop (fuera del menú) -->
+            <div class="lang-selector-group lang-selector-desktop">
+                <button class="lang-selector" data-lang="es" id="lang-btn-es-desktop"
+                    onclick="setLanguage('es')">ES</button>
+                <button class="lang-selector active" data-lang="en" id="lang-btn-en-desktop"
+                    onclick="setLanguage('en')">EN</button>
+            </div>
+        </nav>
+    </header>
+
 
     <main>
-<section id="tecnologia-orc" class="section-content orc-section">
-        <div class="container orc-header">
-            <div class="orange-bar"></div>
-            <h2 id="orc-title">Tecnología ORC: Convierta el Calor en Energía</h2>
-            <p id="orc-intro">Instrelec Group, como representante de INTEC GMK en España, ofrece soluciones avanzadas basadas en el **Ciclo Orgánico de Rankine (ORC)**, ideal para transformar fuentes de calor de bajas temperaturas y potencia térmica reducida en electricidad limpia.</p>
-        </div>
+        <section id="tecnologia-orc" class="section-content orc-section">
+            <div class="container orc-header">
+                <div class="orange-bar"></div>
+                <h2 id="orc-title">Tecnología ORC: Convierta el Calor en Energía</h2>
+                <p id="orc-intro">Instrelec Group, como representante de INTEC GMK en España, ofrece soluciones
+                    avanzadas basadas en el **Ciclo Orgánico de Rankine (ORC)**, ideal para transformar fuentes de calor
+                    de bajas temperaturas y potencia térmica reducida en electricidad limpia.</p>
+            </div>
 
-        <div class="container orc-grid">
-            <div class="orc-card">
-                <div class="card-image-wrapper">
-                    <img src="/img/ORC vapor.jpg" alt="Vapor emergiendo del suelo" class="card-image" id="img-geocal">
+            <div class="container orc-grid">
+                <div class="orc-card">
+                    <div class="card-image-wrapper">
+                        <img src="/img/ORC vapor.jpg" alt="Vapor emergiendo del suelo" class="card-image"
+                            id="img-geocal">
+                    </div>
+                    <div class="card-content">
+                        <h3 id="orc-geocal-title">GEOCAL</h3>
+                        <p id="orc-geocal-text">Potencia ORC a partir del **calor geotérmico**. Sistemas totalmente
+                            automatizados con máxima eficiencia en carga parcial.</p>
+                    </div>
                 </div>
-                <div class="card-content">
-                    <h3 id="orc-geocal-title">GEOCAL</h3>
-                    <p id="orc-geocal-text">Potencia ORC a partir del **calor geotérmico**. Sistemas totalmente automatizados con máxima eficiencia en carga parcial.</p>
+
+                <div class="orc-card">
+                    <div class="card-image-wrapper">
+                        <img src="/img/orc1.png" alt="Motor industrial caliente con brillos anaranjados"
+                            class="card-image" id="img-inducal">
+                    </div>
+                    <div class="card-content">
+                        <h3 id="orc-inducal-title">INDUCAL</h3>
+                        <p id="orc-inducal-text">Recuperación de **energía a partir del calor residual** industrial
+                            (Waste Heat). Soluciones para gases calientes o agua a baja presión.</p>
+                    </div>
+                </div>
+
+                <div class="orc-card">
+                    <div class="card-image-wrapper">
+                        <img src="/img/orc.jpg" alt="Bosque, madera apilada y pellets de biomasa" class="card-image"
+                            id="img-ecocal">
+                    </div>
+                    <div class="card-content">
+                        <h3 id="orc-ecocal-title">ECOCAL</h3>
+                        <p id="orc-ecocal-text">Generación de energía y calor (CHP) a partir de la **biomasa** a pequeña
+                            escala. Alta eficiencia y fácil manejo sin agua de reposición.</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="orc-card">
-                <div class="card-image-wrapper">
-                    <img src="/img/orc1.png" alt="Motor industrial caliente con brillos anaranjados" class="card-image" id="img-inducal">
-                </div>
-                <div class="card-content">
-                    <h3 id="orc-inducal-title">INDUCAL</h3>
-                    <p id="orc-inducal-text">Recuperación de **energía a partir del calor residual** industrial (Waste Heat). Soluciones para gases calientes o agua a baja presión.</p>
-                </div>
+            <div class="container orc-footer">
+                <a href="#proyectos" class="btn-orc" id="orc-btn">Ver Aplicaioes ORC →</a>
             </div>
-
-            <div class="orc-card">
-                <div class="card-image-wrapper">
-                    <img src="/img/orc.jpg" alt="Bosque, madera apilada y pellets de biomasa" class="card-image" id="img-ecocal">
-                </div>
-                <div class="card-content">
-                    <h3 id="orc-ecocal-title">ECOCAL</h3>
-                    <p id="orc-ecocal-text">Generación de energía y calor (CHP) a partir de la **biomasa** a pequeña escala. Alta eficiencia y fácil manejo sin agua de reposición.</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="container orc-footer">
-            <a href="#proyectos" class="btn-orc" id="orc-btn">Ver Casos Prácticos ORC →</a>
-        </div>
-    </section>
+        </section>
     </main>
     <footer>
         <div class="footer-content">
@@ -193,4 +205,5 @@
 
     <script src="js/script.js"></script>
 </body>
+
 </html>

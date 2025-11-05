@@ -3,21 +3,21 @@ let currentLang = 'es';
 const translations = {
     es: {
         // Navegación
-        navEmpresa: 'Empresa',
+        navinicio: 'inicio',
         navORC: 'Tecnología ORC',
         navProyectos: 'Proyectos',
         navServicios: 'Servicios',
         navContacto: 'Contacto',
         
-        // Hero Empresa
+        // Hero inicio
         heroTitle: 'Profesionales generando futuro',
         heroSubtitle: 'Soluciones en Ingeniería, Energía y Recuperación de Calor.',
         heroParagraph: 'Expertos en ORC (Ciclo Orgánico de Rankine) — Proyectos EPC, Revamping y Servicios integrales a nivel internacional.',
         
-        // Contenido Empresa
-        empresaTitle: 'Sobre Instrelec',
-        empresaText: 'Desde 2005, Instrelec ofrece soluciones de ingeniería en automatización, control y energía a nivel internacional. Especialistas en proyectos ORC, energías renovables y servicios EPC/IPCC.',
-        empresaBtn: 'Conozca nuestra tecnología ORC',
+        // Contenido inicio
+        inicioTitle: 'Sobre Instrelec',
+        inicioText: 'Desde 2005, Instrelec ofrece soluciones de ingeniería en automatización, control y energía a nivel internacional. Especialistas en proyectos ORC, energías renovables y servicios EPC/IPCC.',
+        inicioBtn: 'Conozca nuestra tecnología ORC',
         serviciosTitle: 'Nuestros servicios',
         servicio1: 'Ingeniería Conceptual y de Detalle',
         servicio2: 'Procura y Gestión',
@@ -72,7 +72,7 @@ const translations = {
     },
     en: {
         // Navigation
-        navEmpresa: 'Company',
+        navinicio: 'Company',
         navORC: 'ORC Technology',
         navProyectos: 'Projects',
         navServicios: 'Services',
@@ -84,9 +84,9 @@ const translations = {
         heroParagraph: 'Experts in ORC (Organic Rankine Cycle) — EPC Projects, Revamping, and integral services internationally.',
         
         // Company Content
-        empresaTitle: 'About Instrelec',
-        empresaText: 'Since 2005, Instrelec offers engineering solutions in automation, control and energy internationally. Specialists in ORC projects, renewable energy and EPC/IPCC services.',
-        empresaBtn: 'Learn about our ORC technology',
+        inicioTitle: 'About Instrelec',
+        inicioText: 'Since 2005, Instrelec offers engineering solutions in automation, control and energy internationally. Specialists in ORC projects, renewable energy and EPC/IPCC services.',
+        inicioBtn: 'Learn about our ORC technology',
         serviciosTitle: 'Our services',
         servicio1: 'Conceptual and Detailed Engineering',
         servicio2: 'Procurement and Management',

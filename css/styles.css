@@ -219,8 +219,8 @@ main {
     background: linear-gradient(90deg, var(--azul-oscuro) 0%, var(--rojo) 100%);
 }
 
-/* Empresa Hero */
-.empresa-hero {
+/* inicio Hero */
+.inicio-hero {
     height: 450px;
     background-size: cover;
     background-position: center;
@@ -269,7 +269,7 @@ main {
     background: var(--gris-claro);
 }
 
-.empresa-container {
+.inicio-container {
     max-width: 1000px;
     margin: 0 auto;
     display: grid;
@@ -441,7 +441,7 @@ main {
 }
 
 .btn-orc {
-    background: var(--rojo);
+    background: var(--azul-oscuro);
     color: white;
     text-decoration: none;
     padding: 1rem 2rem;
@@ -454,7 +454,7 @@ main {
 }
 
 .btn-orc:hover {
-    background: #d92400;
+    background: var(--azul-oscuro);
 }
 
 /* Projects Section */
@@ -815,7 +815,7 @@ footer {
     }
 
     /* Hero adjustments */
-    .empresa-hero {
+    .inicio-hero {
         height: 350px;
     }
 
@@ -832,7 +832,7 @@ footer {
     }
 
     /* Section adjustments */
-    .empresa-container {
+    .inicio-container {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
@@ -923,7 +923,7 @@ footer {
         font-size: 3.5rem !important;
     }
 
-    .empresa-hero {
+    .inicio-hero {
         height: 300px;
     }
 
