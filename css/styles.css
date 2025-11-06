@@ -454,7 +454,7 @@ main {
 }
 
 .btn-orc:hover {
-    background: var(--azul-oscuro);
+    background: #102a78;
 }
 
 /* Projects Section */
@@ -962,7 +962,8 @@ footer {
         font-size: 0.85rem;
     }
 }
-/* SOLUCIÓN DEFINITIVA - AGREGA AL FINAL DE TU CSS */
+
+/* SOLUCIÓN DEFINITIVA - z-index móvil */
 @media (max-width: 780px) {
     .overlay {
         z-index: 120 !important;
@@ -981,5 +982,470 @@ footer {
     
     .menu-toggle {
         z-index: 135 !important;
+    }
+}
+
+/* ============================================ */
+/* MODAL ORC - ESTILOS */
+/* ============================================ */
+
+/* Overlay del modal */
+.orc-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), 
+                visibility 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.orc-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Prevenir scroll cuando modal está abierto */
+body.modal-open {
+    overflow: hidden;
+}
+
+/* Contenedor del modal */
+.orc-modal-container {
+    background: white;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 900px;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    transform: scale(0.9) translateY(-20px);
+    opacity: 0;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.orc-modal-overlay.active .orc-modal-container {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+/* Botón cerrar */
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: transparent;
+    border: none;
+    font-size: 2.5rem;
+    color: #6b7280;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    z-index: 10;
+}
+
+.modal-close:hover {
+    background: #f3f4f6;
+    color: var(--rojo);
+    transform: rotate(90deg);
+}
+
+/* Header del modal */
+.modal-header {
+    padding: 2rem 2.5rem 1.5rem;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.modal-header h2 {
+    color: var(--azul-oscuro);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Tabs (pestañas) */
+.modal-tabs {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem 2.5rem 0;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.modal-tab-btn {
+    background: transparent;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #6b7280;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: color 0.3s, border-color 0.3s, background 0.3s;
+    border-radius: 6px 6px 0 0;
+    position: relative;
+}
+
+.modal-tab-btn:hover {
+    color: var(--azul-oscuro);
+    background: #f9fafb;
+}
+
+.modal-tab-btn.active {
+    color: var(--rojo);
+    border-bottom-color: var(--rojo);
+    background: #fef2f2;
+}
+
+/* Contenido del modal */
+.modal-content {
+    padding: 2rem 2.5rem;
+}
+
+.modal-tab-content {
+    display: none;
+    animation: fadeInSlide 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-tab-content.active {
+    display: block;
+}
+
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Estilos del contenido */
+.modal-content h3 {
+    color: var(--azul-oscuro);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+}
+
+.modal-content h4 {
+    color: var(--rojo);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 1.5rem 0 0.75rem 0;
+}
+
+.modal-content p {
+    color: #374151;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0.5rem 0;
+}
+
+.modal-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0.75rem 0;
+}
+
+.modal-content li {
+    color: #4b5563;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding-left: 1.5rem;
+    position: relative;
+    margin: 0.5rem 0;
+}
+
+.modal-content li::before {
+    content: '•';
+    color: var(--rojo);
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.modal-content strong {
+    font-weight: 700;
+    color: var(--azul-oscuro);
+}
+
+/* Cajas destacadas */
+.modal-highlight-box {
+    background: #f9fafb;
+    border-left: 4px solid var(--rojo);
+    padding: 1.25rem;
+    margin: 1.5rem 0;
+    border-radius: 6px;
+}
+
+.modal-highlight-box h4 {
+    margin-top: 0;
+}
+
+/* Responsive para tablets */
+@media (max-width: 780px) {
+    .orc-modal-container {
+        width: 92%;
+        max-height: 88vh;
+    }
+
+    .modal-header {
+        padding: 1.5rem 1.5rem 1rem;
+    }
+
+    .modal-header h2 {
+        font-size: 1.5rem;
+        padding-right: 40px;
+    }
+
+    .modal-tabs {
+        padding: 1rem 1.5rem 0;
+        gap: 0.5rem;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .modal-tab-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.95rem;
+        white-space: nowrap;
+    }
+
+    .modal-content {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .orc-modal-container {
+        width: 95%;
+        max-width: 95%;
+        max-height: 90vh;
+        padding: 0;
+        border-radius: 12px;
+    }
+
+    .modal-header {
+        padding: 1.2rem 1rem 0.8rem;
+    }
+
+    .modal-header h2 {
+        font-size: 1.3rem;
+        padding-right: 35px;
+    }
+
+    .modal-close {
+        top: 10px;
+        right: 10px;
+        font-size: 2rem;
+        width: 35px;
+        height: 35px;
+    }
+
+    .modal-tabs {
+        padding: 0.8rem 1rem 0;
+        gap: 0.4rem;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Firefox */
+    }
+
+    .modal-tabs::-webkit-scrollbar {
+        display: none; /* Chrome, Safari */
+    }
+
+    .modal-tab-btn {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.85rem;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    .modal-content {
+        padding: 1rem;
+        max-height: calc(90vh - 160px);
+        overflow-y: auto;
+    }
+
+    .modal-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .modal-content h4 {
+        font-size: 1rem;
+    }
+
+    .modal-content p,
+    .modal-content li {
+        font-size: 0.9rem;
+    }
+
+    .modal-highlight-box {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+}
+
+
+
+
+/* ============================================ */
+/* MODAL ORC - VERSIÓN MÓVIL CON TARJETAS */
+/* ============================================ */
+
+@media (max-width: 780px) {
+    /* Ocultar pestañas en móvil */
+    .modal-tabs {
+        display: none !important;
+    }
+
+    /* Convertir contenido en tarjetas apiladas */
+    .modal-content {
+        padding: 1.5rem 1rem;
+    }
+
+    .modal-tab-content {
+        display: block !important; /* Mostrar todas las tarjetas */
+        background: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        margin-bottom: 1.5rem;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Imagen de la tarjeta móvil */
+    .modal-card-image {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* Contenido de la tarjeta */
+    .modal-card-body {
+        padding: 1.2rem;
+    }
+
+    .modal-card-body h3 {
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
+        color: var(--rojo);
+    }
+
+    .modal-card-intro {
+        font-size: 0.95rem;
+        color: #4b5563;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+    }
+
+    /* Contenido expandible (oculto por defecto) */
+    .modal-expandable-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .modal-expandable-content.expanded {
+        max-height: 2000px; /* Altura máxima generosa */
+    }
+
+    /* Botón "Ver más" */
+    .modal-toggle-btn {
+        background: var(--azul-oscuro);
+        color: white;
+        border: none;
+        padding: 0.7rem 1.5rem;
+        border-radius: 6px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        transition: background 0.3s, transform 0.2s;
+    }
+
+    .modal-toggle-btn:hover {
+        background: #102a78;
+    }
+
+    .modal-toggle-btn:active {
+        transform: scale(0.98);
+    }
+
+    /* Icono flecha del botón */
+    .modal-toggle-icon {
+        display: inline-block;
+        transition: transform 0.3s;
+        font-size: 1.1rem;
+    }
+
+    .modal-toggle-btn.expanded .modal-toggle-icon {
+        transform: rotate(180deg);
+    }
+
+    /* Ajustar estilos dentro del contenido expandible */
+    .modal-expandable-content .modal-highlight-box {
+        margin: 1rem 0;
+    }
+
+    .modal-expandable-content h4 {
+        font-size: 1.05rem;
+        margin-top: 1.2rem;
+    }
+
+    .modal-expandable-content ul {
+        margin: 0.8rem 0;
+    }
+
+    .modal-expandable-content li {
+        font-size: 0.9rem;
+        margin: 0.4rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-card-image {
+        height: 160px;
+    }
+
+    .modal-card-body {
+        padding: 1rem;
+    }
+
+    .modal-card-body h3 {
+        font-size: 1.2rem;
+    }
+
+    .modal-card-intro {
+        font-size: 0.9rem;
+    }
+
+    .modal-toggle-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
     }
 }

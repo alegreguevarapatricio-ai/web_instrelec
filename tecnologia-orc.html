@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corp Instrelec Group</title>
+    <title>Corp Instrelec Group - Tecnología ORC</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -28,7 +28,6 @@
                 <li><a href="tecnologia-orc.html" id="nav-orc">Tecnología ORC</a></li>
                 <li><a href="servicios.html" id="nav-servicios">Servicios</a></li>
                 <li><a href="proyectos.html" id="nav-proyectos">Proyectos</a></li>
-                <!-- <li><a href="contacto.html" id="nav-contacto">Contacto</a></li> -->
 
                 <!-- Selectores de idioma dentro del menú móvil -->
                 <div class="lang-selector-group">
@@ -49,14 +48,13 @@
         </nav>
     </header>
 
-
     <main>
         <section id="tecnologia-orc" class="section-content orc-section">
             <div class="container orc-header">
                 <div class="orange-bar"></div>
                 <h2 id="orc-title">Tecnología ORC: Convierta el Calor en Energía</h2>
                 <p id="orc-intro">Instrelec Group, como representante de INTEC GMK en España, ofrece soluciones
-                    avanzadas basadas en el **Ciclo Orgánico de Rankine (ORC)**, ideal para transformar fuentes de calor
+                    avanzadas basadas en el *Ciclo Orgánico de Rankine (ORC)*, ideal para transformar fuentes de calor
                     de bajas temperaturas y potencia térmica reducida en electricidad limpia.</p>
             </div>
 
@@ -68,7 +66,7 @@
                     </div>
                     <div class="card-content">
                         <h3 id="orc-geocal-title">GEOCAL</h3>
-                        <p id="orc-geocal-text">Potencia ORC a partir del **calor geotérmico**. Sistemas totalmente
+                        <p id="orc-geocal-text">Potencia ORC a partir del *calor geotérmico*. Sistemas totalmente
                             automatizados con máxima eficiencia en carga parcial.</p>
                     </div>
                 </div>
@@ -80,7 +78,7 @@
                     </div>
                     <div class="card-content">
                         <h3 id="orc-inducal-title">INDUCAL</h3>
-                        <p id="orc-inducal-text">Recuperación de **energía a partir del calor residual** industrial
+                        <p id="orc-inducal-text">Recuperación de *energía a partir del calor residual* industrial
                             (Waste Heat). Soluciones para gases calientes o agua a baja presión.</p>
                     </div>
                 </div>
@@ -92,17 +90,134 @@
                     </div>
                     <div class="card-content">
                         <h3 id="orc-ecocal-title">ECOCAL</h3>
-                        <p id="orc-ecocal-text">Generación de energía y calor (CHP) a partir de la **biomasa** a pequeña
+                        <p id="orc-ecocal-text">Generación de energía y calor (CHP) a partir de la *biomasa* a pequeña
                             escala. Alta eficiencia y fácil manejo sin agua de reposición.</p>
                     </div>
                 </div>
             </div>
 
             <div class="container orc-footer">
-                <a href="#proyectos" class="btn-orc" id="orc-btn">Ver Aplicaioes ORC →</a>
+                <a href="" class="btn-orc" id="orc-btn">Ver Aplicaciones ORC →</a>
             </div>
         </section>
+
+        <!-- MODAL ORC -->
+        <div class="orc-modal-overlay" id="orc-modal-overlay">
+            <div class="orc-modal-container" id="orc-modal-container">
+                <button class="modal-close" id="orc-modal-close">&times;</button>
+
+                <div class="modal-header">
+                    <h2 id="modal-title">Nuestras Soluciones ORC</h2>
+                </div>
+
+                <div class="modal-tabs">
+                    <button class="modal-tab-btn active" data-tab="ecocal" id="tab-btn-ecocal">ECOCAL (Biomasa)</button>
+                    <button class="modal-tab-btn" data-tab="inducal" id="tab-btn-inducal">INDUCAL (Calor
+                        Residual)</button>
+                    <button class="modal-tab-btn" data-tab="geocal" id="tab-btn-geocal">GEOCAL (Geotermia)</button>
+                </div>
+
+                <div class="modal-content">
+                    <!-- TAB 1: ECOCAL -->
+                    <div class="modal-tab-content active" data-tab-content="ecocal">
+    <img src="/img/orc.jpg" alt="Instalación de Biomasa ECOCAL" class="modal-card-image">
+    
+    <div class="modal-card-body">
+        <h3 id="modal-ecocal-title">ECOCAL (Biomasa)</h3>
+        <p class="modal-card-intro" id="modal-ecocal-intro">Generación de energía para la industria maderera (CHP) y centrales térmicas. Ideal para aserraderos, plantas de pellets y plantas de procesamiento de madera.</p>
+        
+        <div class="modal-expandable-content">
+            <div class="modal-highlight-box">
+                <h4 id="modal-ecocal-sources-title">Fuentes de Calor Compatibles:</h4>
+                <ul>
+                    <li id="modal-ecocal-source-1">Astillas de madera</li>
+                    <li id="modal-ecocal-source-2">Pellets</li>
+                    <li id="modal-ecocal-source-3">Residuos de madera</li>
+                </ul>
+            </div>
+
+            <h4 id="modal-ecocal-features-title">Características del Módulo:</h4>
+            <ul>
+                <li id="modal-ecocal-feature-1">Utiliza unidades ORC de baja temperatura.</li>
+                <li id="modal-ecocal-feature-2">Diseño montado en bastidor (fácil de instalar in situ).</li>
+                <li id="modal-ecocal-feature-3">Potencia de salida de hasta <strong>500 kW</strong> por módulo.</li>
+            </ul>
+        </div>
+
+        <button class="modal-toggle-btn" data-target="ecocal">
+            <span class="modal-toggle-text" id="modal-ecocal-toggle">Ver más</span>
+            <span class="modal-toggle-icon">▼</span>
+        </button>
+    </div>
+</div>
+
+
+
+                    <!-- TAB 2: INDUCAL -->
+                    <div class="modal-tab-content" data-tab-content="inducal">
+    <img src="/img/orc1.png" alt="Recuperación de calor residual INDUCAL" class="modal-card-image">
+    
+    <div class="modal-card-body">
+        <h3 id="modal-inducal-title">INDUCAL (Calor Residual)</h3>
+        <p class="modal-card-intro" id="modal-inducal-intro">Recuperación de energía a partir de múltiples fuentes de calor residual industrial.</p>
+        
+        <div class="modal-expandable-content">
+            <h4 id="modal-inducal-apps-title">Aplicaciones Principales:</h4>
+            <ul>
+                <li id="modal-inducal-app-1"><strong>Agua Caliente y Vapor (Baja Presión):</strong> Aprovecha el calor residual de motores de biogás, vapor industrial (siderúrgicas, refinerías) y quemadoras de madera.</li>
+                <li id="modal-inducal-app-2"><strong>Gases Calientes:</strong> Utiliza los gases de escape de generadores y motores, y de procesos industriales (acero, cemento, vidrio, cerámica).</li>
+            </ul>
+
+            <div class="modal-highlight-box">
+                <h4 id="modal-inducal-features-title">Características Destacadas:</h4>
+                <ul>
+                    <li id="modal-inducal-feature-1">Potencia de salida de <strong>0.3 a 4 MW</strong> por módulo.</li>
+                    <li id="modal-inducal-feature-2">Máxima eficiencia gracias a máquinas fabricadas a medida.</li>
+                    <li id="modal-inducal-feature-3">Condensador refrigerado por aire (ruido ultra-bajo) disponible.</li>
+                    <li id="modal-inducal-feature-4">Posibilidad de modo CHP (Cogeneración) o máxima potencia.</li>
+                </ul>
+            </div>
+        </div>
+
+        <button class="modal-toggle-btn" data-target="inducal">
+            <span class="modal-toggle-text" id="modal-inducal-toggle">Ver más</span>
+            <span class="modal-toggle-icon">▼</span>
+        </button>
+    </div>
+</div>
+
+                    <!-- TAB 3: GEOCAL -->
+                    <div class="modal-tab-content" data-tab-content="geocal">
+    <img src="/img/ORC vapor.jpg" alt="Planta geotérmica GEOCAL" class="modal-card-image">
+    
+    <div class="modal-card-body">
+        <h3 id="modal-geocal-title">GEOCAL (Geotermia)</h3>
+        <p class="modal-card-intro" id="modal-geocal-intro">Aprovechamiento de energía de alta eficiencia procedente de fuentes geotérmicas. Adaptación perfecta a las necesidades específicas de la fuente geotérmica.</p>
+        
+        <div class="modal-expandable-content">
+            <div class="modal-highlight-box">
+                <h4 id="modal-geocal-sources-title">Fuentes de Calor Compatibles:</h4>
+                <ul>
+                    <li id="modal-geocal-source-1"><strong>Salmuera Caliente:</strong> Para acuíferos con temperaturas entre 90°C y 180°C.</li>
+                    <li id="modal-geocal-source-2"><strong>Drenaje Rápido (Flash):</strong> Utiliza la fracción de agua líquida no aprovechada en centrales de vapor flash.</li>
+                    <li id="modal-geocal-source-3"><strong>Vapor Geotérmico:</strong> Ideal para fuentes de vapor a baja presión.</li>
+                </ul>
+            </div>
+
+            <h4 id="modal-geocal-features-title">Característica del Módulo:</h4>
+            <ul>
+                <li id="modal-geocal-feature-1">Alta eficiencia incluso a carga parcial.</li>
+            </ul>
+        </div>
+
+        <button class="modal-toggle-btn" data-target="geocal">
+            <span class="modal-toggle-text" id="modal-geocal-toggle">Ver más</span>
+            <span class="modal-toggle-icon">▼</span>
+        </button>
+    </div>
+</div>
     </main>
+
     <footer>
         <div class="footer-content">
             <div class="footer-inner">
@@ -128,7 +243,7 @@
                     <div class="offices-grid">
                         <div class="offices-col">
                             <div class="office">
-                                <h3>ESPAÑA</h3>
+                                <h3 id="country-spain">ESPAÑA</h3>
                                 <h4>Corp. Instrelec Group, S.L.</h4>
                                 <p>Instrelec3000 y automatismos</p>
                                 <p>Iberia, S.E. Calle de Anabel</p>
@@ -139,7 +254,7 @@
                             </div>
 
                             <div class="office">
-                                <h3>Venezuela</h3>
+                                <h3 id="country-venezuela">Venezuela</h3>
                                 <p>Instrelec3000 y Automatismos, C.A.</p>
                                 <p>Centro Empresarial</p>
                                 <p>COLÓN, piso 2 Oficina 18,</p>
@@ -148,7 +263,7 @@
                             </div>
 
                             <div class="office">
-                                <h3>Bolivia</h3>
+                                <h3 id="country-bolivia">Bolivia</h3>
                                 <p>Instrelec. S.R.L.</p>
                                 <p>Barrio El Carmen entre radial 23, Av. Mariano Moreno</p>
                                 <p>y calle 3Edificio Kenia oficina 1,</p>
@@ -159,7 +274,7 @@
 
                         <div class="offices-col">
                             <div class="office">
-                                <h3>ALEMANIA</h3>
+                                <h3 id="country-germany">ALEMANIA</h3>
                                 <h4>INTEC GMK</h4>
                                 <p>Lilienthalstr.</p>
                                 <p>18211 Bargeshagen</p>
@@ -168,7 +283,7 @@
                             </div>
 
                             <div class="office">
-                                <h3>EEUU</h3>
+                                <h3 id="country-usa">EEUU</h3>
                                 <h4>Instrelec Group LLC</h4>
                                 <p>7230, NW 58 St, Miami,</p>
                                 <p>Florida; EEUU, CP. 33166</p>
@@ -176,7 +291,7 @@
                             </div>
 
                             <div class="office">
-                                <h3>Perú</h3>
+                                <h3 id="country-peru">Perú</h3>
                                 <p>Instrelec Group S.A.C.</p>
                                 <p>Torre Roja C2, Calle Los Sauces,</p>
                                 <p>Sanisidro 15073 Lima, Perú</p>
@@ -184,7 +299,7 @@
                             </div>
 
                             <div class="office">
-                                <h3>Malasia</h3>
+                                <h3 id="country-malaysia">Malasia</h3>
                                 <p>Lot 3A-2, 2nd Floor, Lorong</p>
                                 <p>Grace Square, Jalan Pantai</p>
                                 <p>Sembulan, 88100 Kota</p>
