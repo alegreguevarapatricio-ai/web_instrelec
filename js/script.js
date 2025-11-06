@@ -370,17 +370,18 @@ function applyTranslations() {
     if (get('country-bolivia')) get('country-bolivia').textContent = t.countryBolivia;
     if (get('country-malaysia')) get('country-malaysia').textContent = t.countryMalaysia;
     // Footer GMK Box
-    const gmkBox = document.querySelector('.gmk-box');
-    if (gmkBox) {
-        const paragraphs = gmkBox.querySelectorAll('p');
-        if (paragraphs.length > 0) {
-            paragraphs[0].innerHTML = "<strong>${t.footerRepresentante}</strong>";
-        }
+const gmkBox = document.querySelector('.gmk-box');
+if (gmkBox) {
+    const paragraphs = gmkBox.querySelectorAll('p');
+    if (paragraphs.length > 0) {
+        // *** CAMBIO AQUÍ: Usamos backticks (`) en lugar de comillas dobles (") ***
+        paragraphs[0].innerHTML = `<strong>${t.footerRepresentante}</strong>`;
     }
+}
     
     const copyrightElement = document.querySelector('.copyright');
     if (copyrightElement) {
-        copyrightElement.textContent = "© 2025 Corp Instrelec Group. ${t.rights}";
+        copyrightElement.textContent = "© 2025 Corp Instrelec Group.";
     }
     
     // Gestión de la clase 'active' para los botones de idioma

@@ -230,7 +230,7 @@ main {
     color: white;
     text-align: center;
     position: relative;
-    padding: 0 5%;
+    padding: 0 3%;
 }
 
 .hero-overlay {
@@ -816,7 +816,7 @@ footer {
 
     /* Hero adjustments */
     .inicio-hero {
-        height: 350px;
+        height: 475px;
     }
 
     .hero-overlay {
@@ -924,11 +924,11 @@ footer {
     }
 
     .inicio-hero {
-        height: 300px;
+        height: 425px;
     }
 
     .hero-overlay {
-        padding: 1rem 1.5rem;
+        padding: 0.5rem 1.5rem;
     }
 
     .hero-text-content h1 {
@@ -1311,7 +1311,10 @@ body.modal-open {
 /* ============================================ */
 /* MODAL ORC - VERSIÓN MÓVIL CON TARJETAS */
 /* ============================================ */
-
+/* Estilo general para el botón de alternar (Oculto por defecto en escritorio) */
+.modal-toggle-btn {
+    display: none; /* Ocultar en escritorio */
+}
 @media (max-width: 780px) {
     /* Ocultar pestañas en móvil */
     .modal-tabs {
