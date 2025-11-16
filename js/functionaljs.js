@@ -2,48 +2,38 @@ let currentLang = 'es';
 
 const translations = {
     es: {
-        // Navegación
+        // NavegaciÃ³n
         navinicio: 'Inicio',
-        navORC: 'Tecnología ORC',
+        navORC: 'TecnologÃ­a ORC',
         navProyectos: 'Proyectos',
         navServicios: 'Servicios',
         navContacto: 'Contacto',
         
         // Hero inicio
         heroTitle: 'Profesionales generando futuro',
-        heroSubtitle: 'Soluciones en Ingeniería, Energía y Recuperación de Calor.',
-        heroParagraph: 'Expertos en ORC (Ciclo Orgánico de Rankine) — Proyectos EPC, Revamping y Servicios integrales a nivel internacional.',
+        heroSubtitle: 'Soluciones en IngenierÃ­a, EnergÃ­a y RecuperaciÃ³n de Calor.',
+        heroParagraph: 'Expertos en ORC (Ciclo OrgÃ¡nico de Rankine) â€“ Proyectos EPC, Revamping y Servicios integrales a nivel internacional.',
         
-        // Timeline
-        timelineTitle: 'NUESTRAº Historia y Crecimiento',
-        timeline2005: 'Instrelec nace ofreciendo soluciones de Ingeniería en Automatización, Control y Electricidad en Venezuela.',
-        timeline2007: 'Apertura de la sede en España, iniciando la oferta de soluciones tipo <strong>IPCC (Ingeniería, Procura, Construcción y Comisionamiento).</strong>',
-        timeline2016: 'Se crea la Corporación, integrando a empresas especialistas con más de 20 años de experiencia en el sector Oil & Gas y un grupo financiero.',
-        timeline2022: 'Firma de proyectos estratégicos con el Ministerio de Energía Renovable de IRAK para el <strong>SALADIN 60 MW Solar Park</strong> y diferentes proyectos en Emiratos Árabes Unidos.',
+        // Contenido inicio
+        inicioTitle: 'Sobre Instrelec',
+        inicioText: 'Desde 2005, Instrelec ofrece soluciones de ingenierÃ­a en automatizaciÃ³n, control y energÃ­a a nivel internacional. Especialistas en proyectos ORC, energÃ­as renovables y servicios EPC/IPCC.',
+        inicioBtn: 'Conozca nuestra tecnologÃ­a ORC',
+        serviciosTitle: 'Nuestros servicios',
+        servicio1: 'IngenierÃ­a Conceptual y de Detalle',
+        servicio2: 'Procura y GestiÃ³n',
+        servicio3: 'ConstrucciÃ³n y Revamping',
+        servicio4: 'Mantenimiento y contratos a largo plazo',
         
-        // Sección Líder en
-        liderTitle: 'EMPRESA INSTRELEC: LÍDER EN',
-        liderCard1Title: 'Ingeniería Especializada',
-        liderCard1Desc: 'División de Ingenierías Conceptual, Básica y de Detalles.',
-        liderCard2Title: 'Gestión y Suministro',
-        liderCard2Desc: 'División de Gestión Aprovisionamiento (Procura) con alcance global.',
-        liderCard3Title: 'Proyectos de Energía',
-        liderCard3Desc: 'Soluciones completas de ORC y Representación GMK para proyectos a gran escala.',
-        liderCard4Title: 'Sostenibilidad y Energía',
-        liderCard4Desc: 'Desarrollo e implementación de proyectos de <strong>Energías Renovables</strong> (Solar, Eólica e Hidrógeno Verde).',
-
-
-        // Sección ORC
-        orcTitle: 'Tecnología ORC: Convierta el Calor en Energía',
-        orcIntro: 'Instrelec Group, como representante de INTEC GMK en España, ofrece soluciones avanzadas basadas en el Ciclo Orgánico de Rankine (ORC), ideal para transformar fuentes de calor de bajas temperaturas y potencia térmica reducida en electricidad limpia.',
-        orcBtn: 'Ver Aplicaciones ORC →',
+        // SecciÃ³n ORC
+        orcTitle: 'TecnologÃ­a ORC: Convierta el Calor en EnergÃ­a',
+        orcIntro: 'Instrelec Group, como representante de INTEC GMK en EspaÃ±a, ofrece soluciones avanzadas basadas en el Ciclo OrgÃ¡nico de Rankine (ORC), ideal para transformar fuentes de calor de bajas temperaturas y potencia tÃ©rmica reducida en electricidad limpia.',
+        orcBtn: 'Ver Aplicaciones ORC â†’',
         orcGeocalTitle: 'GEOCAL',
-        orcGeocalText: 'Potencia ORC a partir del calor geotérmico. Sistemas totalmente automatizados con máxima eficiencia en carga parcial.',
+        orcGeocalText: 'Potencia ORC a partir del calor geotÃ©rmico. Sistemas totalmente automatizados con mÃ¡xima eficiencia en carga parcial.',
         orcInducalTitle: 'INDUCAL',
-        orcInducalText: 'Recuperación de energía a partir del calor residual industrial (Waste Heat). Soluciones para gases calientes o agua a baja presión.',
+        orcInducalText: 'RecuperaciÃ³n de energÃ­a a partir del calor residual industrial (Waste Heat). Soluciones para gases calientes o agua a baja presiÃ³n.',
         orcEcocalTitle: 'ECOCAL',
-        orcEcocalText: 'Generación de energía y calor (CHP) a partir de la biomasa a pequeña escala. Alta eficiencia y fácil manejo sin agua de reposición.',
-        
+        orcEcocalText: 'GeneraciÃ³n de energÃ­a y calor (CHP) a partir de la biomasa a pequeÃ±a escala. Alta eficiencia y fÃ¡cil manejo sin agua de reposiciÃ³n.',
         // Modal ORC
         modalTitle: 'Nuestras Soluciones ORC',
         tabBtnEcocal: 'ECOCAL (Biomasa)',
@@ -52,86 +42,89 @@ const translations = {
 
         // ECOCAL
         modalEcocalTitle: 'ECOCAL (Biomasa)',
-        modalEcocalIntro: 'Generación de energía para la industria maderera (CHP) y centrales térmicas. Ideal para aserraderos, plantas de pellets y plantas de procesamiento de madera.',
+        modalEcocalIntro: 'GeneraciÃ³n de energÃ­a para la industria maderera (CHP) y centrales tÃ©rmicas. Ideal para aserraderos, plantas de pellets y plantas de procesamiento de madera.',
         modalEcocalSourcesTitle: 'Fuentes de Calor Compatibles:',
         modalEcocalSource1: 'Astillas de madera',
         modalEcocalSource2: 'Pellets',
         modalEcocalSource3: 'Residuos de madera',
-        modalEcocalFeaturesTitle: 'Características del Módulo:',
+        modalEcocalFeaturesTitle: 'CaracterÃ­sticas del MÃ³dulo:',
         modalEcocalFeature1: 'Utiliza unidades ORC de baja temperatura.',
-        modalEcocalFeature2: 'Diseño montado en bastidor (fácil de instalar in situ).',
-        modalEcocalFeature3: 'Potencia de salida de hasta 500 kW por módulo.',
-        modalEcocalToggle: 'Ver más',
+        modalEcocalFeature2: 'DiseÃ±o montado en bastidor (fÃ¡cil de instalar in situ).',
+        modalEcocalFeature3: 'Potencia de salida de hasta 500 kW por mÃ³dulo.',
+        modalEcocalToggle: 'Ver mÃ¡s',
         modalEcocalToggleLess: 'Ver menos',
 
         // INDUCAL
         modalInducalTitle: 'INDUCAL (Calor Residual)',
-        modalInducalIntro: 'Recuperación de energía a partir de múltiples fuentes de calor residual industrial.',
+        modalInducalIntro: 'RecuperaciÃ³n de energÃ­a a partir de mÃºltiples fuentes de calor residual industrial.',
         modalInducalAppsTitle: 'Aplicaciones Principales:',
-        modalInducalApp1: 'Agua Caliente y Vapor (Baja Presión): Aprovecha el calor residual de motores de biogás, vapor industrial (siderúrgicas, refinerías) y quemadoras de madera.',
-        modalInducalApp2: 'Gases Calientes: Utiliza los gases de escape de generadores y motores, y de procesos industriales (acero, cemento, vidrio, cerámica).',
-        modalInducalFeaturesTitle: 'Características Destacadas:',
-        modalInducalFeature1: 'Potencia de salida de 0.3 a 4 MW por módulo.',
-        modalInducalFeature2: 'Máxima eficiencia gracias a máquinas fabricadas a medida.',
+        modalInducalApp1: 'Agua Caliente y Vapor (Baja PresiÃ³n): Aprovecha el calor residual de motores de biogÃ¡s, vapor industrial (siderÃºrgicas, refinerÃ­as) y quemadoras de madera.',
+        modalInducalApp2: 'Gases Calientes: Utiliza los gases de escape de generadores y motores, y de procesos industriales (acero, cemento, vidrio, cerÃ¡mica).',
+        modalInducalFeaturesTitle: 'CaracterÃ­sticas Destacadas:',
+        modalInducalFeature1: 'Potencia de salida de 0.3 a 4 MW por mÃ³dulo.',
+        modalInducalFeature2: 'MÃ¡xima eficiencia gracias a mÃ¡quinas fabricadas a medida.',
         modalInducalFeature3: 'Condensador refrigerado por aire (ruido ultra-bajo) disponible.',
-        modalInducalFeature4: 'Posibilidad de modo CHP (Cogeneración) o máxima potencia.',
-        modalInducalToggle: 'Ver más',
+        modalInducalFeature4: 'Posibilidad de modo CHP (CogeneraciÃ³n) o mÃ¡xima potencia.',
+        modalInducalToggle: 'Ver mÃ¡s',
         modalInducalToggleLess: 'Ver menos',
 
         // GEOCAL
         modalGeocalTitle: 'GEOCAL (Geotermia)',
-        modalGeocalIntro: 'Aprovechamiento de energía de alta eficiencia procedente de fuentes geotérmicas. Adaptación perfecta a las necesidades específicas de la fuente geotérmica.',
+        modalGeocalIntro: 'Aprovechamiento de energÃ­a de alta eficiencia procedente de fuentes geotÃ©rmicas. AdaptaciÃ³n perfecta a las necesidades especÃ­ficas de la fuente geotÃ©rmica.',
         modalGeocalSourcesTitle: 'Fuentes de Calor Compatibles:',
-        modalGeocalSource1: 'Salmuera Caliente: Para acuíferos con temperaturas entre 90°C y 180°C.',
-        modalGeocalSource2: 'Drenaje Rápido (Flash): Utiliza la fracción de agua líquida no aprovechada en centrales de vapor flash.',
-        modalGeocalSource3: 'Vapor Geotérmico: Ideal para fuentes de vapor a baja presión.',
-        modalGeocalFeaturesTitle: 'Característica del Módulo:',
+        modalGeocalSource1: 'Salmuera Caliente: Para acuÃ­feros con temperaturas entre 90Â°C y 180Â°C.',
+        modalGeocalSource2: 'Drenaje RÃ¡pido (Flash): Utiliza la fracciÃ³n de agua lÃ­quida no aprovechada en centrales de vapor flash.',
+        modalGeocalSource3: 'Vapor GeotÃ©rmico: Ideal para fuentes de vapor a baja presiÃ³n.',
+        modalGeocalFeaturesTitle: 'CaracterÃ­stica del MÃ³dulo:',
         modalGeocalFeature1: 'Alta eficiencia incluso a carga parcial.',
-        modalGeocalToggle: 'Ver más',
+        modalGeocalToggle: 'Ver mÃ¡s',
         modalGeocalToggleLess: 'Ver menos',
-        
         // Proyectos
         proyectosTitle: 'Proyectos Destacados',
-        project1Title: 'REPSOL (España)',
-        project1Desc: 'Ingeniería, procura y construcción (EPC) de una planta de cogeneración ORC, recuperando calor residual de procesos industriales para generar electricidad limpia.',
+        project1Title: 'REPSOL (EspaÃ±a)',
+        project1Desc: 'IngenierÃ­a, procura y construcciÃ³n (EPC) de una planta de cogeneraciÃ³n ORC, recuperando calor residual de procesos industriales para generar electricidad limpia.',
         project2Title: 'Solar Park (Chile)',
-        project2Desc: 'Sistema de automatización avanzado para la monitorización y control de granjas solares a escala gigavatio. Integración de la red y optimización de rendimiento.',
+        project2Desc: 'Sistema de automatizaciÃ³n avanzado para la monitorizaciÃ³n y control de granjas solares a escala gigavatio. IntegraciÃ³n de la red y optimizaciÃ³n de rendimiento.',
         project3Title: 'INDUCAL (Alemania)',
-        project3Desc: 'Implementación de la tecnología INDUCAL (Waste Heat Recovery) en una fundición, transformando los gases de escape calientes en energía eléctrica para autoconsumo.',
+        project3Desc: 'ImplementaciÃ³n de la tecnologÃ­a INDUCAL (Waste Heat Recovery) en una fundiciÃ³n, transformando los gases de escape calientes en energÃ­a elÃ©ctrica para autoconsumo.',
         project4Title: 'ECOCAL (Bolivia)',
-        project4Desc: 'Instalación de una unidad ECOCAL para generación combinada de calor y electricidad (CHP) usando biomasa forestal local, contribuyendo a la sostenibilidad rural.',
-        proyectosBtn: 'Hable con un experto en proyectos →',
+        project4Desc: 'InstalaciÃ³n de una unidad ECOCAL para generaciÃ³n combinada de calor y electricidad (CHP) usando biomasa forestal local, contribuyendo a la sostenibilidad rural.',
+        proyectosBtn: 'Hable con un experto en proyectos â†’',
         
         // Servicios Integrales
         serviciosIntegralesTitle: 'Servicios Integrales',
-        serviceCard1Title: 'Construcción y Revamping',
-        serviceCard1Desc: 'Servicios de Construcción, Montaje, puesta en marcha (Commissioning) y modernización (Revamping) de plantas y procesos industriales.',
-        serviceCard2Title: 'Ingeniería y Diseño',
-        serviceCard2Desc: 'Diseño de ingeniería conceptual, de detalle, y estudios de viabilidad para sistemas de energía, automatización, y proyectos ORC.',
-        serviceCard3Title: 'Procura y Gestión (EPC)',
-        serviceCard3Desc: 'Gestión completa de Procura, Contratación y Suministro (EPC/IPCC) para garantizar la calidad y eficiencia de su proyecto.',
+        serviceCard1Title: 'ConstrucciÃ³n y Revamping',
+        serviceCard1Desc: 'Servicios de ConstrucciÃ³n, Montaje, puesta en marcha (Commissioning) y modernizaciÃ³n (Revamping) de plantas y procesos industriales.',
+        serviceCard2Title: 'IngenierÃ­a y DiseÃ±o',
+        serviceCard2Desc: 'DiseÃ±o de ingenierÃ­a conceptual, de detalle, y estudios de viabilidad para sistemas de energÃ­a, automatizaciÃ³n, y proyectos ORC.',
+        serviceCard3Title: 'Procura y GestiÃ³n (EPC)',
+        serviceCard3Desc: 'GestiÃ³n completa de Procura, ContrataciÃ³n y Suministro (EPC/IPCC) para garantizar la calidad y eficiencia de su proyecto.',
         serviceCard4Title: 'Mantenimiento y Contratos',
-        serviceCard4Desc: 'Servicios de mantenimiento preventivo y correctivo, y contratos a largo plazo (LTSA) para la máxima disponibilidad de sus equipos.',
+        serviceCard4Desc: 'Servicios de mantenimiento preventivo y correctivo, y contratos a largo plazo (LTSA) para la mÃ¡xima disponibilidad de sus equipos.',
         
-        // Construcción
-        mainTitle: 'Sitio en Construcción',
+        // ConstrucciÃ³n
+        mainTitle: 'Sitio en ConstrucciÃ³n',
         mainText: 'Estamos trabajando para ofrecerte la mejor experiencia. Pronto estaremos contigo.',
         
         // Footer
         footerTitle: 'OFICINAS',
-        footerRepresentante: 'REPRESENTANTE EN ESPAÑA DE:',
+        footerRepresentante: 'REPRESENTANTE EN ESPAÃ‘A DE:',
         footerCEO: 'CEO:',
         footerCFO: 'CFO:',
         footerDirector: 'Director de ventas:',
-        countrySpain: 'ESPAÑA',
+        countrySpain: 'ESPAÃ‘A',
         countryGermany: 'ALEMANIA',
         countryUSA: 'EEUU',
         countryVenezuela: 'Venezuela',
-        countryPeru: 'Perú',
+        countryPeru: 'PerÃº',
         countryBolivia: 'Bolivia',
         countryMalaysia: 'Malasia',
         rights: 'Todos los derechos reservados.'
     },
+
+
+
+
 
     en: {
         // Navigation
@@ -144,40 +137,28 @@ const translations = {
         // Hero Home
         heroTitle: 'Professionals shaping the future',
         heroSubtitle: 'Solutions in Engineering, Energy, and Heat Recovery.',
-        heroParagraph: 'Experts in ORC (Organic Rankine Cycle) — EPC Projects, Revamping, and integral services internationally.',
+        heroParagraph: 'Experts in ORC (Organic Rankine Cycle) â€“ EPC Projects, Revamping, and integral services internationally.',
         
-        // Timeline
-        timelineTitle: 'OUR DNA: History and Growth',
-        timeline2005: 'Instrelec is born offering Engineering solutions in Automation, Control and Electricity in Venezuela.',
-        timeline2007: 'Opening of the headquarters in Spain, initiating the offer of <strong>IPCC solutions (Engineering, Procurement, Construction and Commissioning).</strong>',
-        timeline2016: 'The Corporation is created, integrating specialist companies with more than 20 years of experience in the Oil & Gas sector and a financial group.',
-        timeline2022: 'Signing of strategic projects with the Ministry of Renewable Energy of IRAQ for the <strong>SALADIN 60 MW Solar Park</strong> and different projects in the United Arab Emirates.',
+        // Home Content
+        inicioTitle: 'About Instrelec',
+        inicioText: 'Since 2005, Instrelec offers engineering solutions in automation, control and energy internationally. Specialists in ORC projects, renewable energy and EPC/IPCC services.',
+        inicioBtn: 'Learn about our ORC technology',
+        serviciosTitle: 'Our services',
+        servicio1: 'Conceptual and Detailed Engineering',
+        servicio2: 'Procurement and Management',
+        servicio3: 'Construction and Revamping',
+        servicio4: 'Maintenance and long-term contracts',
         
-
-        // Leader in Section
-        liderTitle: 'INSTRELEC COMPANY: LEADER IN',
-        liderCard1Title: 'Specialized Engineering',
-        liderCard1Desc: 'Division of Conceptual, Basic and Detailed Engineering.',
-        liderCard2Title: 'Management and Supply',
-        liderCard2Desc: 'Procurement Management Division with global reach.',
-        liderCard3Title: 'Energy Projects',
-        liderCard3Desc: 'Complete ORC solutions and GMK Representation for large-scale projects.',
-        liderCard4Title: 'Sustainability and Energy',
-        liderCard4Desc: 'Development and implementation of <strong>Renewable Energy</strong> projects (Solar, Wind and Green Hydrogen).',
-
-
-
         // ORC Section
         orcTitle: 'ORC Technology: Turn Heat into Energy',
         orcIntro: 'Instrelec Group, as representative of INTEC GMK in Spain, offers advanced solutions based on the Organic Rankine Cycle (ORC), ideal for transforming low-temperature heat sources and reduced thermal power into clean electricity.',
-        orcBtn: 'See ORC Applications →',
+        orcBtn: 'See ORC Applications â†’',
         orcGeocalTitle: 'GEOCAL',
         orcGeocalText: 'ORC power from geothermal heat. Fully automated systems with maximum efficiency at partial load.',
         orcInducalTitle: 'INDUCAL',
         orcInducalText: 'Recovery of energy from industrial waste heat. Solutions for hot gases or low-pressure water.',
         orcEcocalTitle: 'ECOCAL',
         orcEcocalText: 'Energy and heat generation (CHP) from biomass on a small scale. High efficiency and easy handling without makeup water.',
-        
         // Modal ORC
         modalTitle: 'Our ORC Solutions',
         tabBtnEcocal: 'ECOCAL (Biomass)',
@@ -216,14 +197,13 @@ const translations = {
         modalGeocalTitle: 'GEOCAL (Geothermal)',
         modalGeocalIntro: 'High-efficiency energy utilization from geothermal sources. Perfect adaptation to the specific needs of the geothermal source.',
         modalGeocalSourcesTitle: 'Compatible Heat Sources:',
-        modalGeocalSource1: 'Hot Brine: For aquifers with temperatures between 90°C and 180°C.',
+        modalGeocalSource1: 'Hot Brine: For aquifers with temperatures between 90Â°C and 180Â°C.',
         modalGeocalSource2: 'Flash Drain: Uses the fraction of liquid water not used in flash steam plants.',
         modalGeocalSource3: 'Geothermal Steam: Ideal for low-pressure steam sources.',
         modalGeocalFeaturesTitle: 'Module Feature:',
         modalGeocalFeature1: 'High efficiency even at partial load.',
         modalGeocalToggle: 'See more',
         modalGeocalToggleLess: 'See less',
-        
         // Projects
         proyectosTitle: 'Featured Projects',
         project1Title: 'REPSOL (Spain)',
@@ -234,7 +214,7 @@ const translations = {
         project3Desc: 'Implementation of INDUCAL (Waste Heat Recovery) technology in a foundry, transforming hot exhaust gases into electrical energy for self-consumption.',
         project4Title: 'ECOCAL (Bolivia)',
         project4Desc: 'Installation of an ECOCAL unit for Combined Heat and Power (CHP) generation using local forest biomass, contributing to rural sustainability.',
-        proyectosBtn: 'Talk to a project expert →',
+        proyectosBtn: 'Talk to a project expert â†’',
         
         // Integral Services
         serviciosIntegralesTitle: 'Integral Services',
@@ -270,14 +250,17 @@ const translations = {
 
 
 
-// Aplica las traducciones al DOM según currentLang
+
+
+
+// Aplica las traducciones al DOM segÃºn currentLang
 function applyTranslations() {
     const t = translations[currentLang];
     if (!t) return;
 
     const get = id => document.getElementById(id);
     
-    // Navegación
+    // NavegaciÃ³n
     if (get('nav-inicio')) get('nav-inicio').textContent = t.navinicio;
     if (get('nav-orc')) get('nav-orc').textContent = t.navORC;
     if (get('nav-proyectos')) get('nav-proyectos').textContent = t.navProyectos;
@@ -289,32 +272,17 @@ function applyTranslations() {
     if (get('hero-subtitle')) get('hero-subtitle').textContent = t.heroSubtitle;
     if (get('hero-paragraph')) get('hero-paragraph').textContent = t.heroParagraph;
     
-    // Timeline
-    const timelineTitle = document.querySelector('.timeline-main-title');
-    if (timelineTitle) {
-        if (currentLang === 'es') {
-            timelineTitle.innerHTML = 'NUESTRO <span class="highlight-adn">ADN</span>: Historia y Crecimiento';
-        } else {
-            timelineTitle.innerHTML = 'OUR <span class="highlight-adn">DNA</span>: History and Growth';
-        }
-    }
-    if (get('timeline-2005')) get('timeline-2005').innerHTML = t.timeline2005;
-    if (get('timeline-2007')) get('timeline-2007').innerHTML = t.timeline2007;
-    if (get('timeline-2016')) get('timeline-2016').innerHTML = t.timeline2016;
-    if (get('timeline-2022')) get('timeline-2022').innerHTML = t.timeline2022;
-
-        // Sección Líder en
-    if (get('lider-title')) get('lider-title').textContent = t.liderTitle;
-    if (get('lider-card1-title')) get('lider-card1-title').textContent = t.liderCard1Title;
-    if (get('lider-card1-desc')) get('lider-card1-desc').textContent = t.liderCard1Desc;
-    if (get('lider-card2-title')) get('lider-card2-title').textContent = t.liderCard2Title;
-    if (get('lider-card2-desc')) get('lider-card2-desc').textContent = t.liderCard2Desc;
-    if (get('lider-card3-title')) get('lider-card3-title').textContent = t.liderCard3Title;
-    if (get('lider-card3-desc')) get('lider-card3-desc').textContent = t.liderCard3Desc;
-    if (get('lider-card4-title')) get('lider-card4-title').textContent = t.liderCard4Title;
-    if (get('lider-card4-desc')) get('lider-card4-desc').innerHTML = t.liderCard4Desc;
+    // Contenido inicio
+    if (get('inicio-title')) get('inicio-title').textContent = t.inicioTitle;
+    if (get('inicio-text')) get('inicio-text').textContent = t.inicioText;
+    if (get('inicio-btn')) get('inicio-btn').textContent = t.inicioBtn;
+    if (get('servicios-title')) get('servicios-title').textContent = t.serviciosTitle;
+    if (get('servicio-1')) get('servicio-1').textContent = t.servicio1;
+    if (get('servicio-2')) get('servicio-2').textContent = t.servicio2;
+    if (get('servicio-3')) get('servicio-3').textContent = t.servicio3;
+    if (get('servicio-4')) get('servicio-4').textContent = t.servicio4;
     
-    // Sección ORC
+    // SecciÃ³n ORC
     if (get('orc-title')) get('orc-title').textContent = t.orcTitle;
     if (get('orc-intro')) get('orc-intro').textContent = t.orcIntro;
     if (get('orc-btn')) get('orc-btn').textContent = t.orcBtn;
@@ -324,7 +292,6 @@ function applyTranslations() {
     if (get('orc-inducal-text')) get('orc-inducal-text').textContent = t.orcInducalText;
     if (get('orc-ecocal-title')) get('orc-ecocal-title').textContent = t.orcEcocalTitle;
     if (get('orc-ecocal-text')) get('orc-ecocal-text').textContent = t.orcEcocalText;
-    
     // Modal ORC
     if (get('modal-title')) get('modal-title').textContent = t.modalTitle;
     if (get('tab-btn-ecocal')) get('tab-btn-ecocal').textContent = t.tabBtnEcocal;
@@ -388,14 +355,13 @@ function applyTranslations() {
     if (get('service-card-4-title')) get('service-card-4-title').textContent = t.serviceCard4Title;
     if (get('service-card-4-desc')) get('service-card-4-desc').textContent = t.serviceCard4Desc;
     
-    // Construcción
+    // ConstrucciÃ³n
     if (get('main-title')) get('main-title').textContent = t.mainTitle;
     if (get('main-text')) get('main-text').textContent = t.mainText;
 
     // Footer
     if (get('footer-title')) get('footer-title').textContent = t.footerTitle;
-    
-    // Países del footer
+    // PaÃ­ses del footer
     if (get('country-spain')) get('country-spain').textContent = t.countrySpain;
     if (get('country-germany')) get('country-germany').textContent = t.countryGermany;
     if (get('country-usa')) get('country-usa').textContent = t.countryUSA;
@@ -403,28 +369,209 @@ function applyTranslations() {
     if (get('country-peru')) get('country-peru').textContent = t.countryPeru;
     if (get('country-bolivia')) get('country-bolivia').textContent = t.countryBolivia;
     if (get('country-malaysia')) get('country-malaysia').textContent = t.countryMalaysia;
-    
     // Footer GMK Box
-    const gmkBox = document.querySelector('.gmk-box');
-    if (gmkBox) {
-        const paragraphs = gmkBox.querySelectorAll('p');
-        if (paragraphs.length > 0) {
-            paragraphs[0].innerHTML = `<strong>${t.footerRepresentante}</strong>`;
-        }
+const gmkBox = document.querySelector('.gmk-box');
+if (gmkBox) {
+    const paragraphs = gmkBox.querySelectorAll('p');
+    if (paragraphs.length > 0) {
+        // *** CAMBIO AQUÃ: Usamos backticks (`) en lugar de comillas dobles (") ***
+        paragraphs[0].innerHTML = `<strong>${t.footerRepresentante}</strong>`;
     }
+}
     
     const copyrightElement = document.querySelector('.copyright');
     if (copyrightElement) {
-        copyrightElement.textContent = `© 2025 Corp Instrelec Group. ${t.rights}`;
+        copyrightElement.textContent = "Â© 2025 Corp Instrelec Group.";
     }
     
-    // Gestión de la clase 'active' para los botones de idioma
+    // GestiÃ³n de la clase 'active' para los botones de idioma
     const btnES = get('lang-btn-es');
     const btnEN = get('lang-btn-en');
-    const btnESDesktop = get('lang-btn-es-desktop');
-    const btnENDesktop = get('lang-btn-en-desktop');
     
     if (btnES) btnES.classList.toggle('active', currentLang === 'es');
     if (btnEN) btnEN.classList.toggle('active', currentLang === 'en');
-    if (btnESDesktop) btnESDesktop.classList.toggle('active', currentLang === 'es');
     
+    // AÃ±adir gestiÃ³n para los botones de escritorio (si existen)
+    const btnESDesktop = get('lang-btn-es-desktop');
+    const btnENDesktop = get('lang-btn-en-desktop');
+    
+    if (btnESDesktop) btnESDesktop.classList.toggle('active', currentLang === 'es');
+    if (btnENDesktop) btnENDesktop.classList.toggle('active', currentLang === 'en');
+
+    document.documentElement.lang = currentLang;
+}
+
+// FunciÃ³n para establecer el idioma y persistir
+function setLanguage(lang) {
+    if (translations[lang] && lang !== currentLang) {
+        currentLang = lang;
+        applyTranslations();
+        try {
+            localStorage.setItem('instrelecLang', currentLang);
+        } catch (e) {
+            // ignore storage errors
+        }
+    }
+}
+window.setLanguage = setLanguage;
+
+// Control del menÃº mÃ³vil
+function setupMobileMenu() {
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.querySelector('.nav-links');
+    const overlay = document.getElementById('overlay');
+    
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const opened = navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active', opened);
+            if (overlay) overlay.classList.toggle('active', opened);
+            
+            // Prevenir scroll del body cuando el menÃº estÃ¡ abierto
+            document.body.style.overflow = opened ? 'hidden' : '';
+        });
+
+        // Cerrar menÃº al hacer clic en un enlace (solo los <a>, no los botones)
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                navLinks.classList.remove('active');
+                menuToggle.classList.remove('active');
+                if (overlay) overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Cerrar al hacer clic en el overlay
+        if (overlay) {
+            overlay.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navLinks.classList.remove('active');
+                menuToggle.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        }
+
+        // Cerrar menÃº al redimensionar la ventana (si se cambia a desktop)
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 780) {
+                navLinks.classList.remove('active');
+                menuToggle.classList.remove('active');
+                if (overlay) overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+}
+
+// ==================================
+// ===== FUNCIÃ“N MODAL ORC ======
+// ==================================
+function setupOrcModal() {
+    const openBtn = document.getElementById('orc-btn');
+    const modalOverlay = document.getElementById('orc-modal-overlay');
+    const modalContainer = document.getElementById('orc-modal-container');
+    const closeBtn = document.getElementById('orc-modal-close');
+    
+    if (!openBtn || !modalOverlay || !modalContainer || !closeBtn) {
+        return;
+    }
+
+    const tabBtns = modalContainer.querySelectorAll('.modal-tab-btn');
+    const tabContents = modalContainer.querySelectorAll('.modal-tab-content');
+
+    const openModal = (e) => {
+        e.preventDefault();
+        modalOverlay.classList.add('active');
+        document.body.classList.add('modal-open');
+    };
+
+    const closeModal = () => {
+        modalOverlay.classList.remove('active');
+        document.body.classList.remove('modal-open');
+    };
+
+    openBtn.addEventListener('click', openModal);
+    closeBtn.addEventListener('click', closeModal);
+    
+    modalOverlay.addEventListener('click', (e) => {
+        if (e.target === modalOverlay) {
+            closeModal();
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+            closeModal();
+        }
+    });
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetTab = btn.getAttribute('data-tab');
+
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+
+                btn.classList.add('active');
+                
+                const activeContent = modalContainer.querySelector(`[data-tab-content ="${targetTab}"]`);
+                if (activeContent) {
+                    activeContent.classList.add('active');
+                }
+            });
+        });
+        // ===== FUNCIONALIDAD MÃ“VIL: BOTONES "VER MÃS" =====
+    const toggleBtns = modalContainer.querySelectorAll('.modal-toggle-btn');
+    
+    toggleBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        
+        const cardBody = btn.closest('.modal-card-body');
+        const expandableContent = cardBody.querySelector('.modal-expandable-content');
+        const toggleText = btn.querySelector('.modal-toggle-text');
+        
+        const isExpanded = expandableContent.classList.toggle('expanded');
+        btn.classList.toggle('expanded', isExpanded);
+        
+        // Obtener el target del botÃ³n para saber quÃ© traducciÃ³n usar
+        const target = btn.getAttribute('data-target');
+        const t = translations[currentLang];
+        
+        if (isExpanded) {
+            if (target === 'ecocal') toggleText.textContent = t.modalEcocalToggleLess;
+            if (target === 'inducal') toggleText.textContent = t.modalInducalToggleLess;
+            if (target === 'geocal') toggleText.textContent = t.modalGeocalToggleLess;
+        } else {
+            if (target === 'ecocal') toggleText.textContent = t.modalEcocalToggle;
+            if (target === 'inducal') toggleText.textContent = t.modalInducalToggle;
+            if (target === 'geocal') toggleText.textContent = t.modalGeocalToggle;
+        }
+    });
+});
+}
+    
+    
+
+
+// InicializaciÃ³n
+document.addEventListener('DOMContentLoaded', () => {
+    try {
+        const saved = localStorage.getItem('instrelecLang');
+        if (saved && translations[saved]) {
+            currentLang = saved;
+        } else {
+            const navLang = navigator.language || navigator.userLanguage || 'es';
+            const baseLang = (navLang.split('-')[0] || 'es').toLowerCase();
+            currentLang = translations[baseLang] ? baseLang : 'es';
+        }
+    } catch (e) {
+        currentLang = 'es';
+    }
+
+    applyTranslations();
+    setupMobileMenu();
+    setupOrcModal();
+});
