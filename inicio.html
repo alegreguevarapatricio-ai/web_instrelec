@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corp Instrelec Group</title>
+    <title data-i18n="meta.title">Corp Instrelec Group</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -24,11 +24,11 @@
             </button>
 
             <ul class="nav-links">
-                <li><a href="inicio.html" id="nav-inicio">Inicio</a></li>
-                <li><a href="tecnologia-orc.html" id="nav-orc">Tecnología ORC</a></li>
-                <li><a href="servicios.html" id="nav-servicios">Servicios</a></li>
-                <li><a href="proyectos.html" id="nav-proyectos">Proyectos</a></li>
-                <!-- <li><a href="contacto.html" id="nav-contacto">Contacto</a></li> -->
+                <li><a href="inicio.html" id="nav-inicio" data-i18n="nav.home">Inicio</a></li>
+                <li><a href="tecnologia-orc.html" id="nav-orc" data-i18n="nav.orc">Tecnología ORC</a></li>
+                <li><a href="servicios.html" id="nav-servicios" data-i18n="nav.services">Servicios</a></li>
+                <li><a href="proyectos.html" id="nav-proyectos" data-i18n="nav.projects">Proyectos</a></li>
+                <!-- <li><a href="contacto.html" id="nav-contacto" data-i18n="nav.contact">Contacto</a></li> -->
 
                 <!-- Selectores de idioma dentro del menú móvil -->
                 <div class="lang-selector-group">
@@ -49,8 +49,6 @@
         </nav>
     </header>
 
-
-
     <main>
         <div class="hero-strip"></div>
 
@@ -58,22 +56,23 @@
             style="background-image: url('img/WhatsApp Image 2025-11-03 at 18.22.38_307c793b.jpg');">
             <div class="hero-overlay">
                 <div class="hero-text-content">
-                    <h1 id="hero-title">Profesionales generando futuro</h1>
-                    <p id="hero-subtitle">Soluciones en Ingeniería, Energía y Recuperación de Calor.</p>
-                    <p id="hero-paragraph">Expertos en ORC (Ciclo Orgánico de Rankine) — Proyectos EPC, Revamping y
+                    <h1 data-i18n="hero.title">Profesionales generando futuro</h1>
+                    <p data-i18n="hero.subtitle">Soluciones en Ingeniería, Energía y Recuperación de Calor.</p>
+                    <p data-i18n="hero.paragraph">Expertos en ORC (Ciclo Orgánico de Rankine) — Proyectos EPC, Revamping y
                         Servicios integrales a nivel internacional.</p>
                 </div>
             </div>
         </div>
+
         <div class="construction-container" style="display:none;">
             <div class="construction-icon">🚧</div>
-            <h1 id="main-title">Sitio en Construcción</h1>
-            <p id="main-text">Estamos trabajando para ofrecerte la mejor experiencia. Pronto estaremos contigo.</p>
+            <h1 data-i18n="construction.title">Sitio en Construcción</h1>
+            <p data-i18n="construction.text">Estamos trabajando para ofrecerte la mejor experiencia. Pronto estaremos contigo.</p>
         </div>
 
         <section id="inicio" class="section-content timeline-section">
             <div class="container">
-                <h2 class="timeline-main-title">
+                <h2 class="timeline-main-title" data-i18n="timeline.title">
                     NUESTRA Historia y Crecimiento
                 </h2>
 
@@ -82,7 +81,7 @@
                     <div class="timeline-item">
                         <div class="timeline-year">2005 - Origen:</div>
                         <div class="timeline-content">
-                            <p id="timeline-2005">Instrelec nace ofreciendo soluciones de Ingeniería en Automatización,
+                            <p data-i18n="timeline.2005">Instrelec nace ofreciendo soluciones de Ingeniería en Automatización,
                                 Control y Electricidad en Venezuela.</p>
                         </div>
                     </div>
@@ -91,7 +90,7 @@
                     <div class="timeline-item">
                         <div class="timeline-year">2007 - Internacionalización:</div>
                         <div class="timeline-content">
-                            <p id="timeline-2007">Apertura de la sede en España, iniciando la oferta de soluciones tipo
+                            <p data-i18n="timeline.2007">Apertura de la sede en España, iniciando la oferta de soluciones tipo
                                 <strong>IPCC (Ingeniería, Procura, Construcción y Comisionamiento).</strong></p>
                         </div>
                     </div>
@@ -100,7 +99,7 @@
                     <div class="timeline-item">
                         <div class="timeline-year">2016 - Corporación Instrelec Group:</div>
                         <div class="timeline-content">
-                            <p id="timeline-2016">Se crea la Corporación, integrando a empresas especialistas con más de
+                            <p data-i18n="timeline.2016">Se crea la Corporación, integrando a empresas especialistas con más de
                                 20 años de experiencia en el sector Oil & Gas y un grupo financiero.</p>
                         </div>
                     </div>
@@ -109,7 +108,7 @@
                     <div class="timeline-item">
                         <div class="timeline-year">2022 - Expansión Global:</div>
                         <div class="timeline-content">
-                            <p id="timeline-2022">Firma de proyectos estratégicos con el Ministerio de Energía Renovable
+                            <p data-i18n="timeline.2022">Firma de proyectos estratégicos con el Ministerio de Energía Renovable
                                 de IRAK para el **SALADIN 60 MW Solar Park** y diferentes proyectos en Emiratos Árabes
                                 Unidos.</p>
                         </div>
@@ -119,294 +118,262 @@
         </section>
 
         <section id="lider-en" class="section-content lider-section">
+            <div class="container">
+                <h2 class="lider-main-title" data-i18n="lider.title">
+                    EMPRESA INSTRELEC LÍDER EN
+                </h2>
+
+                <div class="lider-grid">
+                    <!-- Card 1 -->
+                    <div class="lider-card">
+                        <h3 data-i18n="lider.card1.title">Ingeniería Especializada</h3>
+                        <p data-i18n="lider.card1.desc">División de Ingenierías Conceptual, Básica y de Detalles.</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="lider-card">
+                        <h3 data-i18n="lider.card2.title">Gestión y Suministro</h3>
+                        <p data-i18n="lider.card2.desc">División de Gestión Aprovisionamiento (Procura) con alcance global.</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="lider-card">
+                        <h3 data-i18n="lider.card3.title">Proyectos de Energía</h3>
+                        <p data-i18n="lider.card3.desc">Soluciones completas de ORC y Representación GMK para proyectos a gran escala.</p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="lider-card lider-card-large">
+                        <h3 data-i18n="lider.card4.title">Sostenibilidad y Energía</h3>
+                        <p data-i18n="lider.card4.desc">Desarrollo e implementación de proyectos de <strong data-i18n="lider.card4.strong">Energías Renovables</strong> (Solar, Eólica e Hidrógeno Verde).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Actualizada - Experiencia Comprobada -->
+<section class="experiencia-section">
     <div class="container">
-        <h2 class="lider-main-title" id="lider-title">
-            EMPRESA INSTRELEC LÍDER EN
-        </h2>
+        <h2 class="experiencia-title" data-i18n="experience.title">Experiencia Comprobada: Proyectos Destacados</h2>
         
-        <div class="lider-grid">
-            <!-- Tarjeta 1: Ingeniería Especializada -->
-            <div class="lider-card">
-                <h3 id="lider-card1-title">Ingeniería Especializada</h3>
-                <p id="lider-card1-desc">División de Ingenierías Conceptual, Básica y de Detalles.</p>
+        <!-- Contenedor de Cards Móvil -->
+        <div class="mobile-cards-container">
+            
+            <!-- Card 1 -->
+            <div class="experience-card">
+                <div class="card-header">
+                    <h3 class="client-name" data-i18n="table.row1.client">Ministerio de Industria</h3>
+                    <div class="investment-badge" data-i18n="table.row1.investment">$36 MM</div>
+                </div>
+                <div class="project-info">
+                    <p class="project-description" data-i18n="table.row1.project">Contrato IPC para el <strong>SALADIN 60 MW SOLAR PARK</strong></p>
+                </div>
+                <div class="project-details">
+                    <div class="country-flag">
+                        <span>📍</span>
+                        <span class="country-name" data-i18n="table.row1.country">IRAK</span>
+                    </div>
+                </div>
             </div>
 
-            <!-- Tarjeta 2: Gestión y Suministro -->
-            <div class="lider-card">
-                <h3 id="lider-card2-title">Gestión y Suministro</h3>
-                <p id="lider-card2-desc">División de Gestión Aprovisionamiento (Procura) con alcance global.</p>
+            <!-- Card 2 -->
+            <div class="experience-card">
+                <div class="card-header">
+                    <h3 class="client-name" data-i18n="table.row2.client">NATIONAL WATER COMPANY</h3>
+                    <div class="investment-badge" data-i18n="table.row2.investment">$300 M</div>
+                </div>
+                <div class="project-info">
+                    <p class="project-description" data-i18n="table.row2.project">Ingeniería, Procura y Construcción para las Reservas Estratégicas</p>
+                </div>
+                <div class="project-details">
+                    <div class="country-flag">
+                        <span>📍</span>
+                        <span class="country-name" data-i18n="table.row2.country">ARABIA SAUDITA</span>
+                    </div>
+                </div>
             </div>
 
-            <!-- Tarjeta 3: Proyectos de Energía -->
-            <div class="lider-card">
-                <h3 id="lider-card3-title">Proyectos de Energía</h3>
-                <p id="lider-card3-desc">Soluciones completas de ORC y Representación GMK para proyectos a gran escala.</p>
+            <!-- Card 3 -->
+            <div class="experience-card">
+                <div class="card-header">
+                    <h3 class="client-name" data-i18n="table.row3.client">AES GENER</h3>
+                    <div class="investment-badge" data-i18n="table.row3.investment">$7.2 MM</div>
+                </div>
+                <div class="project-info">
+                    <p class="project-description" data-i18n="table.row3.project">Proyecto IPC para el reemplazo de bombas de alimentación de caldera</p>
+                </div>
+                <div class="project-details">
+                    <div class="country-flag">
+                        <span>📍</span>
+                        <span class="country-name" data-i18n="table.row3.country">CHILE</span>
+                    </div>
+                </div>
             </div>
 
-            <!-- Tarjeta 4: Sostenibilidad y Energía -->
-            <div class="lider-card lider-card-large">
-                <h3 id="lider-card4-title">Sostenibilidad y Energía</h3>
-                <p id="lider-card4-desc">Desarrollo e implementación de proyectos de <strong>Energías Renovables</strong> (Solar, Eólica e Hidrógeno Verde).</p>
+            <!-- Card 4 -->
+            <div class="experience-card">
+                <div class="card-header">
+                    <h3 class="client-name" data-i18n="table.row4.client">PETRONAS</h3>
+                    <div class="investment-badge" data-i18n="table.row4.investment">$28 MM</div>
+                </div>
+                <div class="project-info">
+                    <p class="project-description" data-i18n="table.row4.project"><em>Umbrella Contract</em> para <em>Well Testing</em> y TCP</p>
+                </div>
+                <div class="project-details">
+                    <div class="country-flag">
+                        <span>📍</span>
+                        <span class="country-name" data-i18n="table.row4.country">MALASIA</span>
+                    </div>
+                </div>
             </div>
+
+            <!-- Card 5 -->
+            <div class="experience-card">
+                <div class="card-header">
+                    <h3 class="client-name" data-i18n="table.row5.client">REPSOL PERÚ</h3>
+                    <div class="investment-badge" data-i18n="table.row5.investment">$6 MM</div>
+                </div>
+                <div class="project-info">
+                    <p class="project-description" data-i18n="table.row5.project">Trabajos mecánicos de parada de planta (torre de destilación)</p>
+                </div>
+                <div class="project-details">
+                    <div class="country-flag">
+                        <span>📍</span>
+                        <span class="country-name" data-i18n="table.row5.country">PERÚ</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
 
+        <section id="presencia-internacional" class="section-content presencia-section">
+            <div class="container">
+                <h2 class="presencia-title" data-i18n="presence.title">Presencia Internacional</h2>
 
-
-
-<section id="experiencia-comprobada" class="section-content experiencia-section">
-    <div class="container">
-        <h2 class="experiencia-title" id="experiencia-title">Experiencia Comprobada: Proyectos Destacados</h2>
-        
-        <div class="table-container">
-            <table class="experiencia-table">
-                <thead>
-                    <tr>
-                        <th id="table-header-cliente">Cliente</th>
-                        <th id="table-header-proyecto">Proyecto Destacado</th>
-                        <th id="table-header-pais">País</th>
-                        <th id="table-header-inversion">Inversión Estimada</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td id="cliente-1">Ministerio de Industria</td>
-                        <td id="proyecto-1">Contrato IPC para el **SALADIN 60 MW SOLAR PARK**</td>
-                        <td id="pais-1">IRAK</td>
-                        <td id="inversion-1">$36 MM</td>
-                    </tr>
-                    <tr>
-                        <td id="cliente-2">NATIONAL WATER COMPANY</td>
-                        <td id="proyecto-2">Ingeniería, Procura y Construcción para las Reservas Estratégicas</td>
-                        <td id="pais-2">ARABIA SAUDITA</td>
-                        <td id="inversion-2">$300 M</td>
-                    </tr>
-                    <tr>
-                        <td id="cliente-3">AES GENER</td>
-                        <td id="proyecto-3">Proyecto IPC para el reemplazo de bombas de alimentación de caldera</td>
-                        <td id="pais-3">CHILE</td>
-                        <td id="inversion-3">$7.2 MM</td>
-                    </tr>
-                    <tr>
-                        <td id="cliente-4">PETRONAS</td>
-                        <td id="proyecto-4">*Umbrella Contract* para *Well Testing* y TCP</td>
-                        <td id="pais-4">MALASIA</td>
-                        <td id="inversion-4">$28 MM</td>
-                    </tr>
-                    <tr>
-                        <td id="cliente-5">REPSOL PERÚ</td>
-                        <td id="proyecto-5">Trabajos mecánicos de parada de planta (torre de destilación)</td>
-                        <td id="pais-5">PERÚ</td>
-                        <td id="inversion-5">$6 MM</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</section>
-
-
-
-
-
-<section id="presencia-internacional" class="section-content presencia-section">
-    <div class="container">
-        <h2 class="presencia-title" id="presencia-title">Presencia Internacional</h2>
-        
-        <div class="presencia-content">
-            <p class="presencia-text">
-                <strong id="presencia-america-label">América:</strong> 
-                <span id="presencia-america-text">Perú, Venezuela, Bolivia, EEUU.</span> | 
-                <strong id="presencia-europa-label">Europa:</strong> 
-                <span id="presencia-europa-text">España.</span> | 
-                <strong id="presencia-asia-label">Asia y África:</strong> 
-                <span id="presencia-asia-text">Malasia, Guinea Ecuatorial (Próximamente).</span>
-            </p>
-        </div>
-    </div>
-</section>
-
-<section id="clientes-carousel" class="carousel-section">
-    <div class="container">
-        <h2 class="carousel-title" id="carousel-title">Nuestros Principales Clientes</h2>
-        <p>Confianza global en ingenieria y Construcción</p>
-        
-        <div class="logo-slider">
-            <div class="logo-slider-track">
-                <!-- Primera serie de logos -->
-                <div class="logo-item">
-                    <img src="img/logos/repsol.png" alt="Repsol">
-                </div>
-                <div class="logo-item">
-                    <img src="img/logos/PETRONAS_Logo_(for_solid_white_background).png" alt="Petronas">
-                </div>
-                <div class="logo-item">
-                    <img src="img/logos/pdvsa-logo.png" alt="PDVSA">
-                </div>
-                <div class="logo-item">
-                    <img src="img/logos/rosneft-logo.png" alt="Rosneft">
-                </div>
-                <div class="logo-item">
-                    <img src="img/logos/ConocoPhillips-Logo.png" alt="ConocoPhillips">
-                </div>
-                <div class="logo-item">
-                    <img src="img/logos/Honeywell-Logo.png" alt="Honeywell">
-                </div>
-                <div class="logo-item">
-                    <img src="img/logos/aes.png" alt="AES">
-                </div>
-                <div class="logo-item">
-                    <img src="img/logos/Cargill-logo.webp" alt="Cargill">
-                </div>
-                <div class="logo-item">
-                    <img src="img/logos/logo_inabensa.jpg" alt="Inabensa">
-                </div>
-                <div class="logo-item">
-                    <img src="img/logos/gepetrol-logo-3.png" alt="GEPetrol">
-                </div>
-                <div class="logo-item">
-                    <img src="img/logos/FERTI.jpeg" alt="Fertinitro">
-                </div>
-                <div class="logo-item">
-                    <img src="img/logos/comibol_logo.jpg" alt="Comibol">
-                </div>
-                <div class="logo-item">
-                    <img src="img/logos/fo1369g3b5-formosa-plastics-group-logo-gov-edwards-and-formosa-plastics-announce-332-million-expansion.png" alt="Formosa Plastics">
-                </div>
-                <div class="logo-item">
-                    <img src="img/logos/logos_industrial_paramount.webp" alt="Industrial Paramount">
-                </div>
-                <div class="logo-item">
-                    <img src="img/logos/OIP.jpeg" alt="Cliente">
-                </div>
-
-                <!-- Segunda serie DUPLICADA (para efecto infinito) -->
-                <div class="logo-item">
-                    <img src="img/logos/repsol.png" alt="Repsol">
-                </div>
-                <div class="logo-item">
-                    <img src="img/logos/PETRONAS_Logo_(for_solid_white_background).png" alt="Petronas">
-                </div>
-                <div class="logo-item">
-                    <img src="img/logos/pdvsa-logo.png" alt="PDVSA">
-                </div>
-                <div class="logo-item">
-                    <img src="img/logos/rosneft-logo.png" alt="Rosneft">
-                </div>
-                <div class="logo-item">
-                    <img src="img/logos/ConocoPhillips-Logo.png" alt="ConocoPhillips">
-                </div>
-                <div class="logo-item">
-                    <img src="img/logos/Honeywell-Logo.png" alt="Honeywell">
-                </div>
-                <div class="logo-item">
-                    <img src="img/logos/aes.png" alt="AES">
-                </div>
-                <div class="logo-item">
-                    <img src="img/logos/Cargill-logo.webp" alt="Cargill">
-                </div>
-                <div class="logo-item">
-                    <img src="img/logos/logo_inabensa.jpg" alt="Inabensa">
-                </div>
-                <div class="logo-item">
-                    <img src="img/logos/gepetrol-logo-3.png" alt="GEPetrol">
-                </div>
-                <div class="logo-item">
-                    <img src="img/logos/FERTI.jpeg" alt="Fertinitro">
-                </div>
-                <div class="logo-item">
-                    <img src="img/logos/comibol_logo.jpg" alt="Comibol">
-                </div>
-                <div class="logo-item">
-                    <img src="img/logos/fo1369g3b5-formosa-plastics-group-logo-gov-edwards-and-formosa-plastics-announce-332-million-expansion.png" alt="Formosa Plastics">
-                </div>
-                <div class="logo-item">
-                    <img src="img/logos/logos_industrial_paramount.webp" alt="Industrial Paramount">
-                </div>
-                <div class="logo-item">
-                    <img src="img/logos/OIP.jpeg" alt="Cliente">
+                <div class="presencia-content">
+                    <p class="presencia-text">
+                        <strong data-i18n="presence.america.label">América:</strong>
+                        <span data-i18n="presence.america.text">Perú, Venezuela, Bolivia, EEUU.</span> |
+                        <strong data-i18n="presence.europe.label">Europa:</strong>
+                        <span data-i18n="presence.europe.text">España.</span> |
+                        <strong data-i18n="presence.asiaafrica.label">Asia y África:</strong>
+                        <span data-i18n="presence.asiaafrica.text">Malasia, Guinea Ecuatorial (Próximamente).</span>
+                    </p>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
+
+        <section id="clientes-carousel" class="carousel-section">
+            <div class="container">
+                <h2 class="carousel-title" data-i18n="carousel.title">Nuestros Principales Clientes</h2>
+                <p data-i18n="carousel.subtitle">Confianza global en ingenieria y Construcción</p>
+
+                <div class="logo-slider">
+                    <div class="logo-slider-track">
+                        <!-- Logos left as-is (images are not translated) -->
+                        <div class="logo-item"><img src="img/logos/repsol.png" alt="Repsol"></div>
+                        <div class="logo-item"><img src="img/logos/PETRONAS_Logo_(for_solid_white_background).png" alt="Petronas"></div>
+                        <div class="logo-item"><img src="img/logos/pdvsa-logo.png" alt="PDVSA"></div>
+                        <div class="logo-item"><img src="img/logos/rosneft-logo.png" alt="Rosneft"></div>
+                        <div class="logo-item"><img src="img/logos/ConocoPhillips-Logo.png" alt="ConocoPhillips"></div>
+                        <div class="logo-item"><img src="img/logos/Honeywell-Logo.png" alt="Honeywell"></div>
+                        <div class="logo-item"><img src="img/logos/aes.png" alt="AES"></div>
+                        <div class="logo-item"><img src="img/logos/Cargill-logo.webp" alt="Cargill"></div>
+                        <div class="logo-item"><img src="img/logos/logo_inabensa.jpg" alt="Inabensa"></div>
+                        <div class="logo-item"><img src="img/logos/gepetrol-logo-3.png" alt="GEPetrol"></div>
+                        <div class="logo-item"><img src="img/logos/FERTI.jpeg" alt="Fertinitro"></div>
+                        <div class="logo-item"><img src="img/logos/comibol_logo.jpg" alt="Comibol"></div>
+                        <div class="logo-item"><img src="img/logos/fo1369g3b5-formosa-plastics-group-logo-gov-edwards-and-formosa-plastics-announce-332-million-expansion.png" alt="Formosa Plastics"></div>
+                        <div class="logo-item"><img src="img/logos/logos_industrial_paramount.webp" alt="Industrial Paramount"></div>
+                        <div class="logo-item"><img src="img/logos/OIP.jpeg" alt="Cliente"></div>
+
+                        <!-- Duplicate series for infinite effect -->
+                        <div class="logo-item"><img src="img/logos/repsol.png" alt="Repsol"></div>
+                        <div class="logo-item"><img src="img/logos/PETRONAS_Logo_(for_solid_white_background).png" alt="Petronas"></div>
+                        <div class="logo-item"><img src="img/logos/pdvsa-logo.png" alt="PDVSA"></div>
+                        <div class="logo-item"><img src="img/logos/rosneft-logo.png" alt="Rosneft"></div>
+                        <div class="logo-item"><img src="img/logos/ConocoPhillips-Logo.png" alt="ConocoPhillips"></div>
+                        <div class="logo-item"><img src="img/logos/Honeywell-Logo.png" alt="Honeywell"></div>
+                        <div class="logo-item"><img src="img/logos/aes.png" alt="AES"></div>
+                        <div class="logo-item"><img src="img/logos/Cargill-logo.webp" alt="Cargill"></div>
+                        <div class="logo-item"><img src="img/logos/logo_inabensa.jpg" alt="Inabensa"></div>
+                        <div class="logo-item"><img src="img/logos/gepetrol-logo-3.png" alt="GEPetrol"></div>
+                        <div class="logo-item"><img src="img/logos/FERTI.jpeg" alt="Fertinitro"></div>
+                        <div class="logo-item"><img src="img/logos/comibol_logo.jpg" alt="Comibol"></div>
+                        <div class="logo-item"><img src="img/logos/fo1369g3b5-formosa-plastics-group-logo-gov-edwards-and-formosa-plastics-announce-332-million-expansion.png" alt="Formosa Plastics"></div>
+                        <div class="logo-item"><img src="img/logos/logos_industrial_paramount.webp" alt="Industrial Paramount"></div>
+                        <div class="logo-item"><img src="img/logos/OIP.jpeg" alt="Cliente"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
         <div class="footer-content">
             <div class="footer-inner">
-                <!-- <div class="footer-left">
-                    <div class="gmk-box">
-                        <img src="/img/logo_instrelec.png" alt="Corp Instrelec Group">
-                        <p><strong>CEO:</strong> Ricardo Mazzini</p>
-                        <p><strong>CFO:</strong> Ricardo Martínez</p>
-                        <p><strong>Director de ventas:</strong> Nicolas Timm</p>
-                    </div>
-                </div> -->
-
                 <div class="footer-right">
-                    <h2 class="footer-title" id="footer-title">OFICINAS</h2>
+                    <h2 class="footer-title" data-i18n="footer.title">OFICINAS</h2>
                     <div class="offices-grid">
                         <div class="offices-col">
                             <div class="office">
-                                <h3 id="country-spain">ESPAÑA</h3>
-                                <h4>Corp. Instrelec Group, S.L.</h4>
-                                <p>Instrelec3000 y automatismos</p>
-                                <p>Iberia, S.E. Calle de Anabel</p>
-                                <p>Segura, 11 Edif. A, planta 2</p>
-                                <p>Oficina 2B, C.P. 28108</p>
-                                <p>Alcobendas (Madrid)</p>
+                                <h3 data-i18n="footer.offices.spain.title">ESPAÑA</h3>
+                                <h4 data-i18n="footer.offices.spain.company">Corp. Instrelec Group, S.L.</h4>
+                                <p data-i18n="footer.offices.spain.line1">Instrelec3000 y automatismos</p>
+                                <p data-i18n="footer.offices.spain.line2">Iberia, S.E. Calle de Anabel</p>
+                                <p data-i18n="footer.offices.spain.line3">Segura, 11 Edif. A, planta 2</p>
+                                <p data-i18n="footer.offices.spain.line4">Oficina 2B, C.P. 28108</p>
+                                <p data-i18n="footer.offices.spain.line5">Alcobendas (Madrid)</p>
                             </div>
 
                             <div class="office">
-                                <h3 id="country-venezuela">Venezuela</h3>
-                                <p>Instrelec3000 y Automatismos, C.A.</p>
-                                <p>Centro Empresarial</p>
-                                <p>COLÓN, piso 2 Oficina 18,</p>
-                                <p>Porlamar Edo. Anzoátegui</p>
-
+                                <h3 data-i18n="footer.offices.venezuela.title">Venezuela</h3>
+                                <p data-i18n="footer.offices.venezuela.line1">Instrelec3000 y Automatismos, C.A.</p>
+                                <p data-i18n="footer.offices.venezuela.line2">Centro Empresarial</p>
+                                <p data-i18n="footer.offices.venezuela.line3">COLÓN, piso 2 Oficina 18,</p>
+                                <p data-i18n="footer.offices.venezuela.line4">Porlamar Edo. Anzoátegui</p>
                             </div>
 
                             <div class="office">
-                                <h3 id="country-bolivia">Bolivia</h3>
-                                <p>Instrelec. S.R.L.</p>
-                                <p>Barrio El Carmen entre radial 23, Av. Mariano Moreno</p>
-                                <p>y calle 3Edificio Kenia oficina 1,</p>
-                                <p>Santa Cruz de la Sierra – Bolivia</p>
+                                <h3 data-i18n="footer.offices.bolivia.title">Bolivia</h3>
+                                <p data-i18n="footer.offices.bolivia.line1">Instrelec. S.R.L.</p>
+                                <p data-i18n="footer.offices.bolivia.line2">Barrio El Carmen entre radial 23, Av. Mariano Moreno</p>
+                                <p data-i18n="footer.offices.bolivia.line3">y calle 3Edificio Kenia oficina 1,</p>
+                                <p data-i18n="footer.offices.bolivia.line4">Santa Cruz de la Sierra – Bolivia</p>
                             </div>
                         </div>
 
                         <div class="offices-col">
                             <div class="office">
-                                <h3 id="country-germany">ALEMANIA</h3>
-                                <h4>INTEC GMK</h4>
-                                <p>Lilienthalstr.</p>
-                                <p>18211 Bargeshagen</p>
-                                <p>Alemania</p>
-
+                                <h3 data-i18n="footer.offices.germany.title">ALEMANIA</h3>
+                                <h4 data-i18n="footer.offices.germany.company">INTEC GMK</h4>
+                                <p data-i18n="footer.offices.germany.line1">Lilienthalstr.</p>
+                                <p data-i18n="footer.offices.germany.line2">18211 Bargeshagen</p>
+                                <p data-i18n="footer.offices.germany.line3">Alemania</p>
                             </div>
 
                             <div class="office">
-                                <h3 id="country-usa">EEUU</h3>
-                                <h4>Instrelec Group LLC</h4>
-                                <p>7230, NW 58 St, Miami,</p>
-                                <p>Florida; EEUU, CP. 33166</p>
+                                <h3 data-i18n="footer.offices.usa.title">EEUU</h3>
+                                <h4 data-i18n="footer.offices.usa.company">Instrelec Group LLC</h4>
+                                <p data-i18n="footer.offices.usa.line1">7230, NW 58 St, Miami,</p>
+                                <p data-i18n="footer.offices.usa.line2">Florida; EEUU, CP. 33166</p>
                             </div>
 
                             <div class="office">
-                                <h3 id="country-peru">Perú</h3>
-                                <p>Instrelec Group S.A.C.</p>
-                                <p>Torre Roja C2, Calle Los Sauces,</p>
-                                <p>Sanisidro 15073 Lima, Perú</p>
+                                <h3 data-i18n="footer.offices.peru.title">Perú</h3>
+                                <p data-i18n="footer.offices.peru.line1">Instrelec Group S.A.C.</p>
+                                <p data-i18n="footer.offices.peru.line2">Torre Roja C2, Calle Los Sauces,</p>
+                                <p data-i18n="footer.offices.peru.line3">Sanisidro 15073 Lima, Perú</p>
                             </div>
 
                             <div class="office">
-                                <h3 id="country-malaysia">Malasia</h3>
-                                <p>Lot 3A-2, 2nd Floor, Lorong</p>
-                                <p>Grace Square, Jalan Pantai</p>
-                                <p>Sembulan, 88100 Kota</p>
-                                <p>Kinabalu, SABAH, MALAYSIA</p>
+                                <h3 data-i18n="footer.offices.malaysia.title">Malasia</h3>
+                                <p data-i18n="footer.offices.malaysia.line1">Lot 3A-2, 2nd Floor, Lorong</p>
+                                <p data-i18n="footer.offices.malaysia.line2">Grace Square, Jalan Pantai</p>
+                                <p data-i18n="footer.offices.malaysia.line3">Sembulan, 88100 Kota</p>
+                                <p data-i18n="footer.offices.malaysia.line4">Kinabalu, SABAH, MALAYSIA</p>
                             </div>
                         </div>
                     </div>
@@ -414,7 +381,7 @@
                     <div class="footer-sep"></div>
 
                     <div class="contacts">
-                        <p class="copyright">&copy; 2025 Corp Instrelec Group. Todos los derechos reservados.</p>
+                        <p class="copyright" data-i18n="footer.copyright">© 2025 Corp Instrelec Group. Todos los derechos reservados.</p>
                     </div>
                 </div>
             </div>

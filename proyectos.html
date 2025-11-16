@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corp Instrelec Group</title>
+    <title data-i18n="meta.title">Corp Instrelec Group</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -24,11 +24,10 @@
             </button>
 
             <ul class="nav-links">
-                <li><a href="inicio.html" id="nav-inicio">Inicio</a></li>
-                <li><a href="tecnologia-orc.html" id="nav-orc">Tecnología ORC</a></li>
-                <li><a href="servicios.html" id="nav-servicios">Servicios</a></li>
-                <li><a href="proyectos.html" id="nav-proyectos">Proyectos</a></li>
-                <!-- <li><a href="contacto.html" id="nav-contacto">Contacto</a></li> -->
+                <li><a href="inicio.html" id="nav-inicio" data-i18n="nav.home">Inicio</a></li>
+                <li><a href="tecnologia-orc.html" id="nav-orc" data-i18n="nav.orc">Tecnología ORC</a></li>
+                <li><a href="servicios.html" id="nav-servicios" data-i18n="nav.services">Servicios</a></li>
+                <li><a href="proyectos.html" id="nav-proyectos" data-i18n="nav.projects">Proyectos</a></li>
 
                 <!-- Selectores de idioma dentro del menú móvil -->
                 <div class="lang-selector-group">
@@ -49,19 +48,17 @@
         </nav>
     </header>
 
-
-
     <main>
         <section id="proyectos" class="section-content projects-section">
             <div class="container">
-                <h2 id="proyectos-title">Proyectos Destacados</h2>
+                <h2 id="proyectos-title" data-i18n="projects.title">Proyectos Destacados</h2>
                 <div class="projects-grid">
 
                     <div class="project-card">
                         <img src="/img/img_proyectos/PROEYECTO-REPSOL.webp" alt="Planta Industrial Repsol" class="project-image">
                         <div class="project-info">
-                            <h3 id="project-1-title">REPSOL (España)</h3>
-                            <p id="project-1-desc">Ingeniería, procura y construcción (EPC) de una planta de cogeneración
+                            <h3 id="project-1-title" data-i18n="projects.card1.title">REPSOL (España)</h3>
+                            <p id="project-1-desc" data-i18n="projects.card1.desc">Ingeniería, procura y construcción (EPC) de una planta de cogeneración
                                 ORC, recuperando calor residual de procesos industriales para generar electricidad
                                 limpia.</p>
                         </div>
@@ -70,8 +67,8 @@
                     <div class="project-card">
                         <img src="/img/img_proyectos/PROYECTO-CHILE.jpg" alt="Parque Solar" class="project-image">
                         <div class="project-info">
-                            <h3 id="project-2-title">Solar Park (Chile)</h3>
-                                <p id="project-2-desc">Sistema de automatización avanzado para la monitorización y control de
+                            <h3 id="project-2-title" data-i18n="projects.card2.title">Solar Park (Chile)</h3>
+                                <p id="project-2-desc" data-i18n="projects.card2.desc">Sistema de automatización avanzado para la monitorización y control de
                                 granjas solares a escala gigavatio. Integración de la red y optimización de rendimiento.
                             </p>
                         </div>
@@ -80,8 +77,8 @@
                     <div class="project-card">
                         <img src="/img/img_proyectos/PROYECTO-ALEMANIA.jpg" alt="Aplicación INDUCAL en industria" class="project-image">
                         <div class="project-info">
-                            <h3 id="project-3-title">INDUCAL (Alemania)</h3>
-                            <p id="project-3-desc">Implementación de la tecnología INDUCAL (Waste Heat Recovery) en una
+                            <h3 id="project-3-title" data-i18n="projects.card3.title">INDUCAL (Alemania)</h3>
+                            <p id="project-3-desc" data-i18n="projects.card3.desc">Implementación de la tecnología INDUCAL (Waste Heat Recovery) en una
                                 fundición, transformando los gases de escape calientes en energía eléctrica para
                                 autoconsumo.</p>
                         </div>
@@ -90,97 +87,81 @@
                     <div class="project-card">
                         <img src="/img/img_proyectos/PROYECTO BOLIVIA.webp" alt="Pequeña planta de biomasa" class="project-image">
                         <div class="project-info">
-                            <h3 id="project-4-title">ECOCAL (Bolivia)</h3>
-                            <p id="project-4-desc"> Instalación de una unidad ECOCAL para generación combinada de calor y
+                            <h3 id="project-4-title" data-i18n="projects.card4.title">ECOCAL (Bolivia)</h3>
+                            <p id="project-4-desc" data-i18n="projects.card4.desc"> Instalación de una unidad ECOCAL para generación combinada de calor y
                                 electricidad (CHP) usando biomasa forestal local, contribuyendo a la sostenibilidad
                                 rural.</p>
                         </div>
                     </div>
 
                 </div>
-<!--                 <div class="proyects-footer">
-                    <a href="contacto.html" class="btn-proyectos" id="proyectos-btn">Hable con un experto en proyectos
-                        →</a>
-                </div> -->
             </div>
         </section>
-
     </main>
 
     <footer>
         <div class="footer-content">
             <div class="footer-inner">
-                <!-- <div class="footer-left">
-                    <div class="gmk-box">
-                        <img src="/img/logo_instrelec.png" alt="Corp Instrelec Group">
-                        <p><strong>CEO:</strong> Ricardo Mazzini</p>
-                        <p><strong>CFO:</strong> Ricardo Martínez</p>
-                        <p><strong>Director de ventas:</strong> Nicolas Timm</p>
-                    </div>
-                </div> -->
-
                 <div class="footer-right">
-                    <h2 class="footer-title" id="footer-title">OFICINAS</h2>
+                    <h2 class="footer-title" id="footer-title" data-i18n="footer.title">OFICINAS</h2>
                     <div class="offices-grid">
                         <div class="offices-col">
                             <div class="office">
-                                <h3 id="country-spain">ESPAÑA</h3>
-                                <h4>Corp. Instrelec Group, S.L.</h4>
-                                <p>Instrelec3000 y automatismos</p>
-                                <p>Iberia, S.E. Calle de Anabel</p>
-                                <p>Segura, 11 Edif. A, planta 2</p>
-                                <p>Oficina 2B, C.P. 28108</p>
-                                <p>Alcobendas (Madrid)</p>
+                                <h3 id="country-spain" data-i18n="footer.offices.spain.title">ESPAÑA</h3>
+                                <h4 data-i18n="footer.offices.spain.company">Corp. Instrelec Group, S.L.</h4>
+                                <p data-i18n="footer.offices.spain.line1">Instrelec3000 y automatismos</p>
+                                <p data-i18n="footer.offices.spain.line2">Iberia, S.E. Calle de Anabel</p>
+                                <p data-i18n="footer.offices.spain.line3">Segura, 11 Edif. A, planta 2</p>
+                                <p data-i18n="footer.offices.spain.line4">Oficina 2B, C.P. 28108</p>
+                                <p data-i18n="footer.offices.spain.line5">Alcobendas (Madrid)</p>
                             </div>
 
                             <div class="office">
-                                <h3 id="country-venezuela">Venezuela</h3>
-                                <p>Instrelec3000 y Automatismos, C.A.</p>
-                                <p>Centro Empresarial</p>
-                                <p>COLÓN, piso 2 Oficina 18,</p>
-                                <p>Porlamar Edo. Anzoátegui</p>
-  
+                                <h3 id="country-venezuela" data-i18n="footer.offices.venezuela.title">Venezuela</h3>
+                                <p data-i18n="footer.offices.venezuela.line1">Instrelec3000 y Automatismos, C.A.</p>
+                                <p data-i18n="footer.offices.venezuela.line2">Centro Empresarial</p>
+                                <p data-i18n="footer.offices.venezuela.line3">COLÓN, piso 2 Oficina 18,</p>
+                                <p data-i18n="footer.offices.venezuela.line4">Porlamar Edo. Anzoátegui</p>
                             </div>
 
                             <div class="office">
-                                <h3 id="country-bolivia">Bolivia</h3>
-                                <p>Instrelec. S.R.L.</p>
-                                <p>Barrio El Carmen entre radial 23, Av. Mariano Moreno</p>
-                                <p>y calle 3Edificio Kenia oficina 1,</p>
-                                <p>Santa Cruz de la Sierra – Bolivia</p>
-                             </div>
+                                <h3 id="country-bolivia" data-i18n="footer.offices.bolivia.title">Bolivia</h3>
+                                <p data-i18n="footer.offices.bolivia.line1">Instrelec. S.R.L.</p>
+                                <p data-i18n="footer.offices.bolivia.line2">Barrio El Carmen entre radial 23, Av. Mariano Moreno</p>
+                                <p data-i18n="footer.offices.bolivia.line3">y calle 3Edificio Kenia oficina 1,</p>
+                                <p data-i18n="footer.offices.bolivia.line4">Santa Cruz de la Sierra – Bolivia</p>
+                            </div>
                         </div>
 
                         <div class="offices-col">
                             <div class="office">
-                                <h3 id="country-germany">ALEMANIA</h3>
-                                <h4>INTEC GMK</h4>
-                                <p>Lilienthalstr.</p>
-                                <p>18211 Bargeshagen</p>
-                                <p>Alemania</p>
-  
+                                <h3 id="country-germany" data-i18n="footer.offices.germany.title">ALEMANIA</h3>
+                                <h4 data-i18n="footer.offices.germany.company">INTEC GMK</h4>
+                                <p data-i18n="footer.offices.germany.line1">Lilienthalstr.</p>
+                                <p data-i18n="footer.offices.germany.line2">18211 Bargeshagen</p>
+                                <p data-i18n="footer.offices.germany.line3">Alemania</p>
                             </div>
 
                             <div class="office">
-                                <h3 id="country-usa">EEUU</h3>
-                                <h4>Instrelec Group LLC</h4>
-                                <p>7230, NW 58 St, Miami,</p>
-                                <p>Florida; EEUU, CP. 33166</p>
+                                <h3 id="country-usa" data-i18n="footer.offices.usa.title">EEUU</h3>
+                                <h4 data-i18n="footer.offices.usa.company">Instrelec Group LLC</h4>
+                                <p data-i18n="footer.offices.usa.line1">7230, NW 58 St, Miami,</p>
+                                <p data-i18n="footer.offices.usa.line2">Florida; EEUU, CP. 33166</p>
                             </div>
 
                             <div class="office">
-                                <h3 id="country-peru">Perú</h3>
-                                <p>Instrelec Group S.A.C.</p>
-                                <p>Torre Roja C2, Calle Los Sauces,</p>
-                                <p>Sanisidro 15073 Lima, Perú</p>
+                                <h3 id="country-peru" data-i18n="footer.offices.peru.title">Perú</h3>
+                                <p data-i18n="footer.offices.peru.line1">Instrelec Group S.A.C.</p>
+                                <p data-i18n="footer.offices.peru.line2">Torre Roja C2, Calle Los Sauces,</p>
+                                <p data-i18n="footer.offices.peru.line3">Sanisidro 15073 Lima, Perú</p>
                             </div>
 
                             <div class="office">
-                                <h3 id="country-malaysia">Malasia</h3>
-                                <p>Lot 3A-2, 2nd Floor, Lorong</p>
-                                <p>Grace Square, Jalan Pantai</p>
-                                <p>Sembulan, 88100 Kota</p>
-                                <p>Kinabalu, SABAH, MALAYSIA</p>
+                                <h3 id="country-malaysia" data-i18n="footer.offices.malaysia.title">Malasia</h3>
+                                <p data-i18n="footer.offices.malaysia.line1">Lot 3A-2, 2nd Floor, Lorong</p>
+                                <p data-i18n="footer.offices.malaysia.line2">Grace Square, Jalan Pantai</p>
+                                <p data-i18n="footer.offices.malaysia.line3">Sembulan, 88100 Kota</p>
+                                <p data-i18n="footer.offices.malaysia.line4">Kinabalu, SABAH, MALAYSIA</p>
                             </div>
                         </div>
                     </div>
@@ -188,7 +169,7 @@
                     <div class="footer-sep"></div>
 
                     <div class="contacts">
-                        <p class="copyright">&copy; 2025 Corp Instrelec Group. Todos los derechos reservados.</p>
+                        <p class="copyright" data-i18n="footer.copyright">&copy; 2025 Corp Instrelec Group. Todos los derechos reservados.</p>
                     </div>
                 </div>
             </div>
