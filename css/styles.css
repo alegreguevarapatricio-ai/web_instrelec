@@ -594,7 +594,7 @@ main {
 
 /* Footer */
 footer {
-    background: #fff;
+    background: var(--gris-claro);
     color: var(--texto-dark);
     padding: 1.8rem 5%;
     border-top: 1px solid #e6e6e6;
@@ -893,7 +893,7 @@ footer {
     }
 
     .logo {
-        height: 35px;
+        height: 55px;
         max-width: 100px;
     }
 
@@ -1975,7 +1975,7 @@ body.modal-open {
 .logo-slider-track {
     display: flex;
     gap: 4rem;
-    animation: slide-logos 200s linear infinite;
+    animation: slide-logos 60s linear infinite;
     width: fit-content;
     will-change: transform;
 }
