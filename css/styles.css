@@ -457,82 +457,137 @@ main {
     background: #102a78;
 }
 
-/* Projects Section */
-.projects-section {
-    background: white;
-    padding: 4rem 5%;
+/* ========================================= */
+/* NUEVA SECCIÓN PROYECTOS (Estilo Tarjetas) */
+/* ========================================= */
+
+.section-header {
     text-align: center;
+    margin-bottom: 3rem;
 }
 
-#proyectos-title {
-    color: var(--azul-oscuro);
-    font-size: 2.2rem;
-    font-weight: 700;
-    margin-bottom: 2.5rem;
+.section-subtitle {
+    color: #6b7280;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
 }
 
+/* Grid Responsiva para 5 elementos */
 .projects-grid {
-    max-width: 1200px;
-    margin: 0 auto 2rem;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    /* Esto crea columnas automáticas de mínimo 320px */
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
     gap: 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+    justify-content: center;
 }
 
+/* Estilo de la Tarjeta */
 .project-card {
-    background: var(--gris-claro);
-    border-radius: 8px;
+    background: white;
+    border-radius: 16px; /* Bordes muy redondeados como en la foto */
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(30, 58, 138, 0.15);
+}
+
+/* Contenedor de la imagen y el Badge */
+.card-image-wrapper {
+    position: relative;
+    height: 220px;
+    width: 100%;
+    overflow: hidden;
 }
 
 .project-image {
     width: 100%;
-    height: 150px;
+    height: 100%;
     object-fit: cover;
+    transition: transform 0.5s ease;
 }
 
+.project-card:hover .project-image {
+    transform: scale(1.05);
+}
+
+/* El Badge Rojo (Etiqueta) */
+.project-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #ea2d0c; /* Rojo corporativo */
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    z-index: 2;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Placeholder para el proyecto sin foto (Proyecto 5) */
+.placeholder-image {
+    background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder-image::after {
+    content: '⚡'; /* Icono industrial */
+    font-size: 3rem;
+    opacity: 0.5;
+}
+
+/* Información del Proyecto */
 .project-info {
-    padding: 1.5rem 1rem;
-    text-align: left;
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .project-info h3 {
-    color: var(--rojo);
-    font-size: 1.15rem;
+    color: var(--azul-oscuro);
+    font-size: 1.4rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
+    line-height: 1.3;
 }
 
-.project-info p {
-    font-size: 0.9rem;
-    color: #4b5563;
-    line-height: 1.5;
+/* Estilo para el Cliente */
+.client-text {
+    color: #6b7280; /* Gris medio */
+    font-style: italic;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
 }
 
-.proyects-footer {
-    margin-top: 2.5rem;
+.project-desc {
+    color: #374151;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: auto; /* Empuja el texto hacia arriba si sobra espacio */
 }
 
-.btn-proyectos {
-    background: var(--azul-oscuro);
-    color: white;
-    text-decoration: none;
-    padding: 1rem 2rem;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: background 0.3s;
-    display: inline-block;
-}
-
-.btn-proyectos:hover {
-    background: #102a78;
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr; /* Una sola columna en móvil */
+    }
+    .card-image-wrapper {
+        height: 200px;
+    }
 }
 
 /* Services Section */
@@ -2553,4 +2608,79 @@ body.modal-open {
 
 .copyright {
     margin-top: 10px;
+}
+/* --- Estilos para el Hero Header de Proyectos --- */
+
+.hero-section {
+    /* Asegúrate de que este nombre de archivo sea el correcto. 
+       Si usas la imagen que subiste, cámbialo a: url('../img/edificios02.jpg'); */
+    background-image: url('../img/bg_proyectos.webp'); 
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    /* AGREGADO: Margen inferior para que no se pegue al título de proyectos */
+    margin-bottom: 3rem; 
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.6); /* Un poco más oscuro para leer mejor */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    color: #ffffff;
+    z-index: 2; /* Asegura que el texto esté por encima */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5); /* Sombra para mejorar lectura */
+}
+
+.hero-content p {
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Ajustes Responsive */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+    .hero-section {
+        height: 50vh;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }

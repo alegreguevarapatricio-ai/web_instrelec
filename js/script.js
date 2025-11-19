@@ -20,7 +20,7 @@ const translations = {
             paragraph: "Expertos en ORC (Ciclo Orgánico de Rankine) — Proyectos EPC, Revamping y servicios integrales a nivel internacional."
         },
         timeline: {
-            title: 'NUESTRO <span class="highlight-adn">ADN</span>: Historia y Crecimiento',
+            title: 'NUESTRA HISTORIA',
             "2005": "Instrelec nace ofreciendo soluciones de Ingeniería en Automatización, Control y Electricidad en Venezuela.",
             "2007": "Apertura de la sede en España, iniciando la oferta de soluciones tipo <strong>IPCC (Ingeniería, Procura, Construcción y Comisionamiento).</strong>",
             "2016": "Se crea la Corporación, integrando a empresas especialistas con más de 20 años de experiencia en el sector Oil & Gas y un grupo financiero.",
