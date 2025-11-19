@@ -214,69 +214,90 @@ main {
 }
 
 /* Hero Strip */
-.hero-strip {
-    height: 8px;
-    background: linear-gradient(90deg, var(--azul-oscuro) 0%, var(--rojo) 100%);
-}
-
-/* inicio Hero */
+/* Hero Section con Video */
 .inicio-hero {
+    position: relative;
     height: 450px;
-    background-size: cover;
-    background-position: center;
+    width: 100%;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    text-align: center;
-    position: relative;
-    padding: 0 3%;
 }
 
-.hero-overlay {
-    background: rgba(255, 255, 255, 0.15);
+/* Video de fondo */
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Overlay oscuro opcional */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+/* Contenedor del texto */
+.hero-text-container {
+
+    position: relative;
+    z-index: 3;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.hero-text-container.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero-text-container h1,
+.hero-text-container p {
+    color: white !important;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+/* Efecto Glassmorphism mejorado */
+.inicio-hero .hero-overlay {
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
     border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px var(--azul-oscuro);
     padding: 2rem 3rem;
     max-width: 800px;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    animation: glassAppear 1s ease-out forwards;
 }
 
-.hero-text-content h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+@keyframes glassAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
-.hero-text-content p {
-    font-size: 1.2rem;
-    line-height: 1.4;
-    margin-bottom: 0.8rem;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-}
 
-#hero-paragraph {
-    font-weight: 600;
-    margin-top: 1.5rem;
-}
 
-/* Section Content */
-.section-content {
-    padding: 3rem 5%;
-    background: var(--gris-claro);
-}
 
-.inicio-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 3rem;
-    text-align: left;
-}
 
 .about-instrelec h2 {
     color: var(--azul-oscuro);
@@ -2612,8 +2633,7 @@ body.modal-open {
 /* --- Estilos para el Hero Header de Proyectos --- */
 
 .hero-section {
-    /* Asegúrate de que este nombre de archivo sea el correcto. 
-       Si usas la imagen que subiste, cámbialo a: url('../img/edificios02.jpg'); */
+
     background-image: url('../img/bg_proyectos.webp'); 
     background-size: cover;
     background-position: center center;

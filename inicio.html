@@ -50,20 +50,45 @@
     </header>
 
     <main>
-        <div class="hero-strip"></div>
+        <!-- hero_video -->
+         <div class="hero-strip"></div>
 
-        <div class="inicio-hero"
-            style="background-image: url('img/WhatsApp Image 2025-11-03 at 18.22.38_307c793b.jpg');">
-            <div class="hero-overlay">
-                <div class="hero-text-content">
-                    <h1 data-i18n="hero.title">Profesionales generando futuro</h1>
-                    <p data-i18n="hero.subtitle">Soluciones en Ingeniería, Energía y Recuperación de Calor.</p>
-                    <p data-i18n="hero.paragraph">Expertos en ORC (Ciclo Orgánico de Rankine) — Proyectos EPC, Revamping y
-                        Servicios integrales a nivel internacional.</p>
-                </div>
+<div class="inicio-hero">
+    <!-- Video de fondo -->
+    <video 
+        class="hero-video" 
+        id="heroVideo" 
+        autoplay 
+        muted 
+        playsinline
+        preload="auto"
+    >
+        <source src="./img/hero_home.mp4" type="video/mp4">
+        <source src="video/hero-video.webm" type="video/webm">
+        Tu navegador no soporta el elemento de video.
+    </video>
+
+    <!-- Overlay oscuro -->
+    <div class="video-overlay"></div>
+
+    <!-- Contenedor de texto con efecto glass -->
+    <div class="hero-text-container" id="heroTextContainer">
+        <div class="hero-overlay">
+            <div class="hero-text-content">
+                <h1 data-i18n="hero.title">Profesionales generando futuro</h1>
+                <p data-i18n="hero.subtitle">Soluciones en Ingeniería, Energía y Recuperación de Calor.</p>
+                <p id="hero-paragraph" data-i18n="hero.paragraph">Expertos en ORC (Ciclo Orgánico de Rankine) — Proyectos EPC, Revamping y servicios integrales a nivel internacional.</p>
             </div>
         </div>
+    </div>
 
+    <!-- Botón de control de audio (opcional) -->
+    <button class="audio-control" id="audioControl" title="Activar/Desactivar audio">
+        🔇
+    </button>
+</div>
+
+<!-- Fin hero video -->
         <div class="construction-container" style="display:none;">
             <div class="construction-icon">🚧</div>
             <h1 data-i18n="construction.title">Sitio en Construcción</h1>

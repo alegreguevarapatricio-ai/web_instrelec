@@ -1193,3 +1193,58 @@ if (document.readyState === 'loading') {
 } else {
     preloadCriticalImages();
     }
+
+    // ============================================
+// HERO VIDEO FUNCTIONALITY
+// ============================================
+
+function initHeroVideo() {
+    const video = document.getElementById('heroVideo');
+    const textContainer = document.getElementById('heroTextContainer');
+    const audioControl = document.getElementById('audioControl');
+
+    if (!video || !textContainer) return;
+
+    // Mostrar texto cuando el video termina
+    video.addEventListener('ended', function() {
+        textContainer.classList.add('show');
+    });
+
+    // Control de audio (opcional)
+    if (audioControl) {
+        audioControl.addEventListener('click', function() {
+            if (video.muted) {
+                video.muted = false;
+                audioControl.textContent = '🔊';
+            } else {
+                video.muted = true;
+                audioControl.textContent = '🔇';
+            }
+        });
+    }
+
+    // Manejo de errores
+    video.addEventListener('error', function(e) {
+        console.error('Error al cargar el video:', e);
+        textContainer.classList.add('show');
+    });
+
+    // Asegurar que el video se reproduce en móviles
+    video.addEventListener('loadedmetadata', function() {
+        video.play().catch(function(error) {
+            console.log('Autoplay bloqueado:', error);
+            textContainer.classList.add('show');
+        });
+    });
+}
+
+// Inicializar en el DOM ready existente
+document.addEventListener('DOMContentLoaded', () => {
+    translatePage();
+    initMobileNavigation();
+    initModalORC();
+    initInfiniteCarousel();
+    initHeroVideo(); // ← AGREGAR ESTA LÍNEA
+
+    // ... resto del código
+});
