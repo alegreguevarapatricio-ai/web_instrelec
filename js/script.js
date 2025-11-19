@@ -20,14 +20,29 @@ const translations = {
             paragraph: "Expertos en ORC (Ciclo Orgánico de Rankine) — Proyectos EPC, Revamping y servicios integrales a nivel internacional."
         },
         timeline: {
-            title: 'NUESTRA HISTORIA',
-            "2005": "Instrelec nace ofreciendo soluciones de Ingeniería en Automatización, Control y Electricidad en Venezuela.",
-            "2007": "Apertura de la sede en España, iniciando la oferta de soluciones tipo <strong>IPCC (Ingeniería, Procura, Construcción y Comisionamiento).</strong>",
-            "2016": "Se crea la Corporación, integrando a empresas especialistas con más de 20 años de experiencia en el sector Oil & Gas y un grupo financiero.",
-            "2022": "Firma de proyectos estratégicos con el Ministerio de Energía Renovable de IRAK para el **SALADIN 60 MW Solar Park** y diferentes proyectos en Emiratos Árabes Unidos."
+            word1: "NUESTRA",
+            word2: "HISTORIA", 
+            word3: "EVOLUCIÓN",
+            subtitle: "Cada año, una nueva revolución en ingeniería",
+            "2005": {
+                title: "ORIGEN",
+                text: "Instrelec nace ofreciendo soluciones de Ingeniería en Automatización, Control y Electricidad en Venezuela."
+            },
+            "2007": {
+                title: "EXPANSIÓN GLOBAL", 
+                text: "Apertura de la sede en España, iniciando la oferta de soluciones tipo <strong>IPCC</strong> (Ingeniería, Procura, Construcción y Comisionamiento)."
+            },
+            "2016": {
+                title: "CORPORACIÓN",
+                text: "Se crea la Corporación, integrando a empresas especialistas con más de 20 años de experiencia en el sector Oil & Gas y un grupo financiero."
+            },
+            "2022": {
+                title: "LIDERAZGO MUNDIAL",
+                text: "Firma de proyectos estratégicos con el Ministerio de Energía Renovable de IRAK para el <strong>SALADIN 60 MW Solar Park</strong> y proyectos en Emiratos Árabes Unidos."
+            }
         },
         lider: {
-            title: "EMPRESA INSTRELEC LÍDER EN",
+            title: "EMPRESA LÍDER EN EL SECTOR INDUSTRIAL",
             card1: {
                 title: "Ingeniería Especializada",
                 desc: "División de Ingenierías Conceptual, Básica y de Detalles."
@@ -48,7 +63,7 @@ const translations = {
             }
         },
         experience: {
-            title: "Experiencia Comprobada: Proyectos Destacados"
+            title: "Experiencia Comprobada Proyectos Destacados"
         },
         table: {
     header: {
@@ -348,14 +363,29 @@ const translations = {
             paragraph: "Experts in ORC (Organic Rankine Cycle) — EPC Projects, Revamping, and integral services internationally."
         },
         timeline: {
-            title: 'OUR <span class="highlight-adn">DNA</span>: History and Growth',
-            "2005": "Instrelec is born offering Engineering solutions in Automation, Control and Electricity in Venezuela.",
-            "2007": "Opening of the headquarters in Spain, initiating the offer of <strong>IPCC solutions (Engineering, Procurement, Construction and Commissioning).</strong>",
-            "2016": "The Corporation is created, integrating specialist companies with more than 20 years of experience in the Oil & Gas sector and a financial group.",
-            "2022": "Signing of strategic projects with the Ministry of Renewable Energy of IRAQ for the <strong>SALADIN 60 MW Solar Park</strong> and different projects in the United Arab Emirates."
+            word1: "OUR",
+            word2: "STORY",
+            word3: "EVOLUTION",
+            subtitle: "Every year, a new revolution in engineering",
+            "2005": {
+                title: "ORIGIN",
+                text: "Instrelec is born offering Engineering solutions in Automation, Control and Electricity in Venezuela."
+            },
+            "2007": {
+                title: "GLOBAL EXPANSION",
+                text: "Opening of the headquarters in Spain, initiating the offer of <strong>IPCC</strong> solutions (Engineering, Procurement, Construction and Commissioning)."
+            },
+            "2016": {
+                title: "CORPORATION", 
+                text: "The Corporation is created, integrating specialist companies with more than 20 years of experience in the Oil & Gas sector and a financial group."
+            },
+            "2022": {
+                title: "WORLD LEADERSHIP",
+                text: "Signing of strategic projects with the Ministry of Renewable Energy of IRAQ for the <strong>SALADIN 60 MW Solar Park</strong> and projects in the United Arab Emirates."
+            }
         },
         lider: {
-            title: "INSTRELEC COMPANY: LEADER IN",
+            title: "COMPANY LEADER IN THE INDUSTRIAL SECTOR",
             card1: {
                 title: "Specialized Engineering",
                 desc: "Division of Conceptual, Basic and Detailed Engineering."
@@ -693,6 +723,9 @@ function translatePage() {
 
     // Actualizar textos de cookies
     updateCookieTexts();
+    
+    // Reiniciar animaciones del título
+    initAnimatedTitle();
 }
 
 function setLanguage(lang) {
@@ -1132,6 +1165,143 @@ function initMobileNavigation() {
 }
 
 // ============================================
+// HERO VIDEO FUNCTIONALITY
+// ============================================
+
+function initHeroVideo() {
+    const video = document.getElementById('heroVideo');
+    const textContainer = document.getElementById('heroTextContainer');
+    const audioControl = document.getElementById('audioControl');
+
+    if (!video || !textContainer) return;
+
+    // Mostrar texto cuando el video termina
+    video.addEventListener('ended', function() {
+        textContainer.classList.add('show');
+    });
+
+    // Control de audio (opcional)
+    if (audioControl) {
+        audioControl.addEventListener('click', function() {
+            if (video.muted) {
+                video.muted = false;
+                audioControl.textContent = '🔊';
+            } else {
+                video.muted = true;
+                audioControl.textContent = '🔇';
+            }
+        });
+    }
+
+    // Manejo de errores
+    video.addEventListener('error', function(e) {
+        console.error('Error al cargar el video:', e);
+        textContainer.classList.add('show');
+    });
+
+    // Asegurar que el video se reproduce en móviles
+    video.addEventListener('loadedmetadata', function() {
+        video.play().catch(function(error) {
+            console.log('Autoplay bloqueado:', error);
+            textContainer.classList.add('show');
+        });
+    });
+}
+
+// ============================================
+// CRAZY TIMELINE FUNCTIONALITY
+// ============================================
+
+function initCrazyTimeline() {
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                    
+                    // Efecto adicional para el marcador
+                    const marker = entry.target.querySelector('.marker-orb');
+                    if (marker) {
+                        marker.style.animation = 'orbExplode 0.6s ease-out forwards';
+                        setTimeout(() => {
+                            marker.style.animation = 'orbPulse 2s ease-in-out infinite';
+                        }, 600);
+                    }
+                }, index * 300);
+            }
+        });
+    }, {
+        threshold: 0.3,
+        rootMargin: '0px 0px -100px 0px'
+    });
+    
+    timelineItems.forEach(item => {
+        observer.observe(item);
+    });
+    
+    // Efectos hover adicionales
+    timelineItems.forEach(item => {
+        const card = item.querySelector('.timeline-card');
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-15px) scale(1.05) rotateZ(2deg)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(-10px) scale(1.02) rotateZ(0deg)';
+        });
+    });
+}
+
+// ============================================
+// ANIMATED TITLE FUNCTIONALITY
+// ============================================
+
+function initAnimatedTitle() {
+    const titleWords = document.querySelectorAll('.title-words .word');
+    
+    if (titleWords.length === 0) {
+        console.warn('No se encontraron palabras para animar en el título');
+        return;
+    }
+    
+    // Forzar repaint para activar las animaciones
+    titleWords.forEach((word, index) => {
+        // Asegurarse de que las animaciones estén aplicadas
+        word.style.animation = 'none';
+        
+        // Pequeño delay para el efecto escalonado
+        setTimeout(() => {
+            void word.offsetWidth; // Trigger reflow
+            word.style.animation = `wordFloat 6s ease-in-out ${index * 0.2}s infinite, titleGlow 4s ease-in-out ${index * 0.1}s infinite`;
+        }, 100);
+    });
+    
+    // Observer para reiniciar animaciones cuando sean visibles
+    const titleObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                titleWords.forEach((word, index) => {
+                    setTimeout(() => {
+                        word.style.animationPlayState = 'running';
+                    }, index * 200);
+                });
+            } else {
+                titleWords.forEach(word => {
+                    word.style.animationPlayState = 'paused';
+                });
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    const titleSection = document.querySelector('.timeline-header');
+    if (titleSection) {
+        titleObserver.observe(titleSection);
+    }
+}
+
+// ============================================
 // INITIALIZE EVERYTHING ON DOM LOAD
 // ============================================
 
@@ -1143,6 +1313,9 @@ document.addEventListener('DOMContentLoaded', () => {
     initMobileNavigation();
     initModalORC();
     initInfiniteCarousel();
+    initHeroVideo();
+    initCrazyTimeline();
+    initAnimatedTitle();
 
     // Language buttons event listeners
     ['lang-btn-es', 'lang-btn-en', 'lang-btn-es-desktop', 'lang-btn-en-desktop'].forEach(id => {
@@ -1192,59 +1365,5 @@ if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', preloadCriticalImages);
 } else {
     preloadCriticalImages();
-    }
-
-    // ============================================
-// HERO VIDEO FUNCTIONALITY
-// ============================================
-
-function initHeroVideo() {
-    const video = document.getElementById('heroVideo');
-    const textContainer = document.getElementById('heroTextContainer');
-    const audioControl = document.getElementById('audioControl');
-
-    if (!video || !textContainer) return;
-
-    // Mostrar texto cuando el video termina
-    video.addEventListener('ended', function() {
-        textContainer.classList.add('show');
-    });
-
-    // Control de audio (opcional)
-    if (audioControl) {
-        audioControl.addEventListener('click', function() {
-            if (video.muted) {
-                video.muted = false;
-                audioControl.textContent = '🔊';
-            } else {
-                video.muted = true;
-                audioControl.textContent = '🔇';
-            }
-        });
-    }
-
-    // Manejo de errores
-    video.addEventListener('error', function(e) {
-        console.error('Error al cargar el video:', e);
-        textContainer.classList.add('show');
-    });
-
-    // Asegurar que el video se reproduce en móviles
-    video.addEventListener('loadedmetadata', function() {
-        video.play().catch(function(error) {
-            console.log('Autoplay bloqueado:', error);
-            textContainer.classList.add('show');
-        });
-    });
 }
 
-// Inicializar en el DOM ready existente
-document.addEventListener('DOMContentLoaded', () => {
-    translatePage();
-    initMobileNavigation();
-    initModalORC();
-    initInfiniteCarousel();
-    initHeroVideo(); // ← AGREGAR ESTA LÍNEA
-
-    // ... resto del código
-});
