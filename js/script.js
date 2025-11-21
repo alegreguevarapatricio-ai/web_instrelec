@@ -130,7 +130,7 @@ const translations = {
             title: "OFICINAS",
             offices: {
                 spain: {
-                    title: "ESPAÑA",
+                    title: "España",
                     company: "Corp. Instrelec Group, S.L.",
                     line1: "Instrelec3000 y automatismos",
                     line2: "Iberia, S.E. Calle de Anabel",
@@ -154,7 +154,7 @@ const translations = {
                 },
                 germany: {
                     title: "ALEMANIA",
-                    company: "INTEC GMK",
+                    company: "INTEC GMK GMBH de Alemania",
                     line1: "Lilienthalstr.",
                     line2: "18211 Bargeshagen",
                     line3: "Alemania"
@@ -464,7 +464,7 @@ table: {
             title: "OFFICES",
             offices: {
                 spain: {
-                    title: "SPAIN",
+                    title: "Spain",
                     company: "Corp. Instrelec Group, S.L.",
                     line1: "Instrelec3000 and automation",
                     line2: "Iberia, S.E. Calle de Anabel",
@@ -488,7 +488,7 @@ table: {
                 },
                 germany: {
                     title: "GERMANY",
-                    company: "INTEC GMK",
+                    company: "INTEC GMK GMBH of Germany",
                     line1: "Lilienthalstr.",
                     line2: "18211 Bargeshagen",
                     line3: "Germany"
