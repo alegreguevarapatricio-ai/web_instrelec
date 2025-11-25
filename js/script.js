@@ -115,7 +115,7 @@ const translations = {
             },
             asiaafrica: {
                 label: "Asia y África:",
-                text: "Malasia, Guinea Ecuatorial (Próximamente)."
+                text: "Malasia."
             }
         },
         carousel: {
@@ -450,7 +450,7 @@ table: {
             title: "International Presence",
             america: { label: "America:", text: "Peru, Venezuela, Bolivia, USA." },
             europe: { label: "Europe:", text: "Spain." },
-            asiaafrica: { label: "Asia & Africa:", text: "Malaysia, Equatorial Guinea (Soon)." }
+            asiaafrica: { label: "Asia & Africa:", text: "Malaysia." }
         },
         carousel: {
             title: "Our Main Clients",
