@@ -997,6 +997,10 @@ document.addEventListener('DOMContentLoaded', function() {
 // MODAL ORC FUNCTIONALITY
 // ============================================
 
+// ============================================
+// MODAL ORC FUNCTIONALITY - REORGANIZADO
+// ============================================
+
 function initModalORC() {
     const modalOverlay = document.getElementById('orc-modal-overlay');
     const modalClose = document.getElementById('orc-modal-close');
@@ -1011,6 +1015,9 @@ function initModalORC() {
             e.preventDefault();
             modalOverlay.classList.add('active');
             document.body.classList.add('modal-open');
+            
+            // Activar GEOCAL por defecto al abrir
+            activateTab('geocal');
         });
     }
 
@@ -1036,18 +1043,7 @@ function initModalORC() {
     tabButtons.forEach(button => {
         button.addEventListener('click', function() {
             const targetTab = this.getAttribute('data-tab');
-            
-            // Update active tab button
-            tabButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-            
-            // Update active tab content
-            tabContents.forEach(content => {
-                content.classList.remove('active');
-                if (content.getAttribute('data-tab-content') === targetTab) {
-                    content.classList.add('active');
-                }
-            });
+            activateTab(targetTab);
         });
     });
 
@@ -1081,6 +1077,22 @@ function initModalORC() {
             document.body.classList.remove('modal-open');
         }
     });
+
+    // Función para activar pestaña específica
+    function activateTab(targetTab) {
+        // Update active tab button
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        const activeButton = document.querySelector(`[data-tab="${targetTab}"]`);
+        if (activeButton) activeButton.classList.add('active');
+        
+        // Update active tab content
+        tabContents.forEach(content => {
+            content.classList.remove('active');
+            if (content.getAttribute('data-tab-content') === targetTab) {
+                content.classList.add('active');
+            }
+        });
+    }
 }
 
 // ============================================
@@ -1367,3 +1379,31 @@ if (document.readyState === 'loading') {
     preloadCriticalImages();
 }
 
+ function lineaDeTiempo() {
+            'use strict';
+            var items = document.querySelectorAll("#timeline-1 li");
+            
+            function isElementInViewport(el) {
+                var rect = el.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+            
+            function callbackFunc() {
+                for (var i = 0; i < items.length; i++) {
+                    if (isElementInViewport(items[i])) {
+                        items[i].classList.add("in-view");
+                    }
+                }
+            }
+            
+            window.addEventListener("load", callbackFunc);
+            window.addEventListener("resize", callbackFunc);
+            document.addEventListener('scroll', callbackFunc, true);
+        }
+        
+        lineaDeTiempo();
