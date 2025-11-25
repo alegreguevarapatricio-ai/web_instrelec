@@ -660,8 +660,8 @@ main {
 
 /* Footer */
 footer {
-    background: var(--gris-claro);
-    color: var(--texto-dark);
+    background: #000;
+    color: var(--gris-claro);
     padding: 1.8rem 5%;
     border-top: 1px solid #e6e6e6;
 }
@@ -753,7 +753,7 @@ footer {
 .office p {
     margin: 0.04rem 0;
     font-size: 0.88rem;
-    color: #374151;
+    color: #ffffff;
     line-height: 1.08;
 }
 

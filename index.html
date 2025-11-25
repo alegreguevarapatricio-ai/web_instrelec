@@ -1,34 +1,548 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empresa Líder - Instrelec</title>
-    <style>
-        /* ESTILOS GENERALES */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-
-    </style>
+    <title data-i18n="meta.title">Corp Instrelec Group</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
 
+<body>
+    <header>
+        <nav>
+            <a href="inicio.html" class="logo-link">
+                <div class="logo-container">
+                    <img src="/img/img_instrelec.png" alt="Instrelec Logo" class="logo" id="logo" ">
+                </div>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="inicio.html" id="nav-inicio" data-i18n="nav.home">Inicio</a></li>
+                <li><a href="tecnologia-orc.html" id="nav-orc" data-i18n="nav.orc">Tecnología ORC</a></li>
+                <li><a href="servicios.html" id="nav-servicios" data-i18n="nav.services">Servicios</a></li>
+                <li><a href="proyectos.html" id="nav-proyectos" data-i18n="nav.projects">Proyectos</a></li>
+                <!-- <li><a href="contacto.html" id="nav-contacto" data-i18n="nav.contact">Contacto</a></li> -->
+
+                <!-- Selectores de idioma dentro del menú móvil -->
+                <div class="lang-selector-group">
+                    <button class="lang-selector" data-lang="es" id="lang-btn-es"
+                        onclick="setLanguage('es')">ES</button>
+                    <button class="lang-selector active" data-lang="en" id="lang-btn-en"
+                        onclick="setLanguage('en')">EN</button>
+                </div>
+            </ul>
+
+            <!-- Selectores de idioma para desktop (fuera del menú) -->
+            <div class="lang-selector-group lang-selector-desktop">
+                <button class="lang-selector" data-lang="es" id="lang-btn-es-desktop"
+                    onclick="setLanguage('es')">ES</button>
+                <button class="lang-selector active" data-lang="en" id="lang-btn-en-desktop"
+                    onclick="setLanguage('en')">EN</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- hero_video -->
+        <div class="hero-strip"></div>
+
+        <div class="inicio-hero">
+            <!-- Video de fondo -->
+            <video class="hero-video" id="heroVideo" autoplay muted playsinline preload="auto">
+                <source src="./img/hero_home.mp4" type="video/mp4">
+                <source src="video/hero-video.webm" type="video/webm">
+                Tu navegador no soporta el elemento de video.
+            </video>
+
+            <!-- Overlay oscuro -->
+            <div class="video-overlay"></div>
+
+            <!-- Contenedor de texto con efecto glass -->
+            <div class="hero-text-container" id="heroTextContainer">
+                <div class="hero-overlay">
+                    <div class="hero-text-content">
+                        <h1 data-i18n="hero.title">Profesionales generando futuro</h1>
+                        <p data-i18n="hero.subtitle">Soluciones en Ingeniería, Energía y Recuperación de Calor.</p>
+                        <p id="hero-paragraph" data-i18n="hero.paragraph">Expertos en ORC (Ciclo Orgánico de Rankine) —
+                            Proyectos EPC, Revamping y servicios integrales a nivel internacional.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+<!-- NUEVA SECCION TIMELINE -->
+                <section id="inicio" class="section-content timeline-section">
+        <div class="container">
+            <div id="timeline-1" class="timeline contenido">
+                <div class="titulo-cuadro-r2">
+                    Nuestra Historia y Crecimiento
+                </div>
+                <ul>
+                    <li>
+                        <div>
+                            <div class="timeline-year">2005 - Origen:</div>
+                            <div class="timeline-content">
+                                <p>Instrelec nace ofreciendo soluciones de Ingeniería en Automatización, Control y Electricidad en Venezuela.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div class="timeline-year">2007 - Internacionalización:</div>
+                            <div class="timeline-content">
+                                <p>Apertura de la sede en España, iniciando la oferta de soluciones tipo <strong>IPCC (Ingeniería, Procura, Construcción y Comisionamiento).</strong></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div class="timeline-year">2016 - Corporación Instrelec Group:</div>
+                            <div class="timeline-content">
+                                <p>Se crea la Corporación, integrando a empresas especialistas con más de 20 años de experiencia en el sector Oil & Gas y un grupo financiero.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div class="timeline-year">2022 - Expansión Global:</div>
+                            <div class="timeline-content">
+                                <p>Firma de proyectos estratégicos con el Ministerio de Energía Renovable de IRAK para el <strong>SALADIN 60 MW Solar Park</strong> y diferentes proyectos en Emiratos Árabes Unidos.</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+<!-- FIN SECCION TIMELINE -->
+
+            <!-- SECCIÓN LÍDER MEJORADA - 4 TARJETAS ALINEADAS -->
+    <section id="lider-en" class="section-content lider-section">
+        <div class="container">
+            <h2 class="lider-main-title">
+                EMPRESA LÍDER EN EL SECTOR INDUSTRIAL
+            </h2>
+
+            <div class="lider-grid">
+                <!-- Card 1 -->
+                <div class="lider-card">
+                    <h3>Ingeniería Especializada</h3>
+                    <p>División de Ingenierías Conceptual, Básica y de Detalles con soluciones técnicas de vanguardia para proyectos complejos.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="lider-card">
+                    <h3>Gestión y Suministro</h3>
+                    <p>División de Gestión Aprovisionamiento (Procura) con alcance global y cadena de suministro optimizada.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="lider-card">
+                    <h3>Proyectos de Energía</h3>
+                    <p>Soluciones completas de ORC y Representación GMK para proyectos a gran escala con máxima eficiencia energética.</p>
+                    <a href="tecnologia-orc.html" class="btn-division">Conoce Más</a>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="lider-card">
+                    <h3>Sostenibilidad y Energía</h3>
+                    <p>Desarrollo e implementación de proyectos innovadores de <strong>Energías Renovables</strong> (Solar, Eólica e Hidrógeno Verde) para un futuro sostenible.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- Sección Actualizada - Experiencia Comprobada -->
+        <section class="experiencia-section">
+            <div class="container">
+                <h2 class="experiencia-title" data-i18n="experience.title">Experiencia Comprobada Proyectos Destacados
+                </h2>
+
+                <!-- Contenedor de Cards Móvil -->
+                <div class="mobile-cards-container">
+
+                    <!-- Card 1 -->
+                    <div class="experience-card">
+                        <div class="card-header">
+                            <h3 class="client-name" data-i18n="table.row1.client">Ministerio de Industria</h3>
+                            <div class="investment-badge" data-i18n="table.row1.investment">$36 MM</div>
+                        </div>
+                        <div class="project-info">
+                            <p class="project-description" data-i18n="table.row1.project">Contrato IPC para el
+                                <strong>SALADIN 60 MW SOLAR PARK</strong></p>
+                        </div>
+                        <div class="project-details">
+                            <div class="country-flag">
+                                <span>📍</span>
+                                <span class="country-name" data-i18n="table.row1.country">IRAK</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="experience-card">
+                        <div class="card-header">
+                            <h3 class="client-name" data-i18n="table.row2.client">NATIONAL WATER COMPANY</h3>
+                            <div class="investment-badge" data-i18n="table.row2.investment">$300 M</div>
+                        </div>
+                        <div class="project-info">
+                            <p class="project-description" data-i18n="table.row2.project">Ingeniería, Procura y
+                                Construcción para las Reservas Estratégicas</p>
+                        </div>
+                        <div class="project-details">
+                            <div class="country-flag">
+                                <span>📍</span>
+                                <span class="country-name" data-i18n="table.row2.country">ARABIA SAUDITA</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="experience-card">
+                        <div class="card-header">
+                            <h3 class="client-name" data-i18n="table.row3.client">AES GENER</h3>
+                            <div class="investment-badge" data-i18n="table.row3.investment">$7.2 MM</div>
+                        </div>
+                        <div class="project-info">
+                            <p class="project-description" data-i18n="table.row3.project">Proyecto IPC para el reemplazo
+                                de bombas de alimentación de caldera</p>
+                        </div>
+                        <div class="project-details">
+                            <div class="country-flag">
+                                <span>📍</span>
+                                <span class="country-name" data-i18n="table.row3.country">CHILE</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="experience-card">
+                        <div class="card-header">
+                            <h3 class="client-name" data-i18n="table.row4.client">PETRONAS</h3>
+                            <div class="investment-badge" data-i18n="table.row4.investment">$28 MM</div>
+                        </div>
+                        <div class="project-info">
+                            <p class="project-description" data-i18n="table.row4.project"><em>Umbrella Contract</em>
+                                para <em>Well Testing</em> y TCP</p>
+                        </div>
+                        <div class="project-details">
+                            <div class="country-flag">
+                                <span>📍</span>
+                                <span class="country-name" data-i18n="table.row4.country">MALASIA</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="experience-card">
+                        <div class="card-header">
+                            <h3 class="client-name" data-i18n="table.row5.client">REPSOL PERÚ</h3>
+                            <div class="investment-badge" data-i18n="table.row5.investment">$6 MM</div>
+                        </div>
+                        <div class="project-info">
+                            <p class="project-description" data-i18n="table.row5.project">Trabajos mecánicos de parada
+                                de planta (torre de destilación)</p>
+                        </div>
+                        <div class="project-details">
+                            <div class="country-flag">
+                                <span>📍</span>
+                                <span class="country-name" data-i18n="table.row5.country">PERÚ</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="presencia-internacional" class="section-content presencia-section">
+            <div class="container">
+                <h2 class="presencia-title" data-i18n="presence.title" style="text-align: center;">Presencia
+                    Internacional</h2>
+
+                <div class="presencia-content">
+                    <p class="presencia-text" style="text-align: center;">
+                        <strong data-i18n="presence.america.label">América:</strong>
+                        <span data-i18n="presence.america.text">Perú, Venezuela, Bolivia, EEUU.</span> |
+                        <strong data-i18n="presence.europe.label">Europa:</strong>
+                        <span data-i18n="presence.europe.text">España.</span> |
+                        <strong data-i18n="presence.asiaafrica.label">Asia y África:</strong>
+                        <span data-i18n="presence.asiaafrica.text">Malasia.</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="clientes-carousel" class="carousel-section">
+            <div class="container">
+                <h2 class="carousel-title" data-i18n="carousel.title">Nuestros Principales Clientes</h2>
+                <p data-i18n="carousel.subtitle" style="text-align: center; font-weight: bold;">Confianza global en
+                    ingenieria y Construcción</p>
+
+                <div class="logo-slider">
+                    <div class="logo-slider-track">
+                        <!-- Logos left as-is (images are not translated) -->
+                        <div class="logo-item"><img src="img/logos/repsol.png" alt="Repsol"></div>
+                        <div class="logo-item"><img src="img/logos/PETRONAS_Logo_(for_solid_white_background).png"
+                                alt="Petronas"></div>
+                        <div class="logo-item"><img src="img/logos/pdvsa-logo.png" alt="PDVSA"></div>
+                        <div class="logo-item"><img src="img/logos/rosneft-logo.png" alt="Rosneft"></div>
+                        <div class="logo-item"><img src="img/logos/ConocoPhillips-Logo.png" alt="ConocoPhillips"></div>
+                        <div class="logo-item"><img src="img/logos/Honeywell-Logo.png" alt="Honeywell"></div>
+                        <div class="logo-item"><img src="img/logos/aes.png" alt="AES"></div>
+                        <div class="logo-item"><img src="img/logos/Cargill-logo.webp" alt="Cargill"></div>
+                        <div class="logo-item"><img src="img/logos/logo_inabensa.jpg" alt="Inabensa"></div>
+                        <div class="logo-item"><img src="img/logos/gepetrol-logo-3.png" alt="GEPetrol"></div>
+                        <div class="logo-item"><img src="img/logos/FERTI.jpeg" alt="Fertinitro"></div>
+                        <div class="logo-item"><img src="img/logos/comibol_logo.jpg" alt="Comibol"></div>
+                        <div class="logo-item"><img
+                                src="img/logos/fo1369g3b5-formosa-plastics-group-logo-gov-edwards-and-formosa-plastics-announce-332-million-expansion.png"
+                                alt="Formosa Plastics"></div>
+                        <div class="logo-item"><img src="img/logos/logos_industrial_paramount.webp"
+                                alt="Industrial Paramount"></div>
+                        <div class="logo-item"><img src="img/logos/OIP.jpeg" alt="Cliente"></div>
+
+                        <!-- Duplicate series for infinite effect -->
+                        <div class="logo-item"><img src="img/logos/repsol.png" alt="Repsol"></div>
+                        <div class="logo-item"><img src="img/logos/PETRONAS_Logo_(for_solid_white_background).png"
+                                alt="Petronas"></div>
+                        <div class="logo-item"><img src="img/logos/pdvsa-logo.png" alt="PDVSA"></div>
+                        <div class="logo-item"><img src="img/logos/rosneft-logo.png" alt="Rosneft"></div>
+                        <div class="logo-item"><img src="img/logos/ConocoPhillips-Logo.png" alt="ConocoPhillips"></div>
+                        <div class="logo-item"><img src="img/logos/Honeywell-Logo.png" alt="Honeywell"></div>
+                        <div class="logo-item"><img src="img/logos/aes.png" alt="AES"></div>
+                        <div class="logo-item"><img src="img/logos/Cargill-logo.webp" alt="Cargill"></div>
+                        <div class="logo-item"><img src="img/logos/logo_inabensa.jpg" alt="Inabensa"></div>
+                        <div class="logo-item"><img src="img/logos/gepetrol-logo-3.png" alt="GEPetrol"></div>
+                        <div class="logo-item"><img src="img/logos/FERTI.jpeg" alt="Fertinitro"></div>
+                        <div class="logo-item"><img src="img/logos/comibol_logo.jpg" alt="Comibol"></div>
+                        <div class="logo-item"><img
+                                src="img/logos/fo1369g3b5-formosa-plastics-group-logo-gov-edwards-and-formosa-plastics-announce-332-million-expansion.png"
+                                alt="Formosa Plastics"></div>
+                        <div class="logo-item"><img src="img/logos/logos_industrial_paramount.webp"
+                                alt="Industrial Paramount"></div>
+                        <div class="logo-item"><img src="img/logos/OIP.jpeg" alt="Cliente"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-inner">
+                <div class="footer-right">
+                    <h2 class="footer-title" data-i18n="footer.title">OFICINAS</h2>
+                    <div class="offices-grid">
+                        <div class="offices-col">
+                            <div class="office">
+                                <h3 data-i18n="footer.offices.spain.title">ESPAÑA</h3>
+                                <h4 data-i18n="footer.offices.spain.company">Corp. Instrelec Group, S.L.</h4>
+                                <p data-i18n="footer.offices.spain.line1">Instrelec3000 y automatismos</p>
+                                <p data-i18n="footer.offices.spain.line2">Iberia, S.E. Calle de Anabel</p>
+                                <p data-i18n="footer.offices.spain.line3">Segura, 11 Edif. A, planta 2</p>
+                                <p data-i18n="footer.offices.spain.line4">Oficina 2B, C.P. 28108</p>
+                                <p data-i18n="footer.offices.spain.line5">Alcobendas (Madrid)</p>
+                            </div>
+
+                            <div class="office">
+                                <h3 data-i18n="footer.offices.venezuela.title">Venezuela</h3>
+                                <p data-i18n="footer.offices.venezuela.line1">Instrelec3000 y Automatismos, C.A.</p>
+                                <p data-i18n="footer.offices.venezuela.line2">Centro Empresarial</p>
+                                <p data-i18n="footer.offices.venezuela.line3">COLÓN, piso 2 Oficina 18,</p>
+                                <p data-i18n="footer.offices.venezuela.line4">Porlamar Edo. Anzoátegui</p>
+                            </div>
+
+                            <div class="office">
+                                <h3 data-i18n="footer.offices.bolivia.title">Bolivia</h3>
+                                <p data-i18n="footer.offices.bolivia.line1">Instrelec. S.R.L.</p>
+                                <p data-i18n="footer.offices.bolivia.line2">Barrio El Carmen entre radial 23, Av.
+                                    Mariano Moreno</p>
+                                <p data-i18n="footer.offices.bolivia.line3">y calle 3Edificio Kenia oficina 1,</p>
+                                <p data-i18n="footer.offices.bolivia.line4">Santa Cruz de la Sierra – Bolivia</p>
+                            </div>
+                        </div>
+
+                        <div class="offices-col">
+                            <div class="office">
+                                <h3 data-i18n="footer.offices.germany.title">ALEMANIA</h3>
+                                <a href="http://gmk.info" data-i18n="footer.offices.germany.company"
+                                    style="text-decoration: none;" target="_blank">INTEC gMK GmbH de Alemania></a>
+                                <p data-i18n="footer.offices.germany.line1">Lilienthalstr.</p>
+                                <p data-i18n="footer.offices.germany.line2">18211 Bargeshagen</p>
+                                <p data-i18n="footer.offices.germany.line3">Alemania</p>
+                            </div>
+
+                            <div class="office">
+                                <h3 data-i18n="footer.offices.usa.title">EEUU</h3>
+                                <h4 data-i18n="footer.offices.usa.company">Instrelec Group LLC</h4>
+                                <p data-i18n="footer.offices.usa.line1">7230, NW 58 St, Miami,</p>
+                                <p data-i18n="footer.offices.usa.line2">Florida; EEUU, CP. 33166</p>
+                            </div>
+
+                            <div class="office">
+                                <h3 data-i18n="footer.offices.peru.title">Perú</h3>
+                                <p data-i18n="footer.offices.peru.line1">Instrelec Group S.A.C.</p>
+                                <p data-i18n="footer.offices.peru.line2">Torre Roja C2, Calle Los Sauces,</p>
+                                <p data-i18n="footer.offices.peru.line3">Sanisidro 15073 Lima, Perú</p>
+                            </div>
+
+                            <div class="office">
+                                <h3 data-i18n="footer.offices.malaysia.title">Malasia</h3>
+                                <p data-i18n="footer.offices.malaysia.line1">Lot 3A-2, 2nd Floor, Lorong</p>
+                                <p data-i18n="footer.offices.malaysia.line2">Grace Square, Jalan Pantai</p>
+                                <p data-i18n="footer.offices.malaysia.line3">Sembulan, 88100 Kota</p>
+                                <p data-i18n="footer.offices.malaysia.line4">Kinabalu, SABAH, MALAYSIA</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="office">
+                        <h3>Contacto General</h3>
+                        <p>
+                            <a href="info@instrelec.com" style="text-decoration: none;">info@instrelec.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-sep"></div>
+
+            <div class="contacts">
+                <p class="copyright" data-i18n="footer.copyright">&copy; 2025 Corp Instrelec Group. Todos los derechos
+                    reservados.</p>
+                <div class="footer-links">
+                    <!-- <a href="politica-privacidad.html" data-i18n="footer.links.privacy">Política de Privacidad</a> -->
+                    <a href="politica-cookies.html" data-i18n="footer.links.cookies">Política de Cookies</a>
+                    <!-- <a href="aviso-legal.html" data-i18n="footer.links.legal">Aviso Legal</a> -->
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </footer>
+    <!-- Banner de Cookies -->
+    <div id="cookieBanner">
+        <div class="cookie-container">
+            <div class="cookie-text">
+                <h3>
+                    🍪 Utilizamos cookies
+                </h3>
+                <p>
+                    Utilizamos cookies propias y de terceros para analizar nuestros servicios y mostrarte publicidad
+                    relacionada con tus preferencias.
+                    Puedes aceptar todas las cookies, rechazar las no esenciales o configurar tus preferencias.
+                </p>
+                <a href="politica-cookies.html" style="color: white; font-size: 13px; text-decoration: underline;">Más
+                    información</a>
+            </div>
+            <div class="cookie-buttons">
+                <button class="btn btn-accept" onclick="acceptAllCookies()">Aceptar todas</button>
+                <button class="btn btn-reject" onclick="rejectAllCookies()">Rechazar opcionales</button>
+                <button class="btn btn-settings" onclick="openCookieSettings()">Configurar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Configuración -->
+    <div id="cookieModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Configuración de Cookies</h2>
+                <p style="font-size: 14px; opacity: 0.9; margin-top: 5px;">Elige qué tipos de cookies deseas permitir
+                </p>
+                <button class="modal-close" onclick="closeCookieSettings()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <!-- Cookies Esenciales -->
+                <div class="cookie-category">
+                    <div class="category-header">
+                        <h3>
+                            🔒 Cookies Esenciales
+                            <span class="badge badge-required">OBLIGATORIAS</span>
+                        </h3>
+                        <label class="switch">
+                            <input type="checkbox" id="essential" checked disabled>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <p class="category-description">
+                        Estas cookies son necesarias para el funcionamiento básico del sitio web y no se pueden
+                        desactivar.
+                        Incluyen cookies de sesión y de consentimiento de cookies.
+                    </p>
+                    <p class="cookie-details">Cookies: session_id, cookie_consent</p>
+                </div>
+
+                <!-- Cookies Funcionales -->
+                <div class="cookie-category">
+                    <div class="category-header">
+                        <h3>⚙️ Cookies Funcionales</h3>
+                        <label class="switch">
+                            <input type="checkbox" id="functional">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <p class="category-description">
+                        Permiten mejorar la funcionalidad del sitio recordando tus preferencias (como el idioma
+                        seleccionado,
+                        configuraciones de visualización, etc.).
+                    </p>
+                    <p class="cookie-details">Cookies: user_language, user_preferences</p>
+                </div>
+
+                <!-- Cookies Analíticas -->
+                <div class="cookie-category">
+                    <div class="category-header">
+                        <h3>📊 Cookies Analíticas</h3>
+                        <label class="switch">
+                            <input type="checkbox" id="analytics">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <p class="category-description">
+                        Nos ayudan a entender cómo los visitantes interactúan con el sitio web, recopilando información
+                        de forma anónima sobre las páginas visitadas y el tiempo de navegación.
+                    </p>
+                    <p class="cookie-details">Cookies: _ga, _gid, _gat (Google Analytics)</p>
+                </div>
+
+                <!-- Cookies de Marketing -->
+                <div class="cookie-category">
+                    <div class="category-header">
+                        <h3>🎯 Cookies de Marketing</h3>
+                        <label class="switch">
+                            <input type="checkbox" id="marketing">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <p class="category-description">
+                        Se utilizan para mostrar anuncios más relevantes para ti y tus intereses. También se usan
+                        para limitar el número de veces que ves un anuncio y medir la efectividad de las campañas.
+                    </p>
+                    <p class="cookie-details">Cookies: ads_pixel, fbp, _gcl_au (Google Ads, Facebook Pixel)</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-reject" onclick="saveCustomSettings()">Guardar configuración</button>
+                <button class="btn btn-accept" onclick="acceptAllCookies()">Aceptar todas</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón flotante de configuración -->
+    <button id="cookieSettingsBtn" onclick="openCookieSettings()" title="Configurar cookies">
+        ⚙️
+    </button>
+
+    <script src="js/script.js"></script>
 </body>
+
 </html>
