@@ -1,4 +1,4 @@
-// js/script.js
+// js/script.js - PARTE 1: TRADUCCIONES
 let currentLang = 'es';
 
 // Nested structured translations (ES / EN)
@@ -19,90 +19,80 @@ const translations = {
             subtitle: "Soluciones en Ingeniería, Energía y Recuperación de Calor.",
             paragraph: "Expertos en ORC (Ciclo Orgánico de Rankine) — Proyectos EPC, Revamping y servicios integrales a nivel internacional."
         },
+        // TIMELINE - COMPLETO
         timeline: {
-            word1: "NUESTRA",
-            word2: "HISTORIA", 
-            word3: "EVOLUCIÓN",
-            subtitle: "Cada año, una nueva revolución en ingeniería",
-            "2005": {
-                title: "ORIGEN",
-                text: "Instrelec nace ofreciendo soluciones de Ingeniería en Automatización, Control y Electricidad en Venezuela."
-            },
-            "2007": {
-                title: "EXPANSIÓN GLOBAL", 
-                text: "Apertura de la sede en España, iniciando la oferta de soluciones tipo <strong>IPCC</strong> (Ingeniería, Procura, Construcción y Comisionamiento)."
-            },
-            "2016": {
-                title: "CORPORACIÓN",
-                text: "Se crea la Corporación, integrando a empresas especialistas con más de 20 años de experiencia en el sector Oil & Gas y un grupo financiero."
-            },
-            "2022": {
-                title: "LIDERAZGO MUNDIAL",
-                text: "Firma de proyectos estratégicos con el Ministerio de Energía Renovable de IRAK para el <strong>SALADIN 60 MW Solar Park</strong> y proyectos en Emiratos Árabes Unidos."
-            }
+            title: "Nuestra Historia y Crecimiento",
+            year2005: "2005 - Origen:",
+            desc2005: "Instrelec nace ofreciendo soluciones de Ingeniería en Automatización, Control y Electricidad en Venezuela.",
+            year2007: "2007 - Internacionalización:",
+            desc2007: "Apertura de la sede en España, iniciando la oferta de soluciones tipo <strong>IPCC (Ingeniería, Procura, Construcción y Comisionamiento).</strong>",
+            year2016: "2016 - Corporación Instrelec Group:",
+            desc2016: "Se crea la Corporación, integrando a empresas especialistas con más de 20 años de experiencia en el sector Oil & Gas y un grupo financiero.",
+            year2022: "2022 - Expansión Global:",
+            desc2022: "Firma de proyectos estratégicos con el Ministerio de Energía Renovable de IRAK para el <strong>SALADIN 60 MW Solar Park</strong> y diferentes proyectos en Emiratos Árabes Unidos."
         },
+        // SECCIÓN LÍDER - COMPLETO
         lider: {
             title: "EMPRESA LÍDER EN EL SECTOR INDUSTRIAL",
             card1: {
                 title: "Ingeniería Especializada",
-                desc: "División de Ingenierías Conceptual, Básica y de Detalles."
+                desc: "División de Ingenierías Conceptual, Básica y de Detalles con soluciones técnicas de vanguardia para proyectos complejos."
             },
             card2: {
                 title: "Gestión y Suministro",
-                desc: "División de Gestión Aprovisionamiento (Procura) con alcance global."
+                desc: "División de Gestión Aprovisionamiento (Procura) con alcance global y cadena de suministro optimizada."
             },
             card3: {
                 title: "Proyectos de Energía",
-                desc: "Soluciones completas de ORC y Representación GMK para proyectos a gran escala.",
-                division: "Conoce Más"
+                desc: "Soluciones completas de ORC y Representación GMK para proyectos a gran escala con máxima eficiencia energética.",
+                button: "Conoce Más"
             },
             card4: {
                 title: "Sostenibilidad y Energía",
-                desc: "Desarrollo e implementación de proyectos de <strong>Energías Renovables</strong> (Solar, Eólica e Hidrógeno Verde).",
-                strong: "Energías Renovables"
+                desc: "Desarrollo e implementación de proyectos innovadores de <strong>Energías Renovables</strong> (Solar, Eólica e Hidrógeno Verde) para un futuro sostenible."
             }
         },
         experience: {
             title: "Experiencia Comprobada Proyectos Destacados"
         },
         table: {
-    header: {
-        client: "Cliente",
-        project: "Proyecto Destacado", 
-        country: "País",
-        investment: "Inversión Estimada"
-    },
-    row1: {
-        client: "Ministerio de Industria",
-        project: "Contrato IPC para el <strong>SALADIN 60 MW SOLAR PARK</strong>",
-        country: "IRAK",
-        investment: "$36 MM"
-    },
-    row2: {
-        client: "NATIONAL WATER COMPANY", 
-        project: "Ingeniería, Procura y Construcción para las Reservas Estratégicas",
-        country: "ARABIA SAUDITA",
-        investment: "$300 M"
-    },
-    row3: {
-        client: "AES GENER",
-        project: "Proyecto IPC para el reemplazo de bombas de alimentación de caldera",
-        country: "CHILE", 
-        investment: "$7.2 MM"
-    },
-    row4: {
-        client: "PETRONAS",
-        project: "<em>Umbrella Contract</em> para <em>Well Testing</em> y TCP",
-        country: "MALASIA",
-        investment: "$28 MM"
-    },
-    row5: {
-        client: "REPSOL PERÚ",
-        project: "Trabajos mecánicos de parada de planta (torre de destilación)",
-        country: "PERÚ",
-        investment: "$6 MM"
-    }
-},
+            header: {
+                client: "Cliente",
+                project: "Proyecto Destacado",
+                country: "País",
+                investment: "Inversión Estimada"
+            },
+            row1: {
+                client: "Ministerio de Industria",
+                project: "Contrato IPC para el <strong>SALADIN 60 MW SOLAR PARK</strong>",
+                country: "IRAK",
+                investment: "$36 MM"
+            },
+            row2: {
+                client: "NATIONAL WATER COMPANY",
+                project: "Ingeniería, Procura y Construcción para las Reservas Estratégicas",
+                country: "ARABIA SAUDITA",
+                investment: "$300 M"
+            },
+            row3: {
+                client: "AES GENER",
+                project: "Proyecto IPC para el reemplazo de bombas de alimentación de caldera",
+                country: "CHILE",
+                investment: "$7.2 MM"
+            },
+            row4: {
+                client: "PETRONAS",
+                project: "<em>Umbrella Contract</em> para <em>Well Testing</em> y TCP",
+                country: "MALASIA",
+                investment: "$28 MM"
+            },
+            row5: {
+                client: "REPSOL PERÚ",
+                project: "Trabajos mecánicos de parada de planta (torre de destilación)",
+                country: "PERÚ",
+                investment: "$6 MM"
+            }
+        },
         presence: {
             title: "Presencia Internacional",
             america: {
@@ -120,11 +110,51 @@ const translations = {
         },
         carousel: {
             title: "Nuestros Principales Clientes",
-            subtitle: "Confianza global en ingenieria y Construcción"
+            subtitle: "Confianza global en ingeniería y Construcción"
         },
         construction: {
             title: "Sitio en Construcción",
             text: "Estamos trabajando para ofrecerte la mejor experiencia. Pronto estaremos contigo."
+        },
+        // HERO PROYECTOS
+        heroProjects: {
+            title: "Ingeniería para el Futuro",
+            subtitle: "Desarrollamos soluciones integrales en energías renovables, tratamiento de aguas, data centers y optimización industrial"
+        },
+        // PROYECTOS
+        projects: {
+            title: "Nuestros Proyectos Destacados",
+            subtitle: "Referentes internacionales en innovación y sostenibilidad",
+            eva: {
+                badge: "Renovables & H2",
+                title: "Proyecto \"EVA\" (Energía Verde)",
+                client: "Cliente: Arquimea Group S.A.",
+                desc: "Desarrollo pionero para la generación de Hidrógeno Verde mediante electrólisis para uso industrial en 5 edificios. Es la primera instalación de este tipo en Europa, integrando energía solar y almacenamiento de H2."
+            },
+            datacenter: {
+                badge: "Data Center",
+                title: "Data Center Modular Tier III",
+                client: "Cliente: Evsen Group (El Cairo, Egipto)",
+                desc: "Ingeniería y procura para un Data Center de 5,000 m² con 1,200 racks modulares en contenedores de 12 metros. Capacidad total de TI de 7,200 KW con integración completa de software."
+            },
+            solar: {
+                badge: "Energía Solar",
+                title: "Desarrollos Fotovoltaicos EPC",
+                client: "Clientes: Engie Perú, Ujaas Energy, Sunpharma",
+                desc: "Ejecución de proyectos a gran escala incluyendo la planta de 40 MW en Intipampa (Perú), 17 MWp en Susner (Australia) y 24 MWp en Baghaura (India)."
+            },
+            water: {
+                badge: "Tratamiento Aguas",
+                title: "Plantas de Tratamiento Industrial",
+                client: "Cliente: Corp. Minera de Bolivia / PDVSA",
+                desc: "Ingeniería y procura para plantas de aguas ácidas de mina en Colquiri y Huanuni (Bolivia), y rehabilitación de la unidad de tratamiento de efluentes en refinería Petromonagas."
+            },
+            optimization: {
+                badge: "Optimización",
+                title: "Rehabilitación de Ciclos Combinados",
+                client: "Ubicación: Venezuela",
+                desc: "Optimización y recuperación de la planta \"Ramón Laguna\" (700 MW) y los ciclos combinados Termozulia I y II (750 MW en total), restableciendo estándares operativos internacionales."
+            }
         },
         footer: {
             title: "OFICINAS",
@@ -154,7 +184,7 @@ const translations = {
                 },
                 germany: {
                     title: "ALEMANIA",
-                    company: "INTEC GMK GMBH de Alemania",
+                    company: "INTEC GMK GMBH de Alemania",
                     line1: "Lilienthalstr.",
                     line2: "18211 Bargeshagen",
                     line3: "Alemania"
@@ -182,11 +212,11 @@ const translations = {
             copyright: "© 2025 Corp Instrelec Group. Todos los derechos reservados.",
             links: {
                 privacy: "Política de Privacidad",
-                cookies: "Política de Cookies", 
+                cookies: "Política de Cookies",
                 legal: "Aviso Legal"
             }
         },
-        // NUEVAS TRADUCCIONES PARA TECNOLOGIA ORC
+        // TECNOLOGÍA ORC - COMPLETO
         orc: {
             title: "Tecnología ORC: Convierta el Calor en Energía",
             intro: "Instrelec Group, como representante de INTEC GMK en España, ofrece soluciones avanzadas basadas en el *Ciclo Orgánico de Rankine (ORC)*, ideal para transformar fuentes de calor de bajas temperaturas y potencia térmica reducida en electricidad limpia.",
@@ -195,7 +225,7 @@ const translations = {
                 text: "Potencia ORC a partir del *calor geotérmico*. Sistemas totalmente automatizados con máxima eficiencia en carga parcial."
             },
             inducal: {
-                title: "INDUCAL", 
+                title: "INDUCAL",
                 text: "Recuperación de *energía a partir del calor residual* industrial (Waste Heat). Soluciones para gases calientes o agua a baja presión."
             },
             ecocal: {
@@ -204,7 +234,6 @@ const translations = {
             },
             button: "Ver Aplicaciones ORC →"
         },
-        
         modal: {
             title: "Nuestras Soluciones ORC",
             tab: {
@@ -222,7 +251,7 @@ const translations = {
                 sources: {
                     title: "Fuentes de Calor Compatibles:",
                     "1": "Astillas de madera",
-                    "2": "Pellets", 
+                    "2": "Pellets",
                     "3": "Residuos de madera"
                 },
                 features: {
@@ -249,7 +278,7 @@ const translations = {
                 }
             },
             geocal: {
-                title: "GEOCAL (Geotermia)", 
+                title: "GEOCAL (Geotermia)",
                 intro: "Aprovechamiento de energía de alta eficiencia procedente de fuentes geotérmicas. Adaptación perfecta a las necesidades específicas de la fuente geotérmica.",
                 sources: {
                     title: "Fuentes de Calor Compatibles:",
@@ -263,7 +292,7 @@ const translations = {
                 }
             }
         },
-        // NUEVAS TRADUCCIONES PARA SERVICIOS
+        // SERVICIOS - COMPLETO
         services: {
             title: "Servicios Integrales",
             card1: {
@@ -283,27 +312,7 @@ const translations = {
                 desc: "Servicios de mantenimiento preventivo y correctivo, y contratos a largo plazo (LTSA) para la máxima disponibilidad de sus equipos."
             }
         },
-        // NUEVAS TRADUCCIONES PARA PROYECTOS
-        projects: {
-            title: "Proyectos Destacados",
-            card1: {
-                title: "REPSOL (España)",
-                desc: "Ingeniería, procura y construcción (EPC) de una planta de cogeneración ORC, recuperando calor residual de procesos industriales para generar electricidad limpia."
-            },
-            card2: {
-                title: "Solar Park (Chile)",
-                desc: "Sistema de automatización avanzado para la monitorización y control de granjas solares a escala gigavatio. Integración de la red y optimización de rendimiento."
-            },
-            card3: {
-                title: "INDUCAL (Alemania)",
-                desc: "Implementación de la tecnología INDUCAL (Waste Heat Recovery) en una fundición, transformando los gases de escape calientes en energía eléctrica para autoconsumo."
-            },
-            card4: {
-                title: "ECOCAL (Bolivia)",
-                desc: "Instalación de una unidad ECOCAL para generación combinada de calor y electricidad (CHP) usando biomasa forestal local, contribuyendo a la sostenibilidad rural."
-            }
-        },
-        // NUEVAS TRADUCCIONES PARA COOKIES
+        // COOKIES - COMPLETO
         cookies: {
             banner: {
                 title: "🍪 Utilizamos cookies",
@@ -347,7 +356,7 @@ const translations = {
             }
         }
     },
-
+// TRADUCCIONES EN INGLÉS
     en: {
         meta: { title: "Corp Instrelec Group" },
         nav: {
@@ -362,90 +371,80 @@ const translations = {
             subtitle: "Solutions in Engineering, Energy, and Heat Recovery.",
             paragraph: "Experts in ORC (Organic Rankine Cycle) — EPC Projects, Revamping, and integral services internationally."
         },
+        // TIMELINE - COMPLETO EN INGLÉS
         timeline: {
-            word1: "OUR",
-            word2: "STORY",
-            word3: "EVOLUTION",
-            subtitle: "Every year, a new revolution in engineering",
-            "2005": {
-                title: "ORIGIN",
-                text: "Instrelec is born offering Engineering solutions in Automation, Control and Electricity in Venezuela."
-            },
-            "2007": {
-                title: "GLOBAL EXPANSION",
-                text: "Opening of the headquarters in Spain, initiating the offer of <strong>IPCC</strong> solutions (Engineering, Procurement, Construction and Commissioning)."
-            },
-            "2016": {
-                title: "CORPORATION", 
-                text: "The Corporation is created, integrating specialist companies with more than 20 years of experience in the Oil & Gas sector and a financial group."
-            },
-            "2022": {
-                title: "WORLD LEADERSHIP",
-                text: "Signing of strategic projects with the Ministry of Renewable Energy of IRAQ for the <strong>SALADIN 60 MW Solar Park</strong> and projects in the United Arab Emirates."
-            }
+            title: "Our History and Growth",
+            year2005: "2005 - Origin:",
+            desc2005: "Instrelec is born offering Engineering solutions in Automation, Control and Electricity in Venezuela.",
+            year2007: "2007 - Internationalization:",
+            desc2007: "Opening of headquarters in Spain, initiating <strong>IPCC (Engineering, Procurement, Construction and Commissioning)</strong> solutions.",
+            year2016: "2016 - Instrelec Group Corporation:",
+            desc2016: "The Corporation is created, integrating specialist companies with more than 20 years of experience in the Oil & Gas sector and a financial group.",
+            year2022: "2022 - Global Expansion:",
+            desc2022: "Signing of strategic projects with the Ministry of Renewable Energy of IRAQ for the <strong>SALADIN 60 MW Solar Park</strong> and different projects in the United Arab Emirates."
         },
+        // SECCIÓN LÍDER - COMPLETO EN INGLÉS
         lider: {
-            title: "COMPANY LEADER IN THE INDUSTRIAL SECTOR",
+            title: "LEADING COMPANY IN THE INDUSTRIAL SECTOR",
             card1: {
                 title: "Specialized Engineering",
-                desc: "Division of Conceptual, Basic and Detailed Engineering."
+                desc: "Division of Conceptual, Basic and Detailed Engineering with state-of-the-art technical solutions for complex projects."
             },
             card2: {
                 title: "Management and Supply",
-                desc: "Procurement Management Division with global reach."
+                desc: "Procurement Management Division with global reach and optimized supply chain."
             },
             card3: {
                 title: "Energy Projects",
-                desc: "Complete ORC solutions and GMK Representation for large-scale projects.",
-                division: "Learn More"
+                desc: "Complete ORC solutions and GMK Representation for large-scale projects with maximum energy efficiency.",
+                button: "Learn More"
             },
             card4: {
                 title: "Sustainability and Energy",
-                desc: "Development and implementation of <strong>Renewable Energy</strong> projects (Solar, Wind and Green Hydrogen).",
-                strong: "Renewable Energy"
+                desc: "Development and implementation of innovative <strong>Renewable Energy</strong> projects (Solar, Wind and Green Hydrogen) for a sustainable future."
             }
         },
         experience: {
             title: "Proven Experience: Featured Projects"
         },
-table: {
-    header: {
-        client: "Client",
-        project: "Featured Project",
-        country: "Country", 
-        investment: "Estimated Investment"
-    },
-    row1: {
-        client: "Ministry of Industry",
-        project: "IPC Contract for the <strong>SALADIN 60 MW SOLAR PARK</strong>",
-        country: "IRAQ",
-        investment: "$36 MM"
-    },
-    row2: {
-        client: "NATIONAL WATER COMPANY",
-        project: "Engineering, Procurement and Construction for Strategic Reserves",
-        country: "SAUDI ARABIA",
-        investment: "$300 M"
-    },
-    row3: {
-        client: "AES GENER", 
-        project: "IPC project for boiler feed pumps replacement",
-        country: "CHILE",
-        investment: "$7.2 MM"
-    },
-    row4: {
-        client: "PETRONAS",
-        project: "<em>Umbrella Contract</em> for <em>Well Testing</em> and TCP",
-        country: "MALAYSIA", 
-        investment: "$28 MM"
-    },
-    row5: {
-        client: "REPSOL PERÚ",
-        project: "Mechanical plant shutdown works (distillation column)",
-        country: "PERÚ",
-        investment: "$6 MM"
-    }
-},
+        table: {
+            header: {
+                client: "Client",
+                project: "Featured Project",
+                country: "Country",
+                investment: "Estimated Investment"
+            },
+            row1: {
+                client: "Ministry of Industry",
+                project: "IPC Contract for the <strong>SALADIN 60 MW SOLAR PARK</strong>",
+                country: "IRAQ",
+                investment: "$36 MM"
+            },
+            row2: {
+                client: "NATIONAL WATER COMPANY",
+                project: "Engineering, Procurement and Construction for Strategic Reserves",
+                country: "SAUDI ARABIA",
+                investment: "$300 M"
+            },
+            row3: {
+                client: "AES GENER",
+                project: "IPC project for boiler feed pumps replacement",
+                country: "CHILE",
+                investment: "$7.2 MM"
+            },
+            row4: {
+                client: "PETRONAS",
+                project: "<em>Umbrella Contract</em> for <em>Well Testing</em> and TCP",
+                country: "MALAYSIA",
+                investment: "$28 MM"
+            },
+            row5: {
+                client: "REPSOL PERÚ",
+                project: "Mechanical plant shutdown works (distillation column)",
+                country: "PERU",
+                investment: "$6 MM"
+            }
+        },
         presence: {
             title: "International Presence",
             america: { label: "America:", text: "Peru, Venezuela, Bolivia, USA." },
@@ -459,6 +458,46 @@ table: {
         construction: {
             title: "Under Construction",
             text: "We are working to offer you the best experience. We will be with you soon."
+        },
+        // HERO PROYECTOS EN INGLÉS
+        heroProjects: {
+            title: "Engineering for the Future",
+            subtitle: "We develop comprehensive solutions in renewable energy, water treatment, data centers and industrial optimization"
+        },
+        // PROYECTOS EN INGLÉS
+        projects: {
+            title: "Our Featured Projects",
+            subtitle: "International leaders in innovation and sustainability",
+            eva: {
+                badge: "Renewable & H2",
+                title: "\"EVA\" Project (Green Energy)",
+                client: "Client: Arquimea Group S.A.",
+                desc: "Pioneering development for Green Hydrogen generation through electrolysis for industrial use in 5 buildings. It is the first installation of its kind in Europe, integrating solar energy and H2 storage."
+            },
+            datacenter: {
+                badge: "Data Center",
+                title: "Tier III Modular Data Center",
+                client: "Client: Evsen Group (Cairo, Egypt)",
+                desc: "Engineering and procurement for a 5,000 m² Data Center with 1,200 modular racks in 12-meter containers. Total IT capacity of 7,200 KW with complete software integration."
+            },
+            solar: {
+                badge: "Solar Energy",
+                title: "Photovoltaic EPC Developments",
+                client: "Clients: Engie Peru, Ujaas Energy, Sunpharma",
+                desc: "Execution of large-scale projects including the 40 MW plant in Intipampa (Peru), 17 MWp in Susner (Australia) and 24 MWp in Baghaura (India)."
+            },
+            water: {
+                badge: "Water Treatment",
+                title: "Industrial Treatment Plants",
+                client: "Client: Bolivian Mining Corp. / PDVSA",
+                desc: "Engineering and procurement for acidic mine water plants in Colquiri and Huanuni (Bolivia), and rehabilitation of the effluent treatment unit at Petromonagas refinery."
+            },
+            optimization: {
+                badge: "Optimization",
+                title: "Combined Cycle Rehabilitation",
+                client: "Location: Venezuela",
+                desc: "Optimization and recovery of the \"Ramón Laguna\" plant (700 MW) and Termozulia I and II combined cycles (750 MW in total), restoring international operating standards."
+            }
         },
         footer: {
             title: "OFFICES",
@@ -488,7 +527,7 @@ table: {
                 },
                 germany: {
                     title: "GERMANY",
-                    company: "INTEC GMK GMBH of Germany",
+                    company: "INTEC GMK GMBH of Germany",
                     line1: "Lilienthalstr.",
                     line2: "18211 Bargeshagen",
                     line3: "Germany"
@@ -520,9 +559,9 @@ table: {
                 legal: "Legal Notice"
             }
         },
-        // NUEVAS TRADUCCIONES EN INGLÉS PARA TECNOLOGIA ORC
+        // TECNOLOGÍA ORC EN INGLÉS
         orc: {
-            title: "ORC Technology: Convert Heat into Energy", 
+            title: "ORC Technology: Convert Heat into Energy",
             intro: "Instrelec Group, as representative of INTEC GMK in Spain, offers advanced solutions based on the *Organic Rankine Cycle (ORC)*, ideal for transforming low-temperature heat sources and reduced thermal power into clean electricity.",
             geocal: {
                 title: "GEOCAL",
@@ -530,7 +569,7 @@ table: {
             },
             inducal: {
                 title: "INDUCAL",
-                text: "Recovery of *energy from industrial waste heat*. Solutions for hot gases or low-pressure water." 
+                text: "Recovery of *energy from industrial waste heat*. Solutions for hot gases or low-pressure water."
             },
             ecocal: {
                 title: "ECOCAL",
@@ -538,12 +577,11 @@ table: {
             },
             button: "View ORC Applications →"
         },
-        
         modal: {
             title: "Our ORC Solutions",
             tab: {
                 ecocal: "ECOCAL (Biomass)",
-                inducal: "INDUCAL (Waste Heat)", 
+                inducal: "INDUCAL (Waste Heat)",
                 geocal: "GEOCAL (Geothermal)"
             },
             toggle: {
@@ -557,7 +595,7 @@ table: {
                     title: "Compatible Heat Sources:",
                     "1": "Wood chips",
                     "2": "Pellets",
-                    "3": "Wood waste" 
+                    "3": "Wood waste"
                 },
                 features: {
                     title: "Module Features:",
@@ -597,7 +635,7 @@ table: {
                 }
             }
         },
-        // NUEVAS TRADUCCIONES EN INGLÉS PARA SERVICIOS
+        // SERVICIOS EN INGLÉS
         services: {
             title: "Comprehensive Services",
             card1: {
@@ -617,27 +655,7 @@ table: {
                 desc: "Preventive and corrective maintenance services, and long-term contracts (LTSA) for maximum equipment availability."
             }
         },
-        // NUEVAS TRADUCCIONES EN INGLÉS PARA PROYECTOS
-        projects: {
-            title: "Featured Projects",
-            card1: {
-                title: "REPSOL (Spain)",
-                desc: "Engineering, procurement and construction (EPC) of an ORC cogeneration plant, recovering waste heat from industrial processes to generate clean electricity."
-            },
-            card2: {
-                title: "Solar Park (Chile)",
-                desc: "Advanced automation system for monitoring and control of gigawatt-scale solar farms. Grid integration and performance optimization."
-            },
-            card3: {
-                title: "INDUCAL (Germany)",
-                desc: "Implementation of INDUCAL technology (Waste Heat Recovery) in a foundry, transforming hot exhaust gases into electrical energy for self-consumption."
-            },
-            card4: {
-                title: "ECOCAL (Bolivia)",
-                desc: "Installation of an ECOCAL unit for combined heat and power generation (CHP) using local forest biomass, contributing to rural sustainability."
-            }
-        },
-        // NUEVAS TRADUCCIONES EN INGLÉS PARA COOKIES
+        // COOKIES EN INGLÉS
         cookies: {
             banner: {
                 title: "🍪 We use cookies",
@@ -682,6 +700,9 @@ table: {
         }
     }
 };
+
+// FUNCIONES DE TRADUCCIÓN Y RESTO DEL CÓDIGO (sin cambios)
+// ... (continúa con el resto de las funciones del script original)
 
 // Helper: resolve nested keys like "hero.title" -> translations[currentLang].hero.title
 function resolveKey(obj, path) {

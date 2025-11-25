@@ -13,7 +13,7 @@
         <nav>
             <a href="inicio.html" class="logo-link">
                 <div class="logo-container">
-                    <img src="/img/img_instrelec.png" alt="Instrelec Logo" class="logo" id="logo" ">
+                    <img src="/img/img_instrelec.png" alt="Instrelec Logo" class="logo" id="logo">
                 </div>
             </a>
 
@@ -48,12 +48,13 @@
         </nav>
     </header>
 
-<main>
+    <main>
         <section class="hero-section">
             <div class="hero-overlay">
                 <div class="hero-content">
-                    <h1>Ingeniería para el Futuro</h1>
-                    <p>Desarrollamos soluciones integrales en energías renovables, tratamiento de aguas, data centers y optimización industrial</p>
+                    <h1 data-i18n="heroProjects.title">Ingeniería para el Futuro</h1>
+                    <p data-i18n="heroProjects.subtitle">Desarrollamos soluciones integrales en energías renovables,
+                        tratamiento de aguas, data centers y optimización industrial</p>
                 </div>
             </div>
         </section>
@@ -61,69 +62,74 @@
         <section id="proyectos" class="section-content projects-section">
             <div class="container">
                 <div class="section-header">
-                    <h2 id="proyectos-title">Nuestros Proyectos Destacados</h2>
-                    <p class="section-subtitle">Referentes internacionales en innovación y sostenibilidad</p>
+                    <h2 id="proyectos-title" data-i18n="projects.title">Nuestros Proyectos Destacados</h2>
+                    <p class="section-subtitle" data-i18n="projects.subtitle">Referentes internacionales en innovación y sostenibilidad</p>
                 </div>
-                
+
                 <div class="projects-grid">
 
+                    <!-- Card 1: EVA -->
                     <div class="project-card">
                         <div class="card-image-wrapper">
-                            <span class="project-badge">Renovables & H2</span>
+                            <span class="project-badge" data-i18n="projects.eva.badge">Renovables & H2</span>
                             <img src="img/img_proyectos/EVA.webp" alt="Proyecto EVA Hidrógeno Verde" class="project-image">
                         </div>
                         <div class="project-info">
-                            <h3>Proyecto "EVA" (Energía Verde)</h3>
-                            <p class="client-text">Cliente: Arquimea Group S.A.</p>
-                            <p class="project-desc">Desarrollo pionero para la generación de Hidrógeno Verde mediante electrólisis para uso industrial en 5 edificios. Es la primera instalación de este tipo en Europa, integrando energía solar y almacenamiento de H2.</p>
+                            <h3 data-i18n="projects.eva.title">Proyecto "EVA" (Energía Verde)</h3>
+                            <p class="client-text" data-i18n="projects.eva.client">Cliente: Arquimea Group S.A.</p>
+                            <p class="project-desc" data-i18n="projects.eva.desc">Desarrollo pionero para la generación de Hidrógeno Verde mediante electrólisis para uso industrial en 5 edificios. Es la primera instalación de este tipo en Europa, integrando energía solar y almacenamiento de H2.</p>
                         </div>
                     </div>
 
+                    <!-- Card 2: Data Center -->
                     <div class="project-card">
                         <div class="card-image-wrapper">
-                            <span class="project-badge">Data Center</span>
+                            <span class="project-badge" data-i18n="projects.datacenter.badge">Data Center</span>
                             <img src="img/img_proyectos/DATACENTER.jpeg" alt="Data Center Modular" class="project-image">
                         </div>
                         <div class="project-info">
-                            <h3>Data Center Modular Tier III</h3>
-                            <p class="client-text">Cliente: Evsen Group (El Cairo, Egipto)</p>
-                            <p class="project-desc">Ingeniería y procura para un Data Center de 5,000 m² con 1,200 racks modulares en contenedores de 12 metros. Capacidad total de TI de 7,200 KW con integración completa de software.</p>
+                            <h3 data-i18n="projects.datacenter.title">Data Center Modular Tier III</h3>
+                            <p class="client-text" data-i18n="projects.datacenter.client">Cliente: Evsen Group (El Cairo, Egipto)</p>
+                            <p class="project-desc" data-i18n="projects.datacenter.desc">Ingeniería y procura para un Data Center de 5,000 m² con 1,200 racks modulares en contenedores de 12 metros. Capacidad total de TI de 7,200 KW con integración completa de software.</p>
                         </div>
                     </div>
 
+                    <!-- Card 3: Solar -->
                     <div class="project-card">
                         <div class="card-image-wrapper">
-                            <span class="project-badge">Energía Solar</span>
+                            <span class="project-badge" data-i18n="projects.solar.badge">Energía Solar</span>
                             <img src="img/img_proyectos/FOTOVOL.jpg" alt="Planta Fotovoltaica" class="project-image">
                         </div>
                         <div class="project-info">
-                            <h3>Desarrollos Fotovoltaicos EPC</h3>
-                            <p class="client-text">Clientes: Engie Perú, Ujaas Energy, Sunpharma</p>
-                            <p class="project-desc">Ejecución de proyectos a gran escala incluyendo la planta de 40 MW en Intipampa (Perú), 17 MWp en Susner (Australia) y 24 MWp en Baghaura (India).</p>
+                            <h3 data-i18n="projects.solar.title">Desarrollos Fotovoltaicos EPC</h3>
+                            <p class="client-text" data-i18n="projects.solar.client">Clientes: Engie Perú, Ujaas Energy, Sunpharma</p>
+                            <p class="project-desc" data-i18n="projects.solar.desc">Ejecución de proyectos a gran escala incluyendo la planta de 40 MW en Intipampa (Perú), 17 MWp en Susner (Australia) y 24 MWp en Baghaura (India).</p>
                         </div>
                     </div>
 
+                    <!-- Card 4: Water Treatment -->
                     <div class="project-card">
                         <div class="card-image-wrapper">
-                            <span class="project-badge">Tratamiento Aguas</span>
+                            <span class="project-badge" data-i18n="projects.water.badge">Tratamiento Aguas</span>
                             <img src="img/img_proyectos/plants-water-waste.webp" alt="Planta de Tratamiento" class="project-image">
                         </div>
                         <div class="project-info">
-                            <h3>Plantas de Tratamiento Industrial</h3>
-                            <p class="client-text">Cliente: Corp. Minera de Bolivia / PDVSA</p>
-                            <p class="project-desc">Ingeniería y procura para plantas de aguas ácidas de mina en Colquiri y Huanuni (Bolivia), y rehabilitación de la unidad de tratamiento de efluentes en refinería Petromonagas.</p>
+                            <h3 data-i18n="projects.water.title">Plantas de Tratamiento Industrial</h3>
+                            <p class="client-text" data-i18n="projects.water.client">Cliente: Corp. Minera de Bolivia / PDVSA</p>
+                            <p class="project-desc" data-i18n="projects.water.desc">Ingeniería y procura para plantas de aguas ácidas de mina en Colquiri y Huanuni (Bolivia), y rehabilitación de la unidad de tratamiento de efluentes en refinería Petromonagas.</p>
                         </div>
                     </div>
 
+                    <!-- Card 5: Optimization -->
                     <div class="project-card">
                         <div class="card-image-wrapper">
-                            <span class="project-badge">Optimización</span>
-                            <img src="img/img_proyectos/Hidrogeno-verde-scaled.webp" alt="Planta de Tratamiento" class="project-image"> 
+                            <span class="project-badge" data-i18n="projects.optimization.badge">Optimización</span>
+                            <img src="img/img_proyectos/Hidrogeno-verde-scaled.webp" alt="Ciclos Combinados" class="project-image">
                         </div>
                         <div class="project-info">
-                            <h3>Rehabilitación de Ciclos Combinados</h3>
-                            <p class="client-text">Ubicación: Venezuela</p>
-                            <p class="project-desc">Optimización y recuperación de la planta "Ramón Laguna" (700 MW) y los ciclos combinados Termozulia I y II (750 MW en total), restableciendo estándares operativos internacionales.</p>
+                            <h3 data-i18n="projects.optimization.title">Rehabilitación de Ciclos Combinados</h3>
+                            <p class="client-text" data-i18n="projects.optimization.client">Ubicación: Venezuela</p>
+                            <p class="project-desc" data-i18n="projects.optimization.desc">Optimización y recuperación de la planta "Ramón Laguna" (700 MW) y los ciclos combinados Termozulia I y II (750 MW en total), restableciendo estándares operativos internacionales.</p>
                         </div>
                     </div>
 
@@ -131,7 +137,7 @@
             </div>
         </section>
     </main>
-
+ <br><br>
     <footer>
         <div class="footer-content">
             <div class="footer-inner">
@@ -160,8 +166,7 @@
                             <div class="office">
                                 <h3 data-i18n="footer.offices.bolivia.title">Bolivia</h3>
                                 <p data-i18n="footer.offices.bolivia.line1">Instrelec. S.R.L.</p>
-                                <p data-i18n="footer.offices.bolivia.line2">Barrio El Carmen entre radial 23, Av.
-                                    Mariano Moreno</p>
+                                <p data-i18n="footer.offices.bolivia.line2">Barrio El Carmen entre radial 23, Av. Mariano Moreno</p>
                                 <p data-i18n="footer.offices.bolivia.line3">y calle 3Edificio Kenia oficina 1,</p>
                                 <p data-i18n="footer.offices.bolivia.line4">Santa Cruz de la Sierra – Bolivia</p>
                             </div>
@@ -171,7 +176,7 @@
                             <div class="office">
                                 <h3 data-i18n="footer.offices.germany.title">ALEMANIA</h3>
                                 <a href="http://gmk.info" data-i18n="footer.offices.germany.company"
-                                    style="text-decoration: none;" target="_blank">INTEC gMK GmbH de Alemania></a>
+                                    style="text-decoration: none;" target="_blank">INTEC gMK GmbH de Alemania</a>
                                 <p data-i18n="footer.offices.germany.line1">Lilienthalstr.</p>
                                 <p data-i18n="footer.offices.germany.line2">18211 Bargeshagen</p>
                                 <p data-i18n="footer.offices.germany.line3">Alemania</p>
@@ -204,7 +209,7 @@
                     <div class="office">
                         <h3>Contacto General</h3>
                         <p>
-                            <a href="info@instrelec.com" style="text-decoration: none;">info@instrelec.com</a>
+                            <a href="mailto:info@instrelec.com" style="text-decoration: none;">info@instrelec.com</a>
                         </p>
                     </div>
                 </div>
@@ -213,32 +218,21 @@
             <div class="footer-sep"></div>
 
             <div class="contacts">
-                <p class="copyright" data-i18n="footer.copyright">&copy; 2025 Corp Instrelec Group. Todos los derechos
-                    reservados.</p>
+                <p class="copyright" data-i18n="footer.copyright">&copy; 2025 Corp Instrelec Group. Todos los derechos reservados.</p>
                 <div class="footer-links">
-                    <!-- <a href="politica-privacidad.html" data-i18n="footer.links.privacy">Política de Privacidad</a> -->
                     <a href="politica-cookies.html" data-i18n="footer.links.cookies">Política de Cookies</a>
-                    <!-- <a href="aviso-legal.html" data-i18n="footer.links.legal">Aviso Legal</a> -->
                 </div>
             </div>
         </div>
-        </div>
-        </div>
     </footer>
+
     <!-- Banner de Cookies -->
     <div id="cookieBanner">
         <div class="cookie-container">
             <div class="cookie-text">
-                <h3>
-                    🍪 Utilizamos cookies
-                </h3>
-                <p>
-                    Utilizamos cookies propias y de terceros para analizar nuestros servicios y mostrarte publicidad
-                    relacionada con tus preferencias.
-                    Puedes aceptar todas las cookies, rechazar las no esenciales o configurar tus preferencias.
-                </p>
-                <a href="politica-cookies.html" style="color: white; font-size: 13px; text-decoration: underline;">Más
-                    información</a>
+                <h3>🍪 Utilizamos cookies</h3>
+                <p>Utilizamos cookies propias y de terceros para analizar nuestros servicios y mostrarte publicidad relacionada con tus preferencias. Puedes aceptar todas las cookies, rechazar las no esenciales o configurar tus preferencias.</p>
+                <a href="politica-cookies.html" style="color: white; font-size: 13px; text-decoration: underline;">Más información</a>
             </div>
             <div class="cookie-buttons">
                 <button class="btn btn-accept" onclick="acceptAllCookies()">Aceptar todas</button>
@@ -253,28 +247,20 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h2>Configuración de Cookies</h2>
-                <p style="font-size: 14px; opacity: 0.9; margin-top: 5px;">Elige qué tipos de cookies deseas permitir
-                </p>
+                <p style="font-size: 14px; opacity: 0.9; margin-top: 5px;">Elige qué tipos de cookies deseas permitir</p>
                 <button class="modal-close" onclick="closeCookieSettings()">&times;</button>
             </div>
             <div class="modal-body">
                 <!-- Cookies Esenciales -->
                 <div class="cookie-category">
                     <div class="category-header">
-                        <h3>
-                            🔒 Cookies Esenciales
-                            <span class="badge badge-required">OBLIGATORIAS</span>
-                        </h3>
+                        <h3>🔒 Cookies Esenciales <span class="badge badge-required">OBLIGATORIAS</span></h3>
                         <label class="switch">
                             <input type="checkbox" id="essential" checked disabled>
                             <span class="slider"></span>
                         </label>
                     </div>
-                    <p class="category-description">
-                        Estas cookies son necesarias para el funcionamiento básico del sitio web y no se pueden
-                        desactivar.
-                        Incluyen cookies de sesión y de consentimiento de cookies.
-                    </p>
+                    <p class="category-description">Estas cookies son necesarias para el funcionamiento básico del sitio web y no se pueden desactivar. Incluyen cookies de sesión y de consentimiento de cookies.</p>
                     <p class="cookie-details">Cookies: session_id, cookie_consent</p>
                 </div>
 
@@ -287,11 +273,7 @@
                             <span class="slider"></span>
                         </label>
                     </div>
-                    <p class="category-description">
-                        Permiten mejorar la funcionalidad del sitio recordando tus preferencias (como el idioma
-                        seleccionado,
-                        configuraciones de visualización, etc.).
-                    </p>
+                    <p class="category-description">Permiten mejorar la funcionalidad del sitio recordando tus preferencias (como el idioma seleccionado, configuraciones de visualización, etc.).</p>
                     <p class="cookie-details">Cookies: user_language, user_preferences</p>
                 </div>
 
@@ -304,10 +286,7 @@
                             <span class="slider"></span>
                         </label>
                     </div>
-                    <p class="category-description">
-                        Nos ayudan a entender cómo los visitantes interactúan con el sitio web, recopilando información
-                        de forma anónima sobre las páginas visitadas y el tiempo de navegación.
-                    </p>
+                    <p class="category-description">Nos ayudan a entender cómo los visitantes interactúan con el sitio web, recopilando información de forma anónima sobre las páginas visitadas y el tiempo de navegación.</p>
                     <p class="cookie-details">Cookies: _ga, _gid, _gat (Google Analytics)</p>
                 </div>
 
@@ -320,10 +299,7 @@
                             <span class="slider"></span>
                         </label>
                     </div>
-                    <p class="category-description">
-                        Se utilizan para mostrar anuncios más relevantes para ti y tus intereses. También se usan
-                        para limitar el número de veces que ves un anuncio y medir la efectividad de las campañas.
-                    </p>
+                    <p class="category-description">Se utilizan para mostrar anuncios más relevantes para ti y tus intereses. También se usan para limitar el número de veces que ves un anuncio y medir la efectividad de las campañas.</p>
                     <p class="cookie-details">Cookies: ads_pixel, fbp, _gcl_au (Google Ads, Facebook Pixel)</p>
                 </div>
             </div>
@@ -335,9 +311,7 @@
     </div>
 
     <!-- Botón flotante de configuración -->
-    <button id="cookieSettingsBtn" onclick="openCookieSettings()" title="Configurar cookies">
-        ⚙️
-    </button>
+    <button id="cookieSettingsBtn" onclick="openCookieSettings()" title="Configurar cookies">⚙️</button>
 
     <script src="js/script.js"></script>
 </body>
