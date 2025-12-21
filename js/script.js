@@ -1123,11 +1123,12 @@ function initModalORC() {
 function initInfiniteCarousel() {
     const sliderTrack = document.querySelector('.logo-slider-track');
     
-    if (!sliderTrack) return;
+    if (!sliderTrack || sliderTrack.classList.contains('initialized')) return;
 
     // Duplicate the logos for seamless loop
     const logos = sliderTrack.innerHTML;
     sliderTrack.innerHTML = logos + logos;
+    sliderTrack.classList.add('initialized');
 
     // Pause animation on hover for better UX
     const slider = document.querySelector('.logo-slider');
